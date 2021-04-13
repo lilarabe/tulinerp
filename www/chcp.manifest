@@ -1,0 +1,366 @@
+[
+  {
+    "file": "assets/css/swiper.min.css",
+    "hash": "d9e6e67def5a4bfe9c3e3ed8e2e7cb4f"
+  },
+  {
+    "file": "assets/fonts/ionicons.eot",
+    "hash": "bdf1d30681cf87986c385eea78e8de9a"
+  },
+  {
+    "file": "assets/fonts/ionicons.scss",
+    "hash": "c1fdfabf9cbd412b444f064d27641f10"
+  },
+  {
+    "file": "assets/fonts/ionicons.svg",
+    "hash": "d9496a234c81179afbca6bf5959cc30a"
+  },
+  {
+    "file": "assets/fonts/ionicons.ttf",
+    "hash": "74c652671225d6ded874a648502e5f0a"
+  },
+  {
+    "file": "assets/fonts/ionicons.woff",
+    "hash": "81414686e99c00d2921e03dd53c0ab04"
+  },
+  {
+    "file": "assets/fonts/ionicons.woff2",
+    "hash": "311d81961c5880647fec7eaca1221b2a"
+  },
+  {
+    "file": "assets/fonts/noto-sans-bold.ttf",
+    "hash": "a165a42685795361b25593effb32fdb1"
+  },
+  {
+    "file": "assets/fonts/noto-sans-bold.woff",
+    "hash": "ce3d777f2c41cca1494021cfa3fcd72c"
+  },
+  {
+    "file": "assets/fonts/noto-sans-regular.ttf",
+    "hash": "2fd9c16b805724d590c0cff96da070a4"
+  },
+  {
+    "file": "assets/fonts/noto-sans-regular.woff",
+    "hash": "ce8ba1a4ff970db896192c41fc3c96b1"
+  },
+  {
+    "file": "assets/fonts/noto-sans.scss",
+    "hash": "47d5f7264952ccee8cead7b6dcb6d1bd"
+  },
+  {
+    "file": "assets/fonts/roboto-bold.ttf",
+    "hash": "1f4fd7e4df65487f07ba9148f7ca095d"
+  },
+  {
+    "file": "assets/fonts/roboto-bold.woff",
+    "hash": "43183beef21370d8a4b0d64152287eba"
+  },
+  {
+    "file": "assets/fonts/roboto-bold.woff2",
+    "hash": "28d80f43ae4cc35f19e1f1a6ab670f25"
+  },
+  {
+    "file": "assets/fonts/roboto-light.ttf",
+    "hash": "9ff15bd34ea83e4dd3f23c20c7f5090e"
+  },
+  {
+    "file": "assets/fonts/roboto-light.woff",
+    "hash": "7e2d32e7141050d758a38b4ec96390c0"
+  },
+  {
+    "file": "assets/fonts/roboto-light.woff2",
+    "hash": "a826ff848e9f52b1732fed7d154afa97"
+  },
+  {
+    "file": "assets/fonts/roboto-medium.ttf",
+    "hash": "a937e2cae14e68262a45aa91204c2fdf"
+  },
+  {
+    "file": "assets/fonts/roboto-medium.woff",
+    "hash": "0f3b7101a8adc1afe1fbe89775553c32"
+  },
+  {
+    "file": "assets/fonts/roboto-medium.woff2",
+    "hash": "b2c9c262e089411e20689ed393c00796"
+  },
+  {
+    "file": "assets/fonts/roboto-regular.ttf",
+    "hash": "07f8fb6acbabeb10d3fad9ab02d65e0b"
+  },
+  {
+    "file": "assets/fonts/roboto-regular.woff",
+    "hash": "f94d5e5102359961c44a1da1b58d37c9"
+  },
+  {
+    "file": "assets/fonts/roboto-regular.woff2",
+    "hash": "e6b9d54811307f98da62eae992ae05ba"
+  },
+  {
+    "file": "assets/fonts/roboto.scss",
+    "hash": "e7c30075bc0f0b11422bfbdb2236f9e7"
+  },
+  {
+    "file": "assets/fonts/videogular.css",
+    "hash": "f31ce9009a46e018f11bdc0fca3c276c"
+  },
+  {
+    "file": "assets/fonts/videogular.eot",
+    "hash": "535a6d96e96b8bc4549ff31d0c90b634"
+  },
+  {
+    "file": "assets/fonts/Videogular.json",
+    "hash": "da68f58170ead3a7528212dcc3ed1bb1"
+  },
+  {
+    "file": "assets/fonts/videogular.svg",
+    "hash": "d4f9c9f4aca582e94b2a5354c35f6a2a"
+  },
+  {
+    "file": "assets/fonts/videogular.ttf",
+    "hash": "ab020f4923f88c9e6b00fc1b54873b78"
+  },
+  {
+    "file": "assets/fonts/videogular.woff",
+    "hash": "0b8f5ffeb073ed30e02aca347bd9f9bb"
+  },
+  {
+    "file": "assets/i18n/cn.json",
+    "hash": "971bdf3f1767d1af7465b0e8d2a02d3d"
+  },
+  {
+    "file": "assets/i18n/en.json",
+    "hash": "af50d05773d6815a3ae34ee03d9244ba"
+  },
+  {
+    "file": "assets/icon/favicon.ico",
+    "hash": "9fddc00d61c5f382c9483749d0fd30d8"
+  },
+  {
+    "file": "assets/images/browser/close.png",
+    "hash": "78e265b4a51019501fd0b6e8f2d1c4be"
+  },
+  {
+    "file": "assets/images/default.png",
+    "hash": "08727c1b50bf5e865d83378a2cacb59f"
+  },
+  {
+    "file": "assets/images/detail/del.png",
+    "hash": "1e4a0af1d8851de1cfdcf86fed0ae516"
+  },
+  {
+    "file": "assets/images/detail/edit_1.png",
+    "hash": "b0abda8801e44d65150f480532e4e316"
+  },
+  {
+    "file": "assets/images/detail/edit.png",
+    "hash": "b26f04e39f8a316e0e3be3ebcf7f2dd9"
+  },
+  {
+    "file": "assets/images/home-default-icon.png",
+    "hash": "96d863a8b6c605d76d4c62865161ffde"
+  },
+  {
+    "file": "assets/images/home/blue.png",
+    "hash": "fcbe7e8b78d6f11335ca212c39fb6f32"
+  },
+  {
+    "file": "assets/images/home/brown.png",
+    "hash": "4f85d1e6031be35bb0bba0b02a9e5f09"
+  },
+  {
+    "file": "assets/images/home/cyan.png",
+    "hash": "643b6c0d4805dc8699b80468f61b6422"
+  },
+  {
+    "file": "assets/images/home/green.png",
+    "hash": "b2817fd9269bc3da59461e1e2e134d0f"
+  },
+  {
+    "file": "assets/images/home/lightblue.png",
+    "hash": "ec3781d084e850d629621c7f3ea22491"
+  },
+  {
+    "file": "assets/images/home/orange.png",
+    "hash": "69684ba0d8aa538d81ae51e40058875d"
+  },
+  {
+    "file": "assets/images/home/red.png",
+    "hash": "40c87b9b6cbec0ed40990e9672e4bdf5"
+  },
+  {
+    "file": "assets/images/home/violet.png",
+    "hash": "065c9178a9571ae2e100853c983dbe88"
+  },
+  {
+    "file": "assets/images/home/客户管理 橙色@2x.png",
+    "hash": "69684ba0d8aa538d81ae51e40058875d"
+  },
+  {
+    "file": "assets/images/home/工地管理 浅蓝@2x.png",
+    "hash": "ec3781d084e850d629621c7f3ea22491"
+  },
+  {
+    "file": "assets/images/home/订单管理青色@2x.png",
+    "hash": "643b6c0d4805dc8699b80468f61b6422"
+  },
+  {
+    "file": "assets/images/home/财务管理红色@2x.png",
+    "hash": "40c87b9b6cbec0ed40990e9672e4bdf5"
+  },
+  {
+    "file": "assets/images/icon_one.png",
+    "hash": "332d7d91a3478b9acf7ffaa0a0986b13"
+  },
+  {
+    "file": "assets/images/login/logo.png",
+    "hash": "417c9745c93504ba7d8e9bd8fde999ca"
+  },
+  {
+    "file": "assets/images/login/zs_logo.png",
+    "hash": "da7b9b15b63c1e81050314b482e03375"
+  },
+  {
+    "file": "assets/images/nodata.png",
+    "hash": "c5ba46084650a77c81473f3218f568da"
+  },
+  {
+    "file": "assets/images/nodata/detail.png",
+    "hash": "de30f9244d971b7765cba45781f6b1d7"
+  },
+  {
+    "file": "assets/images/nodata/edit.png",
+    "hash": "cf57efa606270102b23f815da4578134"
+  },
+  {
+    "file": "assets/images/nodata/list.png",
+    "hash": "e12722ffa13ddaf4663012fb482b9fb4"
+  },
+  {
+    "file": "assets/images/poster.jpg",
+    "hash": "2202252a081e4357ade402c4e384ca45"
+  },
+  {
+    "file": "assets/images/scan.png",
+    "hash": "e6acbff50f84c209466cdd68092f16f3"
+  },
+  {
+    "file": "assets/images/user/female.png",
+    "hash": "1f49dce415988e9f98a26b3260220e57"
+  },
+  {
+    "file": "assets/images/user/male.png",
+    "hash": "300d7562b68fa57163a8e92419de5538"
+  },
+  {
+    "file": "assets/js/adapter.js",
+    "hash": "38a0b9115649ebba23af400a0c1e7586"
+  },
+  {
+    "file": "assets/js/face-api.min.js",
+    "hash": "a26c1b31d7aad8fd9f7e90ca77500211"
+  },
+  {
+    "file": "assets/js/jquery.min.js",
+    "hash": "dc5e7f18c8d36ac1d3d4753a87c98d0a"
+  },
+  {
+    "file": "assets/js/socket.io-client.js",
+    "hash": "08d0d98eaf35d99db32e443fc0c51cc7"
+  },
+  {
+    "file": "assets/mysvg/blue.svg",
+    "hash": "82868882caac55509f46f0de2a9c0a70"
+  },
+  {
+    "file": "assets/mysvg/default.svg",
+    "hash": "2c28f1b68b3358255066ca80e02d1c65"
+  },
+  {
+    "file": "assets/mysvg/tab1_h.svg",
+    "hash": "036becfaffaf079c774f2fc315f07e17"
+  },
+  {
+    "file": "assets/mysvg/tab1.svg",
+    "hash": "a2e034b57290d2161348a38d6d1d77ac"
+  },
+  {
+    "file": "assets/mysvg/tab2_h.svg",
+    "hash": "f667e8c0c881ce052e713b93dde0a6a7"
+  },
+  {
+    "file": "assets/mysvg/tab2.svg",
+    "hash": "5b6982fb004e94381d712301d8671fc7"
+  },
+  {
+    "file": "assets/mysvg/tab3_h.svg",
+    "hash": "0b9652ff96e8c3794c70c8663877bfa7"
+  },
+  {
+    "file": "assets/mysvg/tab3.svg",
+    "hash": "4cb89106156a672e034eb0fe6364f5d0"
+  },
+  {
+    "file": "assets/mysvg/tab4_h.svg",
+    "hash": "7871f1d5e09828c313242e1fb4df2213"
+  },
+  {
+    "file": "assets/mysvg/tab4.svg",
+    "hash": "73bc1708a3f63fbf9b367d4fb750b7eb"
+  },
+  {
+    "file": "auth.html",
+    "hash": "9fb0f6a1e8a3ba52ac0f0d32f883932c"
+  },
+  {
+    "file": "browser.js",
+    "hash": "5bf269a306e6035741b5cdaebe705713"
+  },
+  {
+    "file": "build/main.css",
+    "hash": "e9bffd39cc690bafceb20b6312377196"
+  },
+  {
+    "file": "build/main.js",
+    "hash": "a39d54678f0d81ebdb3ce41440c64216"
+  },
+  {
+    "file": "build/polyfills.js",
+    "hash": "443c697fc904cd88a651d09cf5c2fe2b"
+  },
+  {
+    "file": "build/sw-toolbox.js",
+    "hash": "2770efb889cc10c4de88d0b746c2a13c"
+  },
+  {
+    "file": "build/vendor.js",
+    "hash": "e58270d478c6ebcbab120aad659f641a"
+  },
+  {
+    "file": "config.js",
+    "hash": "24a14dbaf130dcf59a388132e292d3dc"
+  },
+  {
+    "file": "download.html",
+    "hash": "1b3e6a0a757c0ec21b6bc4e80b09173e"
+  },
+  {
+    "file": "download.js",
+    "hash": "74bd3e947889fe0a08b630af7a31f878"
+  },
+  {
+    "file": "index.html",
+    "hash": "c9f33ac5c83b81b3ebde044a3e1a6c2e"
+  },
+  {
+    "file": "manifest.json",
+    "hash": "4cd8025bcefb3c3d64a6fe8bad841a2e"
+  },
+  {
+    "file": "service-worker.js",
+    "hash": "2574dcff0f239476c7610383851110ae"
+  },
+  {
+    "file": "sw.js",
+    "hash": "bf8267b3c71f9599b5762efcd5d4fc74"
+  }
+]

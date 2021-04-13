@@ -1,0 +1,918 @@
+{
+    "status": 1,
+    "msg": "",
+    "payload": {
+        "isApprovalFlow": true,
+        "approvalData": {
+            "approvalStatus": 0,
+            "approvalerData": [
+                {
+                    "value": "预决算员",
+                    "label": "预决算员",
+                    "name": "预决算员"
+                }
+            ]
+        },
+        "Calculation": [
+            {
+                "code": "::t_cgdd_cp::{\n\tif (@(string)(S.a) != '' && @(string)(S.b) != '') {@(string)(S.c) = @(string)(S.a) + '号' + @(string)(S.b) + '室';}\n}\n",
+                "call_type": 1
+            },
+            {
+                "code": "M.zhtbh= ((number)(+)(S.t_cgdd_cp){(number)(S.a)}).toFixed(0);",
+                "call_type": 1
+            },
+            {
+                "code": "::t_cgdd_cp::{\n\t@(string)(S.d)=(string)(M.ID);\n\t}",
+                "call_type": 1
+            },
+            {
+                "code": "::t_cgdd_cp::{\n\t@(string)(S.e)=(string)(M.sl);\n\t}",
+                "field": "sl",
+                "call_type": 0
+            },
+            {
+                "code": "::t_cgdd_cp::{\n\t@(string)(S.e)=(string)(M.sl);\n\t}",
+                "call_type": 1
+            }
+        ],
+        "Dynamic_Form": [
+            {
+                "field": "rules1",
+                "condition": 0,
+                "con_val": 1,
+                "custom_cond": "",
+                "hideclear": "true",
+                "dynamic_fields": [
+                    {
+                        "field": [
+                            "t_chanpin.xml",
+                            "value1"
+                        ],
+                        "hidden": "true",
+                        "required": "",
+                        "readonly": "",
+                        "message": "必填"
+                    }
+                ],
+                "Son_Table": []
+            },
+            {
+                "field": "rules2",
+                "condition": "",
+                "con_val": "",
+                "custom_cond": "M.rules2 != '1' && M.value1 >= 100",
+                "dynamic_fields": [
+                    {
+                        "field": [
+                            "t_chanpin.xml",
+                            "value2"
+                        ],
+                        "hidden": "",
+                        "required": "true",
+                        "readonly": "true",
+                        "message": "必填"
+                    }
+                ],
+                "Son_Table": []
+            }
+        ],
+        "isChildTable": true,
+        "chilerenData": [
+            {
+                "displayStyle": "list",
+                "listData": [
+                    {
+                        "groups": [
+                            {
+                                "name": "",
+                                "expanded": 0,
+                                "hidden": false,
+                                "fieldArray": [
+                                    {
+                                        "placeholder": "创建用户1",
+                                        "key": "a",
+                                        "value": "1",
+                                        "selector": "input",
+                                        "readonly": false,
+                                        "disable": false,
+                                        "valids": [],
+                                        "asyncValids": [],
+                                        "tips": "请输入"
+                                    },
+                                    {
+                                        "placeholder": "创建用户",
+                                        "key": "b",
+                                        "value": "覃姗",
+                                        "selector": "input",
+                                        "readonly": false,
+                                        "disable": false,
+                                        "valids": [],
+                                        "asyncValids": [],
+                                        "tips": "请输入"
+                                    },
+                                    {
+                                        "placeholder": "业务板块",
+                                        "key": "c",
+                                        "value": "",
+                                        "selector": "input",
+                                        "readonly": false,
+                                        "disable": false,
+                                        "valids": [],
+                                        "asyncValids": [],
+                                        "tips": "请输入"
+                                    },
+                                    {
+                                        "placeholder": "主表编号",
+                                        "key": "d",
+                                        "value": "",
+                                        "selector": "input",
+                                        "readonly": true,
+                                        "disable": false,
+                                        "valids": [],
+                                        "asyncValids": [],
+                                        "tips": "请输入"
+                                    },
+                                    {
+                                        "placeholder": "主表税率",
+                                        "key": "e",
+                                        "value": "",
+                                        "selector": "input",
+                                        "readonly": true,
+                                        "disable": false,
+                                        "valids": [],
+                                        "asyncValids": [],
+                                        "tips": "请输入"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "moduleName": "t_cgdd_cp",
+                "name": "采购产品",
+                "metaData": {
+                    "groups": [
+                        {
+                            "name": "",
+                            "expanded": 0,
+                            "hidden": false,
+                            "fieldArray": [
+                                {
+                                    "placeholder": "创建用户1",
+                                    "key": "a",
+                                    "value": "1",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "创建用户",
+                                    "key": "b",
+                                    "value": "2",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "业务板块",
+                                    "key": "c",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "主表编号",
+                                    "key": "d",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "主表税率",
+                                    "key": "e",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": true,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "displayStyle": "list",
+                "listData": [],
+                "moduleName": "t_cgdd_fk",
+                "name": "付款计划",
+                "metaData": {
+                    "groups": [
+                        {
+                            "name": "",
+                            "expanded": 0,
+                            "hidden": false,
+                            "fieldArray": [
+                                {
+                                    "placeholder": "创建用户1",
+                                    "key": "createuser",
+                                    "value": "1",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "创建用户",
+                                    "key": "cjyhxm",
+                                    "value": "覃姗",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "业务板块",
+                                    "key": "ywbk",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "板块负责人",
+                                    "key": "bkfzr",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "设计所负责人",
+                                    "key": "sjsfzr",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "displayStyle": "list",
+                "listData": [],
+                "moduleName": "purchase_order_child",
+                "name": "产品(汇总)",
+                "metaData": {
+                    "groups": [
+                        {
+                            "name": "",
+                            "expanded": 0,
+                            "hidden": false,
+                            "fieldArray": [
+                                {
+                                    "placeholder": "创建用户1",
+                                    "key": "createuser",
+                                    "value": "1",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "创建用户",
+                                    "key": "cjyhxm",
+                                    "value": "覃姗",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "业务板块",
+                                    "key": "ywbk",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "板块负责人",
+                                    "key": "bkfzr",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                },
+                                {
+                                    "placeholder": "设计所负责人",
+                                    "key": "sjsfzr",
+                                    "value": "",
+                                    "selector": "input",
+                                    "readonly": false,
+                                    "disable": false,
+                                    "valids": [],
+                                    "asyncValids": [],
+                                    "tips": "请输入"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ],
+        "title": "",
+        "editGroup": [
+            {
+                "name": "基本信息",
+                "expanded": 1,
+                "fieldArray": [
+                    {
+                        "placeholder": "编号",
+                        "key": "ID",
+                        "value": "BSCG202010-000002",
+                        "selector": "input",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [
+                            "required"
+                        ],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "税率",
+                        "key": "sl",
+                        "value": "10",
+                        "selector": "input",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "采购类型",
+                        "key": "cglx",
+                        "value": "6",
+                        "selector": "select",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [
+                            "required"
+                        ],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "按合同一般采购",
+                                "value": "1"
+                            },
+                            {
+                                "name": "临时采购",
+                                "value": "3"
+                            },
+                            {
+                                "name": "设计分包",
+                                "value": "5"
+                            },
+                            {
+                                "name": "库存采购",
+                                "value": "6"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "是否增补",
+                        "key": "sfzb",
+                        "value": "0",
+                        "selector": "select",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "是",
+                                "value": "1"
+                            },
+                            {
+                                "name": "否",
+                                "value": "0"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "金额累计",
+                        "key": "zhtbh",
+                        "value": "",
+                        "selector": "input",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "销售合同编号",
+                        "key": "ccbh",
+                        "value": "",
+                        "selector": "sheetlink",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [
+                            "required"
+                        ],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "params": {
+                            "moduleName": "dingdanchengce",
+                            "workFlowId": "qjjfwpt_dev0032"
+                        }
+                    },
+                    {
+                        "placeholder": "项目编号",
+                        "key": "xmbh",
+                        "value": "",
+                        "selector": "sheetlink",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [
+                            "required"
+                        ],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "params": {
+                            "moduleName": "lixiangtongji",
+                            "workFlowId": "qjjfwpt_dev0214"
+                        }
+                    },
+                    {
+                        "placeholder": "采购合同甲方",
+                        "key": "cghtjf",
+                        "value": "BSJF2019-0002",
+                        "selector": "hidden",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "动态表单1",
+                        "key": "rules1",
+                        "value": "",
+                        "selector": "input",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "动态表单2",
+                        "key": "rules2",
+                        "value": "",
+                        "selector": "input",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "值1",
+                        "key": "value1",
+                        "value": "value1",
+                        "selector": "input",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "值2",
+                        "key": "value2",
+                        "value": "2",
+                        "selector": "input",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "业务类型",
+                        "key": "ywlx",
+                        "value": "",
+                        "selector": "hidden",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "合同编号",
+                        "key": "ddbh",
+                        "value": "",
+                        "selector": "hidden",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "合同编号1",
+                        "key": "htbh",
+                        "value": "",
+                        "selector": "hidden",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    }
+                ]
+            },
+            {
+                "name": "",
+                "expanded": 1,
+                "fieldArray": [
+                  {
+                    "placeholder": "产品编号",
+                    "key": "ID",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品名称",
+                    "key": "mingcheng",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [
+                      "required"
+                    ],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品型号",
+                    "key": "kcbh",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品类型",
+                    "key": "cplx",
+                    "value": "1",
+                    "selector": "select",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [
+                      "required"
+                    ],
+                    "asyncValids": [],
+                    "tips": "请输入",
+                    "valueArray": [
+                      {
+                        "name": "主材",
+                        "value": "1"
+                      },
+                      {
+                        "name": "辅材",
+                        "value": "2"
+                      },
+                      {
+                        "name": "辅材包",
+                        "value": "3"
+                      },
+                      {
+                        "name": "组合包",
+                        "value": "4"
+                      }
+                    ]
+                  },
+                  {
+                    "placeholder": "结构类型",
+                    "key": "jglx",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": true,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入",
+                    "valueArray": [
+                      {
+                        "name": "造价结构",
+                        "value": "1"
+                      },
+                      {
+                        "name": "安装结构",
+                        "value": "2"
+                      }
+                    ]
+                  },
+                  {
+                    "placeholder": "供应商",
+                    "key": "gys",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "供应商全称",
+                    "key": "gysqc",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": true,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "默认施工项",
+                    "key": "mrsgx",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "供应商组合",
+                    "key": "gyszh",
+                    "value": "",
+                    "selector": "toggle",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品风格",
+                    "key": "fengge",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "所属户型",
+                    "key": "producttx",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品套系",
+                    "key": "cptx",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": true,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "套系名称",
+                    "key": "cptxmc",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": true,
+                    "readonly": true,
+                    "disable": true,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品系列",
+                    "key": "cpxl",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "计量单位",
+                    "key": "jldw",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [
+                      "required"
+                    ],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "所属栏目",
+                    "key": "suoshulanmu",
+                    "value": "0",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "产品类别",
+                    "key": "cplb",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": false,
+                    "readonly": true,
+                    "disable": true,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "报价方式",
+                    "key": "bjfs",
+                    "value": "1",
+                    "selector": "",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入",
+                    "valueArray": [
+                      {
+                        "name": "单体报价",
+                        "value": "1"
+                      },
+                      {
+                        "name": "计算报价",
+                        "value": "2"
+                      },
+                      {
+                        "name": "区间报价",
+                        "value": "3"
+                      }
+                    ]
+                  },
+                  {
+                    "placeholder": "上架状态",
+                    "key": "sjzt",
+                    "value": "2",
+                    "selector": "select",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入",
+                    "valueArray": [
+                      {
+                        "name": "暂存",
+                        "value": "0"
+                      },
+                      {
+                        "name": "上架申请中",
+                        "value": "1"
+                      },
+                      {
+                        "name": "上架",
+                        "value": "2"
+                      },
+                      {
+                        "name": "下架申请中",
+                        "value": "5"
+                      },
+                      {
+                        "name": "下架",
+                        "value": "3"
+                      },
+                      {
+                        "name": "禁用",
+                        "value": "4"
+                      }
+                    ]
+                  },
+                  {
+                    "placeholder": "有效期起",
+                    "key": "youxiaoqiqi",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "有效期止",
+                    "key": "yxqz",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  }
+                ],
+                "hidden": false
+              }
+        ]
+    }
+}

@@ -1,0 +1,1167 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "isAdd": true,
+    "listData": [
+      {
+        "id": "EJKH202002-0008",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "芮秀测试0208",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "B",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202002-0008",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "13701602971",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "上海市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "1234567.89",
+            "selector": "display-currency",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "芮秀",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "楼盘测试",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202002-0005",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202002-0005",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "石家庄市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "郁芳权",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202002-0004",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202002-0004",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "张浩",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0098",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "郭清美",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0098",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "13661794526",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "苏州市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "康勇",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "象屿都城",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0096",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0096",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "苏州市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "郁芳权",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0095",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "吴密",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0095",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "13504698030",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "上海市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "覃姗",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "通海锦绣家园",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0086",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "广西海吉星农产品国际物流有限公司",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0086",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "13392166998",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "梁维",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "海吉星星座",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0075",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0075",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "朱金琦",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0070",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0070",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "贾崇歌",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0066",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "无锡新硕置业有限公司",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0066",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "11122233344",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "无锡市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "陆晓芬",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "栖霞天樾府",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0065",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "测试姓名",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "C",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0065",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "15693569863",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "上海市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "小订",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "1,000.00",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "测试账号",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "金霞苑",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0054",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0054",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "南昌市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "贾崇歌",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0052",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "孙剑波",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0052",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "15800756364",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "苏州市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "小订",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "3,000.00",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "向阿琴",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "象屿都城",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0047",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0047",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "常德市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "黄俊",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      },
+      {
+        "id": "EJKH202001-0032",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "姓名",
+            "value": "张春丽",
+            "selector": "display-title",
+            "colspan": "3",
+            "colName": "khmc"
+          },
+          {
+            "name": "成交级别",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "1",
+            "colName": "cjjb",
+            "tagStyle": {
+              "background": "#54A4DA",
+              "color": "#fff"
+            }
+          },
+          {
+            "name": "编号",
+            "value": "EJKH202001-0032",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID"
+          },
+          {
+            "name": "客户手机",
+            "value": "13124808913",
+            "selector": "display-mobile",
+            "colspan": "2",
+            "colName": "kehushouji"
+          },
+          {
+            "name": "城市",
+            "value": "上海市",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "chengshi"
+          },
+          {
+            "name": "订金类型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djlx"
+          },
+          {
+            "name": "订金金额",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "djje"
+          },
+          {
+            "name": "客户经理",
+            "value": "梁维",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "dqgw"
+          },
+          {
+            "name": "楼盘",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "loupan"
+          }
+        ],
+        "Goto_Module": "kehu"
+      }
+    ],
+    "num": 15,
+    "title": "我的客户",
+    "total": 683
+  }
+}

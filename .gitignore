@@ -35,7 +35,7 @@ platforms/
 plugins/
 plugins/android.json
 plugins/ios.json
-www/
+## www/
 logs/
 $RECYCLE.BIN/
 

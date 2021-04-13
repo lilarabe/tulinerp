@@ -1,0 +1,1268 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "isApprovalFlow": true,
+    "isEdit": false,
+    "title": "",
+    "baseData": {
+      "cols": "fklb = 1 and ifnull(yjfk,'') = '' order by created_at desc,ID desc",
+      "itemData": ""
+    },
+    "moreData": [
+      {
+        "groupName": "基本信息",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "单据编号",
+            "value": "XJCL202103-000007",
+            "key": "ID",
+            "selector": "display-default",
+            "realvalue": "XJCL202103-000007",
+            "displayunit": ""
+          },
+          {
+            "name": "客户",
+            "value": "",
+            "key": "khbh",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": "",
+            "fkModuleName": "kehu",
+            "fkModuleId": ""
+          },
+          {
+            "name": "单据名称",
+            "value": "",
+            "key": "djmc",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "采购订单编号",
+            "value": "XJ176624SG006-XMCG-010",
+            "key": "lwhtbh",
+            "selector": "display-default",
+            "realvalue": "XJ176624SG006-XMCG-010",
+            "displayunit": "",
+            "fkModuleName": "cgdd",
+            "fkModuleId": "XJ176624SG006-XMCG-010"
+          },
+          {
+            "name": "采购劳务税率",
+            "value": "13",
+            "key": "cglwsl",
+            "selector": "hidden",
+            "realvalue": "13",
+            "displayunit": ""
+          },
+          {
+            "name": "采购类型",
+            "value": "按合同一般采购",
+            "key": "cglx",
+            "selector": "display-default",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "合同状态",
+            "value": "2",
+            "key": "htzt",
+            "selector": "hidden",
+            "realvalue": "2",
+            "displayunit": ""
+          },
+          {
+            "name": "销售合同编号",
+            "value": "176624SG006",
+            "key": "ccbh",
+            "selector": "display-default",
+            "realvalue": "XJCC201911-000494",
+            "displayunit": "",
+            "fkModuleName": "dingdanchengce",
+            "fkModuleId": "XJCC201911-000494"
+          },
+          {
+            "name": "合同税率(%",
+            "value": "11.0",
+            "key": "ywsl",
+            "selector": "hidden",
+            "realvalue": "11.0",
+            "displayunit": ""
+          },
+          {
+            "name": "销售合同编号",
+            "value": "176624SG006",
+            "key": "xshtbh",
+            "selector": "hidden",
+            "realvalue": "176624SG006",
+            "displayunit": ""
+          },
+          {
+            "name": "合同编号",
+            "value": "176624SG006",
+            "key": "htbh",
+            "selector": "hidden",
+            "realvalue": "176624SG006",
+            "displayunit": ""
+          },
+          {
+            "name": "业务类型",
+            "value": "",
+            "key": "ywlx",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "项目编号",
+            "value": "LX2019000099",
+            "key": "xmbh",
+            "selector": "hidden",
+            "realvalue": "XJLX2019-000099",
+            "displayunit": ""
+          },
+          {
+            "name": "项目名称",
+            "value": "南德·国际城三期13号楼室内精装修施工合同",
+            "key": "gcxm",
+            "selector": "display-default",
+            "realvalue": "南德·国际城三期13号楼室内精装修施工合同",
+            "displayunit": ""
+          },
+          {
+            "name": "分包合同名称",
+            "value": "",
+            "key": "cghtmc",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "订单状态",
+            "value": "已审核",
+            "key": "ddcczt",
+            "selector": "hidden",
+            "realvalue": "已审核",
+            "displayunit": ""
+          },
+          {
+            "name": "楼盘",
+            "value": "南德·国际城",
+            "key": "lpbh",
+            "selector": "hidden",
+            "realvalue": "XJLP2019-0049",
+            "displayunit": ""
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "key": "cplx",
+            "selector": "hidden",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "所属组织",
+            "value": "",
+            "key": "suoshuzuzhi",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "供应商",
+            "value": "武汉春润景建材有限公司",
+            "key": "gysbh",
+            "selector": "display-default",
+            "realvalue": "XJGYS2019-00075",
+            "displayunit": "",
+            "fkModuleName": "gongyingshang",
+            "fkModuleId": "XJGYS2019-00075"
+          },
+          {
+            "name": "供应商等级",
+            "value": "",
+            "key": "gysdj",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "供应商名称",
+            "value": "武汉春润景建材有限公司",
+            "key": "gysmc",
+            "selector": "hidden",
+            "realvalue": "武汉春润景建材有限公司",
+            "displayunit": ""
+          },
+          {
+            "name": "付款期间",
+            "value": "",
+            "key": "fkqj",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "收款单位",
+            "value": "武汉春润景建材有限公司",
+            "key": "skdw",
+            "selector": "hidden",
+            "realvalue": "武汉春润景建材有限公司",
+            "displayunit": ""
+          },
+          {
+            "name": "付款类型",
+            "value": "进度款",
+            "key": "fukuanjindu",
+            "selector": "display-default",
+            "realvalue": "02",
+            "displayunit": ""
+          },
+          {
+            "name": "付款方式",
+            "value": "",
+            "key": "fkfs",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "付款模板",
+            "value": "",
+            "key": "fkmb",
+            "selector": "display-default",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "税率(%)",
+            "value": "13",
+            "key": "shuidian",
+            "selector": "display-default",
+            "realvalue": "13",
+            "displayunit": ""
+          },
+          {
+            "name": "税差",
+            "value": "0.00",
+            "key": "shuicha",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "计划类型",
+            "value": "计划内支付",
+            "key": "jhlx",
+            "selector": "display-default",
+            "realvalue": "2",
+            "displayunit": ""
+          },
+          {
+            "name": "计划外支付次",
+            "value": "0",
+            "key": "jhwzfcs",
+            "selector": "display-default",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "本次申请支付",
+            "value": "0.00",
+            "key": "bcsqzf",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "申请日期",
+            "value": "2021-03-26",
+            "key": "fukuanriqi",
+            "selector": "display-datetime",
+            "realvalue": "2021-03-26",
+            "displayunit": ""
+          },
+          {
+            "name": "项目经理",
+            "value": "代辉",
+            "key": "xmjl",
+            "selector": "display-default",
+            "realvalue": "04870",
+            "displayunit": ""
+          },
+          {
+            "name": "项目管家",
+            "value": "",
+            "key": "khgj",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "项目经理1",
+            "value": "04870",
+            "key": "xmjl1",
+            "selector": "hidden",
+            "realvalue": "04870",
+            "displayunit": ""
+          },
+          {
+            "name": "申请人",
+            "value": "何乔乔",
+            "key": "shenqingren",
+            "selector": "display-default",
+            "realvalue": "06463",
+            "displayunit": ""
+          },
+          {
+            "name": "当前节点",
+            "value": "0",
+            "key": "dqjd",
+            "selector": "hidden",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "是否已开票",
+            "value": "1",
+            "key": "sfykp",
+            "selector": "display-default",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "上传发票承诺",
+            "value": "",
+            "key": "scfpcnh",
+            "selector": "display-multifile",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "单据状态",
+            "value": "待审核",
+            "key": "zhuangtai",
+            "selector": "display-default",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "是否开发票",
+            "value": "是",
+            "key": "sfkfp",
+            "selector": "hidden",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "发票扫描件",
+            "value": [
+              {
+                "filePath": "http:\/\/edemo.quanzhuyun.com\/uploadfiles\/qjjfwpt_dev\/data\/e8090678b5b6f7976a2464c44350b9b54babe117.jpg",
+                "fileValue": "e8090678b5b6f7976a2464c44350b9b54babe117.jpg"
+              }
+            ],
+            "key": "fpsmj",
+            "selector": "display-multifile",
+            "realvalue": [
+              {
+                "filePath": "http:\/\/edemo.quanzhuyun.com\/uploadfiles\/qjjfwpt_dev\/data\/e8090678b5b6f7976a2464c44350b9b54babe117.jpg",
+                "fileValue": "e8090678b5b6f7976a2464c44350b9b54babe117.jpg"
+              }
+            ],
+            "displayunit": ""
+          },
+          {
+            "name": "发票号码",
+            "value": "03416130，03416128,03416129,03416130",
+            "key": "fapiaohaoma",
+            "selector": "display-default",
+            "realvalue": "03416130，03416128,03416129,03416130",
+            "displayunit": ""
+          },
+          {
+            "name": "审批附件",
+            "value": "",
+            "key": "spfj",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          }
+        ]
+      },
+      {
+        "groupName": "采购合同付款情况",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "采购合同总金",
+            "value": "3652330.00",
+            "key": "htzje",
+            "selector": "display-default",
+            "realvalue": "3652330.00",
+            "displayunit": ""
+          },
+          {
+            "name": "不含税分包合",
+            "value": "3232150.44",
+            "key": "htzjebhs",
+            "selector": "hidden",
+            "realvalue": "3232150.44",
+            "displayunit": ""
+          },
+          {
+            "name": "累计已付金额",
+            "value": "2750000.00",
+            "key": "ljyfje",
+            "selector": "display-default",
+            "realvalue": "2750000.00",
+            "displayunit": ""
+          },
+          {
+            "name": "已申请未支付",
+            "value": "400000.00",
+            "key": "ljysqje",
+            "selector": "display-default",
+            "realvalue": "400000.00",
+            "displayunit": ""
+          },
+          {
+            "name": "不含税本次申",
+            "value": "353982.30",
+            "key": "bcfkbhs",
+            "selector": "hidden",
+            "realvalue": "353982.30",
+            "displayunit": ""
+          },
+          {
+            "name": "本次申请金额",
+            "value": "400000.00",
+            "key": "bencifukuan",
+            "selector": "display-default",
+            "realvalue": "400000.00",
+            "displayunit": ""
+          },
+          {
+            "name": "大写金额",
+            "value": "肆拾万圆整",
+            "key": "bcfkdxje",
+            "selector": "hidden",
+            "realvalue": "肆拾万圆整",
+            "displayunit": ""
+          },
+          {
+            "name": "累计合同支付",
+            "value": "97.2000",
+            "key": "ljhtzfbl",
+            "selector": "display-default",
+            "realvalue": "97.2000",
+            "displayunit": "%"
+          },
+          {
+            "name": "累计付款(不",
+            "value": "3141592.91",
+            "key": "ljfkbhs",
+            "selector": "hidden",
+            "realvalue": "3141592.91",
+            "displayunit": ""
+          },
+          {
+            "name": "累计到场",
+            "value": "0.00",
+            "key": "ljdc",
+            "selector": "display-default",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "累计到场支付",
+            "value": "97.2000",
+            "key": "ljdczfbl",
+            "selector": "display-default",
+            "realvalue": "97.2000",
+            "displayunit": "%"
+          }
+        ]
+      },
+      {
+        "groupName": "科目付款情况",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "项目合同金额",
+            "value": "27333148.50",
+            "key": "xmhtje",
+            "selector": "hidden",
+            "realvalue": "27333148.50",
+            "displayunit": ""
+          }
+        ]
+      },
+      {
+        "groupName": "项目平衡",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "项目累计付款",
+            "value": "15629699.16",
+            "key": "fukuan",
+            "selector": "display-default",
+            "realvalue": "15629699.16",
+            "displayunit": ""
+          },
+          {
+            "name": "项目累计收款",
+            "value": "22192374.66",
+            "key": "shoukuan",
+            "selector": "display-default",
+            "realvalue": "22192374.66",
+            "displayunit": ""
+          },
+          {
+            "name": "项目已申请未",
+            "value": "800000.00",
+            "key": "zaitu",
+            "selector": "display-default",
+            "realvalue": "800000.00",
+            "displayunit": ""
+          },
+          {
+            "name": "项目累计成本",
+            "value": "22206675.3100",
+            "key": "chanzhi",
+            "selector": "display-default",
+            "realvalue": "22206675.3100",
+            "displayunit": ""
+          },
+          {
+            "name": "项目累计成本",
+            "value": "8120132.3100",
+            "key": "chanzhi1",
+            "selector": "hidden",
+            "realvalue": "8120132.3100",
+            "displayunit": ""
+          },
+          {
+            "name": "项目累计成本",
+            "value": "0.0000",
+            "key": "chanzhi2",
+            "selector": "hidden",
+            "realvalue": "0.0000",
+            "displayunit": ""
+          },
+          {
+            "name": "部门累计成本",
+            "value": "8387181.5402",
+            "key": "bmljcb1",
+            "selector": "hidden",
+            "realvalue": "8387181.5402",
+            "displayunit": ""
+          },
+          {
+            "name": "部门累计成本",
+            "value": "15588.2200",
+            "key": "bmljcb2",
+            "selector": "hidden",
+            "realvalue": "15588.2200",
+            "displayunit": ""
+          },
+          {
+            "name": "毛利率",
+            "value": "11.01",
+            "key": "maolilv",
+            "selector": "display-default",
+            "realvalue": "11.01",
+            "displayunit": "%"
+          },
+          {
+            "name": "出库不含税",
+            "value": "0.00",
+            "key": "ckbhs",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "销项税额",
+            "value": "2407374.32",
+            "key": "xxse",
+            "selector": "hidden",
+            "realvalue": "2407374.32",
+            "displayunit": ""
+          },
+          {
+            "name": "进项税额",
+            "value": "1443503.14",
+            "key": "jxse",
+            "selector": "hidden",
+            "realvalue": "1443503.14",
+            "displayunit": ""
+          },
+          {
+            "name": "项目结余",
+            "value": "0",
+            "key": "jieyu",
+            "selector": "display-default",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "全垫资金额",
+            "value": "",
+            "key": "qdzje",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "临时垫资金额",
+            "value": "0.00",
+            "key": "lsdzje",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "垫资金额",
+            "value": "0",
+            "key": "dianzijine",
+            "selector": "hidden",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "项目结余(含",
+            "value": "0",
+            "key": "xmjyhdz",
+            "selector": "hidden",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "项目进度比例",
+            "value": "0.00",
+            "key": "xmjdbl",
+            "selector": "display-default",
+            "realvalue": "0.00",
+            "displayunit": "%"
+          },
+          {
+            "name": "流水",
+            "value": "",
+            "key": "liushui",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "实际付款日期",
+            "value": "",
+            "key": "sjtkrq",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "付款类别",
+            "value": "材料款",
+            "key": "fklb",
+            "selector": "hidden",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "订单金额",
+            "value": "0.00",
+            "key": "ddje",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "销售订单",
+            "value": "",
+            "key": "ddbh",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "隐藏类别",
+            "value": "",
+            "key": "yclb",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "隐藏金额",
+            "value": "0.00",
+            "key": "yincangjine",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "保存次数",
+            "value": "1",
+            "key": "bccs",
+            "selector": "hidden",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "备注",
+            "value": "",
+            "key": "beizhu",
+            "selector": "display-default",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "部门累计付款",
+            "value": "18481955.28",
+            "key": "bmljfk",
+            "selector": "hidden",
+            "realvalue": "18481955.28",
+            "displayunit": ""
+          },
+          {
+            "name": "部门累计收款",
+            "value": "8495839.16",
+            "key": "bmljsk",
+            "selector": "hidden",
+            "realvalue": "8495839.16",
+            "displayunit": ""
+          },
+          {
+            "name": "部门已申请未",
+            "value": "810332.32",
+            "key": "bmysqwzf",
+            "selector": "hidden",
+            "realvalue": "810332.32",
+            "displayunit": ""
+          },
+          {
+            "name": "部门累计成本",
+            "value": "24249754.9800",
+            "key": "bmljcb",
+            "selector": "hidden",
+            "realvalue": "24249754.9800",
+            "displayunit": ""
+          },
+          {
+            "name": "分摊金额",
+            "value": "",
+            "key": "fentanjine",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "毛利率 (%",
+            "value": "0.00",
+            "key": "bmmll",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "部门销项税额",
+            "value": "604544.62",
+            "key": "bmxxse",
+            "selector": "hidden",
+            "realvalue": "604544.62",
+            "displayunit": ""
+          },
+          {
+            "name": "部门进项税额",
+            "value": "1553944.36",
+            "key": "bmjxse",
+            "selector": "hidden",
+            "realvalue": "1553944.36",
+            "displayunit": ""
+          },
+          {
+            "name": "部门结余",
+            "value": "0",
+            "key": "bumenjieyu",
+            "selector": "hidden",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "部门全垫资金",
+            "value": "0.00",
+            "key": "bmqdzje",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "部门临时垫资",
+            "value": "0.00",
+            "key": "bmlsdz",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "部门垫资金额",
+            "value": "0",
+            "key": "bmdzje",
+            "selector": "hidden",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "部门结余(含",
+            "value": "0",
+            "key": "bmjyhdz",
+            "selector": "hidden",
+            "realvalue": "0",
+            "displayunit": ""
+          },
+          {
+            "name": "固定部门结余",
+            "value": "-11051323.61",
+            "key": "gdbmjy",
+            "selector": "hidden",
+            "realvalue": "-11051323.61",
+            "displayunit": ""
+          },
+          {
+            "name": "固定部门结余",
+            "value": "-11051323.61",
+            "key": "gdbmjyhdz",
+            "selector": "hidden",
+            "realvalue": "-11051323.61",
+            "displayunit": ""
+          },
+          {
+            "name": "计划付款金额",
+            "value": "0.00",
+            "key": "jhfkje",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "计划已付金额",
+            "value": "0.00",
+            "key": "jhyfje",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          },
+          {
+            "name": "计划剩余金额",
+            "value": "0.00",
+            "key": "jhsyje",
+            "selector": "hidden",
+            "realvalue": "0.00",
+            "displayunit": ""
+          }
+        ]
+      },
+      {
+        "groupName": "系统信息",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "创建用户1",
+            "value": "06463",
+            "key": "createuser",
+            "selector": "hidden",
+            "realvalue": "06463",
+            "displayunit": ""
+          },
+          {
+            "name": "创建用户",
+            "value": "何乔乔",
+            "key": "cjyhxm",
+            "selector": "display-default",
+            "realvalue": "何乔乔",
+            "displayunit": ""
+          },
+          {
+            "name": "方案设计",
+            "value": "",
+            "key": "fangansheji",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "业务板块",
+            "value": "湖北新军",
+            "key": "ywbk",
+            "selector": "display-default",
+            "realvalue": "XJYWBK2019-0004",
+            "displayunit": ""
+          },
+          {
+            "name": "板块负责人",
+            "value": "胡文渊",
+            "key": "bkfzr",
+            "selector": "hidden",
+            "realvalue": "06393",
+            "displayunit": ""
+          },
+          {
+            "name": "负责团队",
+            "value": "",
+            "key": "fztd",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "所属组",
+            "value": "工程部",
+            "key": "groupname",
+            "selector": "hidden",
+            "realvalue": "工程部",
+            "displayunit": ""
+          },
+          {
+            "name": "创建日期",
+            "value": "2021-03-26",
+            "key": "created_at",
+            "selector": "display-datetime",
+            "realvalue": "2021-03-26",
+            "displayunit": ""
+          },
+          {
+            "name": "修改用户1",
+            "value": "06463",
+            "key": "modifyuser",
+            "selector": "hidden",
+            "realvalue": "06463",
+            "displayunit": ""
+          },
+          {
+            "name": "修改用户",
+            "value": "何乔乔",
+            "key": "xgyhxm",
+            "selector": "display-default",
+            "realvalue": "何乔乔",
+            "displayunit": ""
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "key": "jdrq",
+            "selector": "display-datetime",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "审批状态",
+            "value": "审批中",
+            "key": "spzt",
+            "selector": "hidden",
+            "realvalue": "1",
+            "displayunit": ""
+          },
+          {
+            "name": "设计所负责人",
+            "value": "",
+            "key": "sjsfzr",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "修改日期",
+            "value": "2021-03-26",
+            "key": "updated_at",
+            "selector": "display-datetime",
+            "realvalue": "2021-03-26",
+            "displayunit": ""
+          },
+          {
+            "name": "站点",
+            "value": "XJ",
+            "key": "site",
+            "selector": "hidden",
+            "realvalue": "XJ",
+            "displayunit": ""
+          },
+          {
+            "name": "暂存状态",
+            "value": "",
+            "key": "tempsave",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          },
+          {
+            "name": "共享用户",
+            "value": "",
+            "key": "allianceusers",
+            "selector": "hidden",
+            "realvalue": "",
+            "displayunit": ""
+          }
+        ]
+      }
+    ],
+    "chilerenData": [
+      {
+        "displayStyle": "default",
+        "listData": [
+          {
+            "id": "XJCL202103-000007",
+            "isDel": false,
+            "isEdit": false,
+            "pic": [],
+            "cols": "fklb = 1 and ifnull(yjfk,'') = '' order by created_at desc,ID desc",
+            "chileren_id": "33674",
+            "itemData": [
+              {
+                "key": "fkmc",
+                "realValue": "材料",
+                "displayunit": "",
+                "name": "产品名称",
+                "value": "材料",
+                "selector": "display-default",
+                "colspan": ""
+              },
+              {
+                "key": "fujian",
+                "realValue": "",
+                "displayunit": "",
+                "name": "产品图片",
+                "value": "",
+                "selector": "hidden",
+                "colspan": ""
+              },
+              {
+                "key": "shuliang",
+                "realValue": "1.00",
+                "displayunit": "",
+                "name": "数量",
+                "value": "1.00",
+                "selector": "display-default",
+                "colspan": ""
+              },
+              {
+                "key": "chuchangjia",
+                "realValue": "",
+                "displayunit": "",
+                "name": "出厂价(不含",
+                "value": "",
+                "selector": "hidden",
+                "colspan": ""
+              },
+              {
+                "key": "chuchangjiage",
+                "realValue": "3652330.00",
+                "displayunit": "",
+                "name": "成本价(含税",
+                "value": "3652330.00",
+                "selector": "display-default",
+                "colspan": ""
+              },
+              {
+                "key": "jine",
+                "realValue": "3652330.00",
+                "displayunit": "",
+                "name": "采购合同金额",
+                "value": "3652330.00",
+                "selector": "display-default",
+                "colspan": ""
+              },
+              {
+                "key": "zfjebhs",
+                "realValue": "353982.30",
+                "displayunit": "",
+                "name": "支付金额(不",
+                "value": "353982.30",
+                "selector": "hidden",
+                "colspan": ""
+              },
+              {
+                "key": "zhifujine",
+                "realValue": "400000.00",
+                "displayunit": "",
+                "name": "支付金额(含",
+                "value": "400000.00",
+                "selector": "display-default",
+                "colspan": ""
+              },
+              {
+                "key": "beizhu",
+                "realValue": "",
+                "displayunit": "",
+                "name": "备注",
+                "value": "",
+                "selector": "display-default",
+                "colspan": ""
+              },
+              {
+                "key": "ID",
+                "realValue": "33674",
+                "displayunit": "",
+                "name": "编号",
+                "value": "33674",
+                "selector": "hidden",
+                "colspan": ""
+              },
+              {
+                "key": "fk",
+                "realValue": "XJCL202103-000007",
+                "displayunit": "",
+                "name": "主表编号",
+                "value": "XJCL202103-000007",
+                "selector": "hidden",
+                "colspan": ""
+              }
+            ]
+          }
+        ],
+        "moduleName": "t_cwfk_1",
+        "name": "支付明细",
+        "isAdd": false,
+        "isHide": false
+      }
+    ],
+    "Extra": [],
+    "relevantModuleData": [],
+    "approvalData": {
+      "node_now": "0",
+      "withdraw": -1,
+      "isShowSubmitBtn": false,
+      "baseOpenFiled": [],
+      "chilerenOpenFiled": [],
+      "logData": [
+        {
+          "user": "资材员 - 唐志秉",
+          "result": "wait",
+          "users": [],
+          "message": "",
+          "date": "2021-03-30 10:15:24"
+        },
+        {
+          "user": "何乔乔",
+          "result": "start",
+          "message": "",
+          "date": "2021-03-26 15:53:58"
+        }
+      ],
+      "rejectData": [
+        {
+          "value": -1,
+          "label": "驳回至发起人"
+        }
+      ],
+      "isSubmit": false,
+      "isApprovalPending": false,
+      "isComplete": false,
+      "approvalStatus": 1,
+      "approvalerData": [
+        {
+          "value": "06393",
+          "label": "06393",
+          "name": "胡文渊 - 工程部"
+        }
+      ],
+      "next_node": 1
+    },
+    "Calculation": [
+      {
+        "code": "let zongjie = 0;\nlet shuilv = (number)(M.shuidian);\n::t_cwfk_1::{\n\tzongjie += @(number)(S.zhifujine);\n\t@(string)(S.zfjebhs) = (@(number)(S.zhifujine) \/ (1 + shuilv\/100)).toFixed(2);\n}\nM.bencifukuan = (zongjie).toFixed(2);\nM.bcfkbhs = ((number)(M.bencifukuan)\/(1 + shuilv\/100)).toFixed(2);",
+        "field": "",
+        "call_type": 1
+      },
+      {
+        "code": "if ((string)(M.htzt) != '3' && (number)(M.bencifukuan) > (((number)(M.htzje)*10000-(number)(M.ljysqje)*10000-(number)(M.ljyfje)*10000)\/10000) && (string)(M.beizhu) == '') {\n     alert('申请金额超出采购剩余金额,请填写备注!');\n     return false;\n}\nif ((number)(M.bencifukuan) == 0) {\n     alert('申请金额不能为0!');\n     return false;\n}",
+        "field": "",
+        "call_type": 4
+      },
+      {
+        "code": "(string)(M.ljhtzfbl) = 0;\n(string)(M.ljdczfbl) = 0;\nif ((number)(M.htzje) > 0){\n\t(string)(M.ljhtzfbl) = ((((number)(M.ljyfje) + (number)(M.ljysqje) + (number)(M.bencifukuan))\/(number)(M.htzje)*10000)\/100).toFixed(2);\n}\nif ((number)(M.ljdc) > 0){\n\t(string)(M.ljdczfbl) = ((((number)(M.ljyfje) + (number)(M.ljysqje) + (number)(M.bencifukuan))\/(number)(M.ljdc)*10000)\/100).toFixed(2);\n}\nlet xxse = (number)(M.xxse);\nif (((string)(M.site) != 'SJ' && (string)(M.site) != 'JK') && ((number)(M.shoukuan)\/(1+(number)(M.ywsl)\/100)*(number)(M.ywsl)\/100) > (number)(M.xxse)) xxse = (number)(M.shoukuan)\/(1+(number)(M.ywsl)\/100)*(number)(M.ywsl)\/100;\n(string)(M.jieyu) = ((number)(M.shoukuan) - (number)(M.fukuan) - ((number)(M.shoukuan)\/(1+(number)(M.ywsl)\/100))*((number)(M.maolilv)\/100) - xxse - (number)(M.ckbhs) - (number)(M.zaitu) + (number)(M.jxse)).toFixed(2);\n(string)(M.bumenjieyu) = ((number)(M.bmljsk) - (number)(M.bmljfk) - ((number)(M.bmljsk)\/(1+(number)(M.ywsl)\/100))*((number)(M.bmmll)\/100) - (number)(M.bmxxse) - (number)(M.bmysqwzf) - (number)(M.fentanjine) + (number)(M.bmjxse)).toFixed(2);\n(string)(M.dianzijine) = (number)(M.lsdzje);\nif ((number)(M.jieyu) < 0) (string)(M.dianzijine) = (number)(M.dianzijine) + (number)(M.qdzje);\n(string)(M.xmjyhdz) = ((number)(M.jieyu) + (number)(M.dianzijine)).toFixed(2);\n(string)(M.bmdzje) = (number)(M.bmlsdz);\nif ((number)(M.bumenjieyu) < 0) (string)(M.bmdzje) = (number)(M.bmdzje) + (number)(M.bmqdzje);\n(string)(M.bmjyhdz) = ((number)(M.bumenjieyu) + (number)(M.bmdzje)).toFixed(2);\n(string)(M.jhsyje) = ((number)(M.jhfkje) - (number)(M.jhyfje)).toFixed(2);\n(string)(M.chanzhi) = ((number)(M.chanzhi1)+(number)(M.chanzhi2)).toFixed(2);\n(string)(M.bmljcb) = ((number)(M.bmljcb1)+(number)(M.bmljcb2)).toFixed(2);\nif ((string)(M.jhlx) == '2' && (number)(M.bencifukuan) > (number)(M.jhsyje) && ((string)(M.site) == 'BS' || (string)(M.site) == 'HZ' || (string)(M.site) == 'SJ')) {\n    setColor('M','jhsyje','#F56C6C');\n}\nif ((number)(M.maolilv) < 0 && (string)(M.site) != 'SJ') {\n    setColor('M','maolilv','#F56C6C');\n}\nif ((number)(M.bumenjieyu) < 0) {\n    setColor('M','bumenjieyu','#F56C6C');\n}\nif (((number)(M.jieyu) < 0) && (string)(M.site) != 'SJ') {\n    setColor('M','jieyu','#F56C6C');\n    setColor('M','bencifukuan','#F56C6C');\n}\nif (((number)(M.ljhtzfbl) > 100)) {\n    setColor('M','ljhtzfbl','#F56C6C');\n}\nif (((number)(M.ljdczfbl) > 100)) {\n    setColor('M','ljdczfbl','#F56C6C');\n}\nif (((number)(M.xmjdbl) > 100)) {\n    setColor('M','xmjdbl','#F56C6C');\n}\nif ((string)(M.fukuanjindu) != '' && (string)(M.fukuanjindu) != '01' && (number)(M.ljdc) == 0) {\n    setColor('M','ljdc','#F56C6C');\n}\nif ((string)(M.ddcczt) == '已结算') {\n    setColor('M','ddcczt','#f7dd66');\n}",
+        "field": "",
+        "call_type": 3
+      },
+      {
+        "code": "(string)(M.ljhtzfbl) = 0;\n(string)(M.ljdczfbl) = 0;\nif ((number)(M.htzje) > 0){\n\t(string)(M.ljhtzfbl) = Math.floor(((number)(M.ljyfje) + (number)(M.ljysqje) + (number)(M.bencifukuan))\/(number)(M.htzje)*1000)\/10;\n}\nif ((number)(M.ljdc) > 0){\n\t(string)(M.ljdczfbl) = Math.floor(((number)(M.ljyfje) + (number)(M.ljysqje) + (number)(M.bencifukuan))\/(number)(M.ljdc)*1000)\/10;\n}\n(string)(M.shuicha) = (((number)(M.bencifukuan)\/(1+(number)(M.shuidian)\/100))*(number)(M.cglwsl)\/100 - ((number)(M.bencifukuan)\/(1+(number)(M.shuidian)\/100))*(number)(M.shuidian)\/100).toFixed(2);",
+        "field": "bencifukuan",
+        "call_type": 0
+      },
+      {
+        "code": "if ((string)(M.site) == 'SJ') {\n\tif ((number)(M.bmjyhdz) < 0) {\n\t\talert('部门结余(含垫资)有异常!');\n\t\treturn false;\n\t}\n\tif ((string)(M.fukuanjindu) == '01' && (number)(M.ljyfje) > 0) {\n\t\talert('付款类型错误!');\n\t\treturn false;\n\t}\n\tif ((number)(M.ljfkbhs) > (number)(M.htzjebhs)) {\n\t\talert('累计付款金额不含税不能超过合同金额不含税!');\n\t\treturn false;\n\t}\n}\nif ((string)(M.beizhu) == '' && ((string)(M.site) == 'SJ') && (string)(M.jhlx) == '2' && (number)(M.bencifukuan) > (number)(M.jhsyje)) {\n\talert('材料付款数据有异常!请填写备注。');\n\treturn false;\n}\nif ((string)(M.beizhu) == '' && (string)(M.site) != 'SJ' && ((number)(M.jieyu) < 0 || (number)(M.maolilv) < 0 || (number)(M.ljhtzfbl) > 100 || (number)(M.ljdczfbl) > 100 || ((string)(M.fukuanjindu) != '01' && (number)(M.ljdc) == 0))) {\n    alert('材料付款数据有异常!请填写备注。');\n\treturn false;\n}\nif ((string)(M.ddcczt) == '已结算' && (number)(M.bencifukuan) > (((number)(M.ljdc)*10000-(number)(M.ljysqje)*10000-(number)(M.ljyfje)*10000)\/10000)) {\n     alert('申请金额超出采购结算金额！');\n     return false;\n}",
+        "field": "",
+        "call_type": 5
+      },
+      {
+        "code": "let zongjie = 0;\nlet shuilv = (number)(M.shuidian);\n::t_cwfk_1::{\n\tzongjie += @(number)(S.zhifujine);\n\t@(string)(S.zfjebhs) = (@(number)(S.zhifujine) \/ (1 + shuilv\/100)).toFixed(2);\n}\nM.bencifukuan = (zongjie).toFixed(2);\nM.bcfkbhs = ((number)(M.bencifukuan)\/(1 + shuilv\/100)).toFixed(2);",
+        "field": "shuidian",
+        "call_type": 0
+      }
+    ],
+    "Dynamic_Form": [
+      {
+        "field": "cglx",
+        "condition": 0,
+        "con_val": "2",
+        "custom_cond": "",
+        "dynamic_fields": [
+          {
+            "field": [
+              "caiwufukuan.xml",
+              "xmbh"
+            ],
+            "hidden": "false",
+            "required": "",
+            "readonly": "",
+            "message": "必填"
+          },
+          {
+            "field": [
+              "caiwufukuan.xml",
+              "ccbh"
+            ],
+            "hidden": "true",
+            "required": "",
+            "readonly": "",
+            "message": "必填"
+          }
+        ]
+      },
+      {
+        "field": "cglx",
+        "condition": 0,
+        "con_val": "4",
+        "custom_cond": "",
+        "dynamic_fields": [
+          {
+            "field": [
+              "caiwufukuan.xml",
+              "xmbh"
+            ],
+            "hidden": "false",
+            "required": "",
+            "readonly": "",
+            "message": "必填"
+          },
+          {
+            "field": [
+              "caiwufukuan.xml",
+              "ccbh"
+            ],
+            "hidden": "true",
+            "required": "",
+            "readonly": "",
+            "message": "必填"
+          }
+        ]
+      }
+    ],
+    "DiscussSum": 0
+  }
+}

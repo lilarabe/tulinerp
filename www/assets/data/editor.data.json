@@ -1,0 +1,967 @@
+{
+    "status": 1,
+    "msg": "",
+    "payload": {
+        "isApprovalFlow": false,
+        "approvalData": {
+            "approvalStatus": -1,
+            "approvalerData": []
+        },
+        "isChildTable": true,
+        "chilerenData": [
+            {
+                "displayStyle": "hidden",
+                "listData": [],
+                "moduleName": "t_kehu_family",
+                "name": "家庭关系"
+            }
+        ],
+        "title": "我的客户",
+        "editGroup": [
+            {
+                "name": "基本信息",
+                "expanded": 1,
+                "fieldArray": [
+                    {
+                        "placeholder": "编号",
+                        "key": "ID",
+                        "value": "KH201912-0088",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "姓名",
+                        "key": "khmc",
+                        "value": "刘达",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "客户手机",
+                        "key": "kehushouji",
+                        "value": "",
+                        "selector": "mobile",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [
+                            "required"
+                        ],
+                        "asyncValids": [
+                            "only"
+                        ],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "固定电话",
+                        "key": "gddh",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "省份",
+                        "key": "sheng",
+                        "value": "",
+                        "selector": "sheetlink",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "params": {
+                            "moduleName": "shengfen",
+                            "workFlowId": "qjjfwpt_dev0109"
+                        }
+                    },
+                    {
+                        "placeholder": "城市",
+                        "key": "chengshi",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "昵称",
+                        "key": "nicheng",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "年龄",
+                        "key": "nianling",
+                        "value": "0",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "工作单位",
+                        "key": "gzdw",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "工作年限",
+                        "key": "gznx",
+                        "value": "0",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "性别",
+                        "key": "xingbie",
+                        "value": "",
+                        "selector": "tagselect",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "男",
+                                "value": "1"
+                            },
+                            {
+                                "name": "女",
+                                "value": "2"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "身高",
+                        "key": "shengao",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "订金类型",
+                        "key": "djlx",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "订金金额",
+                        "key": "djje",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "兴趣爱好",
+                        "key": "xingquaihao",
+                        "value": "",
+                        "selector": "tagmultiselect",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "收藏",
+                                "value": "收藏"
+                            },
+                            {
+                                "name": "影音发烧",
+                                "value": "影音发烧"
+                            },
+                            {
+                                "name": "宠物",
+                                "value": "宠物"
+                            },
+                            {
+                                "name": "健身",
+                                "value": "健身"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "客户渠道",
+                        "key": "khly_sz",
+                        "value": "",
+                        "selector": "select",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [
+                            "required"
+                        ],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "围观",
+                                "value": "1"
+                            },
+                            {
+                                "name": "400",
+                                "value": "2"
+                            },
+                            {
+                                "name": "网销",
+                                "value": "3"
+                            },
+                            {
+                                "name": "中介",
+                                "value": "4"
+                            },
+                            {
+                                "name": "物业",
+                                "value": "5"
+                            },
+                            {
+                                "name": "楼销",
+                                "value": "6"
+                            },
+                            {
+                                "name": "拍卖行",
+                                "value": "7"
+                            },
+                            {
+                                "name": "关系户",
+                                "value": "8"
+                            },
+                            {
+                                "name": "全员营销",
+                                "value": "9"
+                            },
+                            {
+                                "name": "设计师回头客",
+                                "value": "10"
+                            },
+                            {
+                                "name": "项目经理回头客",
+                                "value": "11"
+                            },
+                            {
+                                "name": "老客户",
+                                "value": "12"
+                            },
+                            {
+                                "name": "其他",
+                                "value": "13"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "头像",
+                        "key": "touxiang",
+                        "value": "",
+                        "selector": "file",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "性格",
+                        "key": "xingge",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "理智型",
+                                "value": "理智型"
+                            },
+                            {
+                                "name": "疑虑型",
+                                "value": "疑虑型"
+                            },
+                            {
+                                "name": "情绪型",
+                                "value": "情绪型"
+                            },
+                            {
+                                "name": "外向",
+                                "value": "外向"
+                            },
+                            {
+                                "name": "内向",
+                                "value": "内向"
+                            },
+                            {
+                                "name": "A型性格",
+                                "value": "A型性格"
+                            },
+                            {
+                                "name": "B型性格",
+                                "value": "B型性格"
+                            },
+                            {
+                                "name": "C型性格",
+                                "value": "C型性格"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "职位",
+                        "key": "zhiwei",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "备注",
+                        "key": "grjj",
+                        "value": "",
+                        "selector": "textarea",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    }
+                ]
+            },
+            {
+                "name": "扩展属性",
+                "expanded": 0,
+                "hidden": false,
+                "fieldArray": [
+                    {
+                        "placeholder": "客户经理",
+                        "key": "dqgw",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": ["required"],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "displayValue": "",
+                        "params": {
+                            "moduleName": "user",
+                            "workFlowId": "qjjfwpt_dev0043"
+                        }
+                    },
+                    {
+                        "placeholder": "所属组",
+                        "key": "groupname",
+                        "value": "[group]",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "项目拓展",
+                        "key": "xmtz",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "方案设计",
+                        "key": "shejishi",
+                        "value": "",
+                        "selector": "sheetlink",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "params": {
+                            "moduleName": "user",
+                            "workFlowId": "qjjfwpt_dev0224"
+                        }
+                    },
+                    {
+                        "placeholder": "经理设计",
+                        "key": "jinglisheji",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "推荐人",
+                        "key": "tuijianren",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "客户来源",
+                        "key": "khly",
+                        "value": "5",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "小程序转发",
+                                "value": "1"
+                            },
+                            {
+                                "name": "小程序海报",
+                                "value": "2"
+                            },
+                            {
+                                "name": "服务号",
+                                "value": "3"
+                            },
+                            {
+                                "name": "订阅号",
+                                "value": "4"
+                            },
+                            {
+                                "name": "活动现场",
+                                "value": "5"
+                            },
+                            {
+                                "name": "外部广告报名页",
+                                "value": "6"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "客户类型",
+                        "key": "kehulaiyuan",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "valueArray": [
+                            {
+                                "name": "普通客户",
+                                "value": "普通客户"
+                            },
+                            {
+                                "name": "老客户",
+                                "value": "老客户"
+                            },
+                            {
+                                "name": "关系户",
+                                "value": "关系户"
+                            },
+                            {
+                                "name": "普通员工",
+                                "value": "普通员工"
+                            },
+                            {
+                                "name": "M6员工",
+                                "value": "M6员工"
+                            }
+                        ]
+                    },
+                    {
+                        "placeholder": "产品设计师",
+                        "key": "cpsjs",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "params": {
+                            "moduleName": "user",
+                            "workFlowId": "qjjfwpt_dev0292"
+                        }
+                    },
+                    {
+                        "placeholder": "成交级别",
+                        "key": "cjjb",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "定位",
+                        "key": "dingwei",
+                        "value": {
+                            "latitude": "",
+                            "longitude": "",
+                            "address": ""
+                        },
+                        "selector": "location",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "客户等级",
+                        "key": "kehudengji",
+                        "value": "",
+                        "selector": "sheetlink",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "params": {
+                            "moduleName": "dengjiguanli",
+                            "workFlowId": false
+                        }
+                    },
+                    {
+                        "placeholder": "房产编号",
+                        "key": "fcbh",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "信用值",
+                        "key": "xinyongzhi",
+                        "value": "0",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "e币",
+                        "key": "jifen",
+                        "value": "0",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "楼盘",
+                        "key": "loupan",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "创建日期",
+                        "key": "createdate",
+                        "value": "2019-12-25 18:05:44",
+                        "selector": "date",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "户主名称",
+                        "key": "hzmc",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "人脸识别",
+                        "key": "rlsb",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "密码",
+                        "key": "mima",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "小程序ope",
+                        "key": "miniopenid",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "等级名称",
+                        "key": "djmc",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "UnionI",
+                        "key": "unionid",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "户主编号",
+                        "key": "suoshuhuzhu",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "订阅号ope",
+                        "key": "wxopenid",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "用于微信登录"
+                    },
+                    {
+                        "placeholder": "服务号ope",
+                        "key": "fwhopenid",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "名片",
+                        "key": "card_url",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "名片有效期",
+                        "key": "card_date",
+                        "value": "0",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "签到周期",
+                        "key": "sign_cycle",
+                        "value": "0",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    }
+                ]
+            },
+            {
+                "name": "开票信息",
+                "expanded": 0,
+                "hidden": false,
+                "fieldArray": [
+                    {
+                        "placeholder": "发票内容",
+                        "key": "fpnr",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "身份证号",
+                        "key": "sfzh",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "纳税人识别号",
+                        "key": "nsrsbh",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "地址电话(增",
+                        "key": "dzdhzp",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "开户行及账号",
+                        "key": "khhjzhzp",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    }
+                ]
+            },
+            {
+                "name": "系统信息",
+                "expanded": 0,
+                "hidden": false,
+                "fieldArray": [
+                    {
+                        "placeholder": "创建用户1",
+                        "key": "createuser",
+                        "value": "jin",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "创建用户",
+                        "key": "cjyhxm",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "修改用户1",
+                        "key": "modifyuser",
+                        "value": "jin",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "修改用户",
+                        "key": "xgyhxm",
+                        "value": "",
+                        "selector": "input",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": true,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    },
+                    {
+                        "placeholder": "修改日期",
+                        "key": "updated_at",
+                        "value": "2019-12-25",
+                        "selector": "datetime",
+                        "type": "text",
+                        "readonly": true,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入",
+                        "minDate": "",
+                        "maxDate": ""
+                    },
+                    {
+                        "placeholder": "生日",
+                        "key": "birthday",
+                        "value": "",
+                        "selector": "hidden",
+                        "type": "text",
+                        "readonly": false,
+                        "disable": false,
+                        "valids": [],
+                        "asyncValids": [],
+                        "tips": "请输入"
+                    }
+                ]
+            }
+        ]
+    }
+}

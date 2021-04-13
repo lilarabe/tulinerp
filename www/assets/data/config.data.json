@@ -1,0 +1,16 @@
+{
+  "status": 1,
+  "payload": {
+    "debugConfigs": [{
+        "name": "热更新debug",
+        "key":"hotCode",
+        "isDebug": false
+      },
+      {
+        "name": "HTTP请求debug",
+        "key":"ajax",
+        "isDebug": false
+      }
+    ]
+  }
+}

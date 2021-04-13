@@ -1,0 +1,410 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "isApprovalFlow": true,
+    "isEdit": false,
+    "title": "B端客户",
+    "baseData": {
+      "cols": "4",
+      "itemData": ""
+    },
+    "moreData": [
+      {
+        "groupName": "基本信息",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "编号",
+            "value": "EJCU202011-0001",
+            "key": "ID",
+            "selector": "hidden",
+            "realvalue": "EJCU202011-0001"
+          },
+          {
+            "name": "客户编号",
+            "value": "3",
+            "key": "khbh",
+            "selector": "display-default",
+            "realvalue": "3"
+          },
+          {
+            "name": "客户类型",
+            "value": "企业",
+            "key": "kehuleixing",
+            "selector": "hidden",
+            "realvalue": "1"
+          },
+          {
+            "name": "客户名称",
+            "value": "hjgm",
+            "key": "khmc",
+            "selector": "display-title",
+            "realvalue": "hjgm"
+          },
+          {
+            "name": "是否渠道客户",
+            "value": "是",
+            "key": "sfqdkh",
+            "selector": "display-default",
+            "realvalue": "是"
+          },
+          {
+            "name": "所属集团",
+            "value": "3",
+            "key": "ssjt",
+            "selector": "display-default",
+            "realvalue": "3"
+          },
+          {
+            "name": "集团类型",
+            "value": "",
+            "key": "jtlx",
+            "selector": "hidden",
+            "realvalue": ""
+          },
+          {
+            "name": "客户性质",
+            "value": "央企",
+            "key": "kehubeijing",
+            "selector": "display-default",
+            "realvalue": "央企"
+          },
+          {
+            "name": "公司类型",
+            "value": "区域公司",
+            "key": "gslx",
+            "selector": "display-default",
+            "realvalue": "区域公司"
+          },
+          {
+            "name": "渠道类型",
+            "value": "个人资源",
+            "key": "qdlx",
+            "selector": "display-default",
+            "realvalue": "1"
+          },
+          {
+            "name": "渠道来源",
+            "value": "",
+            "key": "bdqdly",
+            "selector": "hidden",
+            "realvalue": ""
+          },
+          {
+            "name": "是否渠道介绍",
+            "value": "是",
+            "key": "sfqdjs",
+            "selector": "display-default",
+            "realvalue": "是"
+          },
+          {
+            "name": "客户来源渠道",
+            "value": "22",
+            "key": "khly_sz",
+            "selector": "display-tag",
+            "realvalue": "22",
+            "fkModuleName": "bduankehu",
+            "fkModuleId": "22"
+          },
+          {
+            "name": "是否需要入库",
+            "value": "是",
+            "key": "sfxyrk",
+            "selector": "display-default",
+            "realvalue": "是"
+          },
+          {
+            "name": "战略合作协议",
+            "value": "已签订",
+            "key": "zlhzxy",
+            "selector": "display-default",
+            "realvalue": "已签订"
+          },
+          {
+            "name": "是否A类供应",
+            "value": "",
+            "key": "sfalgys",
+            "selector": "hidden",
+            "realvalue": ""
+          },
+          {
+            "name": "是否上市公司",
+            "value": "",
+            "key": "sfssgs",
+            "selector": "display-default",
+            "realvalue": ""
+          },
+          {
+            "name": "上市代码",
+            "value": "",
+            "key": "ssdm",
+            "selector": "display-default",
+            "realvalue": ""
+          },
+          {
+            "name": "省份",
+            "value": "",
+            "key": "sheng",
+            "selector": "display-default",
+            "realvalue": ""
+          },
+          {
+            "name": "城市",
+            "value": "",
+            "key": "chengshi",
+            "selector": "display-default",
+            "realvalue": ""
+          },
+          {
+            "name": "所在区",
+            "value": "",
+            "key": "quxian",
+            "selector": "display-default",
+            "realvalue": ""
+          },
+          {
+            "name": "客户地址",
+            "value": "231",
+            "key": "gongsidizhi",
+            "selector": "display-default",
+            "realvalue": "231"
+          },
+          {
+            "name": "营销人员",
+            "value": "金鑫忠",
+            "key": "dqgw",
+            "selector": "display-default",
+            "realvalue": "jin"
+          },
+          {
+            "name": "评估状态",
+            "value": "待审核",
+            "key": "khpgzt",
+            "selector": "display-default",
+            "realvalue": "0"
+          },
+          {
+            "name": "评估评级",
+            "value": "新客户",
+            "key": "khpgpj",
+            "selector": "display-default",
+            "realvalue": "新客户"
+          },
+          {
+            "name": "备注",
+            "value": "11",
+            "key": "grjj",
+            "selector": "display-desc",
+            "realvalue": "11"
+          }
+        ]
+      },
+      {
+        "groupName": "开发业务 (多选）",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "开发业务",
+            "value": "BC施工业务",
+            "key": "kaifayewu",
+            "selector": "display-default",
+            "realvalue": "BC施工业务"
+          }
+        ]
+      },
+      {
+        "groupName": "可合作区域 (多选）",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "可合作区域",
+            "value": "33",
+            "key": "quyu",
+            "selector": "display-tag",
+            "realvalue": "33"
+          },
+          {
+            "name": "客户历往项目",
+            "value": "0",
+            "key": "khlwxmqyje",
+            "selector": "hidden",
+            "realvalue": "0"
+          },
+          {
+            "name": "客户评估",
+            "value": "",
+            "key": "kehupinggu",
+            "selector": "hidden",
+            "realvalue": ""
+          }
+        ]
+      },
+      {
+        "groupName": "系统信息",
+        "group_Display": true,
+        "itemData": [
+          {
+            "name": "创建用户1",
+            "value": "jin",
+            "key": "createuser",
+            "selector": "hidden",
+            "realvalue": "jin"
+          },
+          {
+            "name": "创建用户",
+            "value": "金鑫忠",
+            "key": "cjyhxm",
+            "selector": "display-default",
+            "realvalue": "金鑫忠"
+          },
+          {
+            "name": "下次审核时间",
+            "value": "",
+            "key": "xcshsj",
+            "selector": "display-date",
+            "realvalue": ""
+          },
+          {
+            "name": "所属组",
+            "value": "经营二部转化组",
+            "key": "groupname",
+            "selector": "display-default",
+            "realvalue": "经营二部转化组"
+          },
+          {
+            "name": "创建日期",
+            "value": "2020-11-13 00:00:00",
+            "key": "createdate",
+            "selector": "display-datetime",
+            "realvalue": "2020-11-13 00:00:00"
+          },
+          {
+            "name": "修改用户1",
+            "value": "jin",
+            "key": "modifyuser",
+            "selector": "hidden",
+            "realvalue": "jin"
+          },
+          {
+            "name": "修改用户",
+            "value": "金鑫忠",
+            "key": "xgyhxm",
+            "selector": "display-default",
+            "realvalue": "金鑫忠"
+          },
+          {
+            "name": "修改日期",
+            "value": "2021-01-12 16:28:02",
+            "key": "updated_at",
+            "selector": "display-datetime",
+            "realvalue": "2021-01-12 16:28:02"
+          },
+          {
+            "name": "建档日期",
+            "value": "2021-01-06 15:13:20",
+            "key": "jdrq",
+            "selector": "hidden",
+            "realvalue": "2021-01-06 15:13:20"
+          },
+          {
+            "name": "审批状态",
+            "value": "审批中",
+            "key": "spzt",
+            "selector": "hidden",
+            "realvalue": "1"
+          },
+          {
+            "name": "暂存状态",
+            "value": "",
+            "key": "tempsave",
+            "selector": "hidden",
+            "realvalue": ""
+          },
+          {
+            "name": "共享用户",
+            "value": "",
+            "key": "allianceusers",
+            "selector": "hidden",
+            "realvalue": ""
+          }
+        ]
+      }
+    ],
+    "chilerenData": [
+      {
+        "isAdd": false,
+        "isHide": true,
+        "name": "明细表",
+        "moduleName": "busi_cus_score",
+        "listData": [],
+        "displayStyle": "default"
+      }
+    ],
+    "Extra": [],
+    "relevantModuleData": [
+      {
+        "badge": "0",
+        "name": "B端关系人",
+        "moduleName": "bduanguanxiren",
+        "action": "add",
+        "params": {
+          "WorkFlowID": "qjjfwpt_dev0641",
+          "relevantID": "EJCU202011-0001"
+        }
+      }
+    ],
+    "approvalData": {
+      "node_now": "EJNode000190",
+      "isShowSubmitBtn": false,
+      "baseOpenFiled": [],
+      "chilerenOpenFiled": [],
+      "logData": [
+        {
+          "user": "3333 - 金鑫忠",
+          "result": "wait",
+          "users": [],
+          "message": "",
+          "date": "2021-01-12 17:14:44"
+        },
+        {
+          "user": "金鑫忠",
+          "result": "start",
+          "message": "",
+          "date": "2021-01-12 16:28:03"
+        },
+        {
+          "user": "3333 - 金鑫忠",
+          "result": "no",
+          "message": "驳回至提交人-意见: 哦哦哦",
+          "date": "2021-01-12 16:27:46"
+        },
+        {
+          "user": "金鑫忠",
+          "result": "start",
+          "message": "",
+          "date": "2021-01-11 15:46:04"
+        }
+      ],
+      "rejectData": [
+        {
+          "value": -1,
+          "label": "驳回至发起人"
+        }
+      ],
+      "isSubmit": false,
+      "isApprovalPending": true,
+      "isComplete": true,
+      "approvalStatus": 1,
+      "approvalerData": []
+    },
+    "Calculation": [
+      {
+        "code": "alert('别提交了 烦');\nreturn false;",
+        "field": "EJNode000190",
+        "call_type": 6
+      }
+    ],
+    "DiscussSum": 0
+  }
+}
