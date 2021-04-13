@@ -1,0 +1,125 @@
+<ion-header offline>
+
+  <ion-navbar>
+
+    <ion-title>{{title}}</ion-title>
+
+    <!-- <ion-buttons *ngIf="navMenuBtns.length > 1" end>
+      <button (click.stop)="toggleMenu();" ion-button icon-only>
+        <ion-icon color="default" name="md-more"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons *ngIf="navMenuBtns.length === 1 && !isApprovalFlow" end>
+      <ng-container *ngFor="let btn of navMenuBtns;">
+        <button *ngIf="btn.name!=='编辑'" (click)="onNavMenuBtnsClick(btn);" color="light" ion-button icon-only
+        clear small>
+        <button class="header-btn" ion-button clear>{{ btn.name }}</button>
+      </button>
+      </ng-container>
+    </ion-buttons> -->
+
+    <!-- 灰色幕布 -->
+    <div class="detail-curtain" *ngIf="showItem.length>0"></div>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content debug-toggle>
+
+  <!-- 头部按钮菜单 -->
+  <!-- <nav-menu #navMenu [isShow]="topMenuShow">
+    <button *ngFor="let btn of navMenuBtns;" (click)="onNavMenuBtnsClick(btn);" color="light" block ion-button icon-only
+      clear small>
+      {{ btn.name }}
+    </button>
+  </nav-menu> -->
+
+  <!-- 请求等待图片 -->
+  <div *ngIf="!isLoaded" class="no-data">
+    <img class="no-data-img" src="assets/images/nodata/detail.png">
+  </div>
+
+  <div *ngIf="errorMsg" class="errorMsg">{{ errorMsg }}</div>
+
+  <div class="tabs">
+    <tabs [(activeIndex)]="activeIndex" [labelShow]="labelShow">
+      <tab label="详情">
+
+        <!-- 编辑页主子表切换 -->
+        <ng-container *ngIf="headerTabs.length > 1">
+          <editor-tabs (activeLabelChange)="onActiveLabelChange($event);" [labels]="headerTabs"></editor-tabs>
+        </ng-container>
+        <!-- 基础信息 -->
+        <detail-more-data [hidden]="activeStepId !== 'master'" *ngIf="moreData.length > 0" [moreData]="moreData"
+          [isShowMore]="isShowMore" [moduleName]="navParams.get('moduleName')" [moduleId]="navParams.get('id')"
+          [isEdit]="false"></detail-more-data>
+        <!-- 子表信息 -->
+        <ng-container *ngFor="let child of chilerenData; let idx = index;">
+          <ng-container *ngIf="child.isHide === undefined || child.isHide === false">
+            <div [hidden]="activeStepId !== 'child-'+idx">
+              
+              <ng-container *ngIf="child.displayStyle==='default'">
+                <detail-children [isAdd]="child.isAdd" [moduleId]="navParams.get('id')"
+                  [parentModuleName]="navParams.get('moduleName')" [isShowAdd]='false' [childData]="child"></detail-children>
+              </ng-container>
+
+              <detail-pictures *ngIf="child.displayStyle==='gallery'" [itemsData]="child" [isEdit]="isEdit">
+              </detail-pictures>
+            </div>
+          </ng-container>
+        </ng-container>
+      </tab>
+      <tab label="审批" *ngIf="approvalData.logData.length > 0" [isMark]="approvalData.isApprovalPending">
+        <!-- 审批日志 -->
+        <div *ngIf="approvalData.logData.length > 0" #approvalLog>
+          <approval-log (postShowItem)="getPostShowItem($event)" (postSuccessEvent)="getPostSuccessEvent();"
+            (textareaFocusEvent)="onTextareaFocusEvent();" [approvalData]="approvalData" [moreData]="moreData"
+            [formulaData]="formulaData" [chilerenData]="chilerenData">
+          </approval-log>
+        </div>
+      </tab>
+      <!-- 相关模块 -->
+      <tab *ngIf="relevantModuleData.length>0"
+        [label]="'更多'+(relevantModuleData.length>1?'('+relevantModuleData.length+')':'')">
+        <detail-grid [relevantModuleData]="relevantModuleData"></detail-grid>
+      </tab>
+      <!-- <ng-container *ngFor="let item of relevantModuleData;">
+
+        <tab *ngIf="item.action === 'add'" [label]="item.name">
+          <detail-add>
+            <span (tap)="pushOtherPage(item);" style="color: #3178FF;margin-left: 10px;">新增</span>
+          </detail-add>
+        </tab>
+
+        <tab *ngIf="item.action === 'list'" [label]="item.name">
+          <detail-list [moduleName]="item.moduleName" [params]="item.params"></detail-list>
+        </tab>
+      </ng-container> -->
+    </tabs>
+  </div>
+  <ion-fab *ngIf="isEdit && (!isApprovalFlow || approvalData.isShowSubmitBtn)" bottom right>
+    <button ion-fab color="default" (tap)="onNavMenuBtnsClick(navMenuBtns[0]);">
+      <!-- <ion-icon color="light" class="add-btn-icon" name="add"></ion-icon> -->
+      <img src="assets/images/detail/edit.png" class="edit-png">
+    </button>
+  </ion-fab>
+
+  <div class="edit-pop-top" *ngIf="showItem.length>0 || (approvalData.chilerenOpenFiled && approvalData.chilerenOpenFiled.length>0)">
+    <div class="page-edit" [ngClass]="{'out': pageOutAni,'animation':addAnimation}">
+      <div class="z-header">
+        <ion-icon name="arrow-down" class="icon" (click)="editOut()"></ion-icon>
+        请确认以下信息
+      </div>
+      <div class="edit-page">
+        <page-edit [showItem]="showItem" [childrenItem]='approvalData.chilerenOpenFiled' (inform)="editOut()">
+        </page-edit>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

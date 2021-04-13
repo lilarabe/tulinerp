@@ -1,0 +1,5 @@
+<div class="search" [ngClass]="{'search-empty': !keyword}">
+  <ion-searchbar (ionInput)="autoSearch();" [animated]="false" [debounce]="1000" [placeholder]="'搜索'"
+    [(ngModel)]="keyword" (ionClear)="searchClear();"></ion-searchbar>
+  <button ion-button color="dark" clear no-paddings (click)="btnSearch()">搜索</button>
+</div>

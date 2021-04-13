@@ -1,0 +1,14 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup relative" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-select [formControlName]="inputFormControlName" cancelText="取消" okText="确定" class="edit-value">
+      <ion-option *ngFor="let option of valueArray" [value]="option.value" [disabled]="readonly">{{ option.name }}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state [fieldData]="fieldData"></edit-public-state>
+  <div class="curtain" *ngIf=" readonly || disable"></div>
+</div>

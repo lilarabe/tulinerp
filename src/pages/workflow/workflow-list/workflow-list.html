@@ -1,0 +1,25 @@
+<ion-header class="list-page-header" offline>
+
+  <ion-navbar>
+
+    <ion-title>{{title}}</ion-title>
+
+  </ion-navbar>
+
+  <list-search (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+  (searchClickEvent)="searchInput($event);"></list-search>
+
+</ion-header>
+
+
+<ion-content class="list-page-content" debug-toggle>
+
+  <list-num [totalNum]="totalNum"></list-num>
+
+  <display-items [clickAction]="'toDetailPage'" [listData]="listData" [moduleName]="moduleName" [isDrag]="false">
+  </display-items>
+
+  <!--上拉加载-->
+  <list-next-page [isEnabled]="canFlippingPage" (nextPageEvent)="$event.waitFor(asyncNextPage());"></list-next-page>
+
+</ion-content>

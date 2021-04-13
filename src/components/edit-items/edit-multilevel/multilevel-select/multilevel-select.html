@@ -1,0 +1,13 @@
+<div class="select">
+  <ion-select (ionChange)="onChange($event)" placeholder="请选择" [ngClass]="{'readonly': readonly || disable}" [(ngModel)]="selectData[selectIndex]" item-content
+    interface="popover" class="edit-value">
+    <ng-container *ngFor="let option of valueArray">
+      <ion-option *ngIf="!option.isHidden" [value]="option.value" [disabled]="readonly">{{ option.label }}
+      </ion-option>
+    </ng-container>
+  </ion-select>
+</div>
+<div class="mleft" *ngIf="nowData?.children && selectData[selectIndex]">
+  <multilevel-select [readonly]='readonly' [disable]='disable' [valueArray]='nowData.children' [selectData]='selectData' [selectIndex]='+selectIndex+1' (uploadSelectData)="informSuperior($event)"></multilevel-select>
+</div>
+

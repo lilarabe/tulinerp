@@ -1,0 +1,17 @@
+<ion-content>
+  <div class="slides">
+    <ion-slides *ngIf="imgArray && imgArray.length" #slides zoom="true" loop="false" pager="true" [initialSlide]="index"
+      (ionSlideDidChange)="ionSlideDidChange();">
+      <ion-slide *ngFor="let img of imgArray">
+        <img (press)="openMenu($event);" [src]="img.src | safeUrl" class="imgs">
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-fab top right edge class="edit" (click)="dismiss();">
+    <button ion-fab mini color="danger">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>

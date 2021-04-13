@@ -1,0 +1,7 @@
+<div class="list-tile">
+  <div class="lable">{{name| maxString:labelMaxLen}}</div>
+  <div class="colon">:</div>
+  <div class="value" is-overflow2 (overflow)="isOverflow($event);" [ngStyle]="setStyle">
+    {{value | currency:' ':'symbol':'1.2-2'}}
+  </div>
+</div>

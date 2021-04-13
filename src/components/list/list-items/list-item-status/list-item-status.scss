@@ -1,0 +1,64 @@
+list-item-status {
+  display: block;
+
+  .list-status {
+    @include flex-x();
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+
+    .tag {
+      font-size: var(--fs-s);
+      text-align: center;
+      color: #ffffff;
+      margin: 0 10px;
+      @include flex-x();
+      align-items: center;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 2px;
+        margin: 0 5px;
+      }
+    }
+
+    .tag.g {
+      color: #2FEB39;
+
+      &::before {
+        background-color: #2FEB39;
+      }
+    }
+
+    .tag.b {
+      color: #3178FF;
+
+      &::before {
+        background-color: #3178FF;
+      }
+    }
+
+    .tag.y {
+      color: #FF7F1D;
+    }
+
+    .tag.r {
+      color: #FD3535;
+
+      &::before {
+        background-color: #FD3535;
+      }
+    }
+
+    .tag.z {
+      color: #30F2DE;
+
+      .alert {
+        margin-right: 6px;
+      }
+    }
+  }
+}

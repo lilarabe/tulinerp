@@ -1,0 +1,46 @@
+page-inform-details {
+  ion-content {
+    background-color: rgb(243, 243, 243) !important;
+  }
+
+  .dai_item {
+    overflow: hidden;
+    margin: 10px 0px;
+    padding: 10px 0px;
+
+    .dai_headImg {
+      float: left;
+      width: 13%;
+    }
+
+    .dai_content {
+      padding-left: 10px;
+      float: left;
+      width: 87%;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 400;
+      }
+
+      div {
+        width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px 0.1px rgba(143, 143, 143, 0.2);
+
+        h3 {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 12px;
+          margin: 0;
+          color: rgb(191, 191, 191);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item (tap)="presentAlert();" class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note color="dark" [ngClass]="readonly || disable ? 'readonly' : ''" class="edit-value" item-end>
+      {{ formControl.value }}{{ tips }}</ion-note>
+    <ion-icon name="create" [color]="readonly || disable ? 'disable' : 'default'" item-end></ion-icon>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

@@ -1,0 +1,17 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note class="note-desc edit-bar" item-end>
+        <button *ngIf="!(readonly || disable) && filePath" (click.stop)="del();" color="danger" ion-button small>删除</button>
+        <button *ngIf="!(readonly || disable)" color="default" ion-button small>
+          上传
+          <app-file-upload (uploadFileInfoEvent)="getUploadFileInfo($event);" [fileTypeNames]="fileTypeNames" [fileMaxSize]="fileMaxSize"></app-file-upload>
+        </button>
+        <button *ngIf="filePath && !fileBase64" (click.stop)="view();" color="default" ion-button small>查看</button>
+    </ion-note>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

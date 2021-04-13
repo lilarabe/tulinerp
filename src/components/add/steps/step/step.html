@@ -1,0 +1,11 @@
+<div class="spet" [ngClass]="status">
+    <div class="head">
+        <div #line class="line"></div>
+        <div class="icon">
+            <div *ngIf="status === 'previous'" class="icon-previous"></div>
+            <div *ngIf="status === 'current'" class="icon-current"></div>
+            <div *ngIf="status === 'next'" class="icon-next"></div>
+        </div>
+    </div>
+    <div class="title">{{title | maxString: 4}}</div>
+</div>

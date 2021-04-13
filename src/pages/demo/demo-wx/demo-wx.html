@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>微信</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3>分享文字</h3>
+  <button (click)="shareText();" ion-button>分享文字</button>
+
+  <h3>分享图片</h3>
+  <button (click)="shareImage();" ion-button>分享图片</button>
+
+  <h3>分享链接</h3>
+  <button (click)="shareLink();" ion-button>分享链接</button>
+
+  <h3>分享小程序</h3>
+  <button (click)="shareMiniProgram();" ion-button>分享小程序</button>
+
+  <h3>分享小程序with启动参数</h3>
+  <button (click)="shareMiniProgramWithQuery();" ion-button>分享小程序with启动参数</button>
+
+  <h3>分享媒体</h3>
+  <button (click)="shareMedia();" ion-button>分享媒体</button>
+
+  <h3>打开小程序</h3>
+  <button (click)="openMiniProgram();" ion-button>打开小程序</button>
+
+  <h3>打开小程序with启动参数</h3>
+  <button (click)="openMiniProgramWithQuery();" ion-button>打开小程序with启动参数</button>
+
+  <h3>微信授权</h3>
+  <button (click)="auth();" ion-button>微信授权</button>
+
+  <h3>微信支付</h3>
+  <button (click)="pay();" ion-button>微信支付</button>
+
+
+</ion-content>

@@ -1,0 +1,74 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>配置页</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list no-border>
+
+    <ion-list-header>重启APP后生效</ion-list-header>
+
+    <ion-item (click.stop)="pushConfigDebug();">
+      <ion-icon name='bug' item-start></ion-icon>
+      进入debug调试页
+    </ion-item>
+
+    <ion-item (click.stop)="pushConfigStorage();">
+      <ion-icon name='cloud' item-start></ion-icon>
+      <ion-label>查看storage信息</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushHotCode();">
+      <ion-icon name='ios-cloud-download' item-start></ion-icon>
+      <ion-label>热更新调试</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushJpush();">
+      <ion-icon name='flash' item-start></ion-icon>
+      <ion-label>极光推送配置</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushVideo();">
+      <ion-icon name='videocam' item-start></ion-icon>
+      <ion-label>视频配置</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushVideoRecord();">
+      <ion-icon name='videocam' item-start></ion-icon>
+      <ion-label>视频录制</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushVideoIn();">
+      <ion-icon name='videocam' item-start></ion-icon>
+      <ion-label>视频输入</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushVideoOut();">
+      <ion-icon name='videocam' item-start></ion-icon>
+      <ion-label>视频输出</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushFaceCollect();">
+      <ion-icon name='contact' item-start></ion-icon>
+      <ion-label>人脸录入</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushFaceMatching();">
+      <ion-icon name='contact' item-start></ion-icon>
+      <ion-label>人脸对比</ion-label>
+    </ion-item>
+
+    <ion-item (click.stop)="pushDemoPage();">
+      <ion-icon name='tablet-portrait' item-start></ion-icon>
+      <ion-label>进入DEMO页</ion-label>
+    </ion-item>
+
+
+  </ion-list>
+
+</ion-content>

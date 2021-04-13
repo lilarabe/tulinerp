@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>demoWebRtc</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h1>获取用户设备:</h1>
+  <ion-list *ngFor="let item of mediaDeviceInfo">
+    <ion-list-header>{{ item.label }}</ion-list-header>
+    <ion-item>设备Id(deviceId):{{ item.deviceId }}</ion-item>
+    <ion-item>设备类型(kind):{{ item.kind }}</ion-item>
+    <ion-item>组Id(groupId):{{ item.groupId }}</ion-item>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item (click)="toVideoDemo();">视频demo</button>  
+  </ion-list>
+
+</ion-content>

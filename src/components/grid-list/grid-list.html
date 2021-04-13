@@ -1,0 +1,36 @@
+<app-grid-list *ngIf="items && items.cols" [cols]="items.cols" [rowHeight]="rowHeight+'px'">
+  <ng-container *ngFor="let item of items.itemData">
+    <app-grid-tile *ngIf="item.selector !== 'hidden'" [colspan]="item.colspan" [rowspan]="item.rowspan">
+      <div [ngSwitch]="item.selector" class="switch">
+        <!-- 标题 -->
+        <display-title *ngSwitchCase="'display-title'" [value]="item.value"></display-title>
+        <!-- 图片 -->
+        <display-image *ngSwitchCase="'display-image'" [value]="item.value" [name]="item.name"></display-image>
+        <!-- 日期 -->
+        <display-date *ngSwitchCase="'display-date'" [value]="item.value" [name]="item.name"></display-date>
+        <!-- 日期时间 -->
+        <display-datetime *ngSwitchCase="'display-datetime'" [value]="item.value" [name]="item.name"></display-datetime>
+        <!-- 手机 -->
+        <display-mobile *ngSwitchCase="'display-mobile'" [value]="item.value" [name]="item.name" [operate]="operate">
+        </display-mobile>
+        <!-- 标签 -->
+        <display-tag *ngSwitchCase="'display-tag'" [value]="item.value" [tagStyle]="item.tagStyle"></display-tag>
+        <!-- 描述 -->
+        <display-desc *ngSwitchCase="'display-desc'" [value]="item.value" [name]="item.name" [operate]="operate">
+        </display-desc>
+        <!-- toggle -->
+        <display-toggle *ngSwitchCase="'display-toggle'" [value]="item.value" [name]="item.name"></display-toggle>
+        <!-- 文件 -->
+        <display-file *ngSwitchCase="'display-file'" [value]="item.value" [name]="item.name"></display-file>
+        <!-- 默认 -->
+        <display-default *ngSwitchCase="'display-default'" [value]="item.value" [name]="item.name"
+          [setStyle]="item.setStyle || {}"></display-default>
+        <!-- default -->
+        <display-default *ngSwitchDefault [value]="item.value" [name]="item.name" [setStyle]="item.setStyle || {}">
+        </display-default>
+      </div>
+    </app-grid-tile>
+  </ng-container>
+</app-grid-list>
+
+<div></div>

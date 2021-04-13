@@ -1,0 +1,15 @@
+wx-work-pc {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+
+    .erroMsg {
+        font-size: 20px;
+        color: #333333;
+        width: 80vw;
+    }
+}

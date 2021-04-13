@@ -1,0 +1,14 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- input -->
+  <ion-input [type]="'tel'" [formControlName]="inputFormControlName" [readonly]="readonly" class="edit-value" text-start>
+  </ion-input>
+  <ion-icon *ngIf="!formControl.valid" name="call" color="disable" class="edit-btns" item-end>
+  </ion-icon>
+  <ion-icon *ngIf="formControl.valid" name="call" color="default" class="edit-btns" item-end>
+    <a href="tel:{{formControl.value}}" class="call"></a>
+  </ion-icon>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

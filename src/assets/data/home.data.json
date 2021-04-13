@@ -1,0 +1,35 @@
+{
+  "companyName": "上海万象建设工程有限公司",
+  "mobile": "181****7813",
+  "role": 1,
+  "moduleCategory": [
+    {
+      "categoryName": "采购",
+      "moduleList": [
+        {
+          "name": "销售订单",
+          "key": "orderModule"
+        },
+        {
+          "name": "采购订单",
+          "key": "saleModule"
+        }
+      ]
+    },
+    {
+      "categoryName": "项目",
+      "moduleList": [
+        {
+          "name": "销售订单",
+          "key": "orderModule"
+        },
+        {
+          "name": "采购订单",
+          "key": "saleModule"
+        }
+      ]
+    }
+  ],
+  
+  "status": 1
+}

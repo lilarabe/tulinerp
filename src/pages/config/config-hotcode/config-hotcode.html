@@ -1,0 +1,37 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>热更新配置</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card>
+      <button (click)="hardHotCode();" small ion-button>强制热更新</button>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header>本地chcp.json信息</ion-list-header>
+      <ion-item *ngFor="let chcpItem of localChcpData;">
+        <ion-label class="lable" item-start>{{ chcpItem.key }}</ion-label>
+        <ion-note class="value" item-end>{{ chcpItem.value }}</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-list>
+      <ion-list-header>服务器chcp.json信息</ion-list-header>
+      <ion-item *ngIf="!isApp">不在APP中无法探测服务器chcp.json信息</ion-item>
+      <ion-item *ngFor="let chcpItem of serveChcpData;">
+        <ion-label class="lable" item-start>{{ chcpItem.key }}</ion-label>
+        <ion-note class="value" item-end>{{ chcpItem.value }}</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+</ion-content>

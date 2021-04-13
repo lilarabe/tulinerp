@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+
+    <ion-title>
+      <div class="title">{{title}}</div>
+    </ion-title>
+
+    <ion-buttons end>
+      <button (click)="close();" ion-button color="dark">
+        <button class="header-btn" ion-button clear>关闭</button>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content class="content">
+  <div>typeof:{{typeof}}</div>
+  <pre>{{preMsg}}</pre>
+</ion-content>

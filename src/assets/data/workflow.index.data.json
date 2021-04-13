@@ -1,0 +1,40 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "workflowCategoryData": [],
+    "badge": 1,
+    "approvalData": [
+      {
+        "categoryName": "待办事宜",
+        "moduleName": "__APPROVE[Todo]",
+        "badge": "1"
+      },
+      {
+        "categoryName": "已办事宜",
+        "moduleName": "__APPROVE[Done]",
+        "badge": "2"
+      },
+      {
+        "categoryName": "已归档",
+        "moduleName": "__APPROVE[Mine]",
+        "badge": "3"
+      },
+      {
+        "categoryName": "进行中",
+        "moduleName": "__APPROVE[Going]",
+        "badge": "4"
+      },
+      {
+        "categoryName": "被驳回",
+        "moduleName": "__APPROVE[Reject]",
+        "badge": "5"
+      },
+      {
+        "categoryName": "已归档",
+        "moduleName": "__APPROVE[MyMine]",
+        "badge": "6"
+      }
+    ]
+  }
+}

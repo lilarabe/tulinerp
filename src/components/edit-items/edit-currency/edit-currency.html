@@ -1,0 +1,23 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"
+    [inputFormControlName]="inputFormControlName">
+  </edit-public-lable>
+  <!-- item -->
+  <div class="currency-box">
+
+    <div [ngClass]="{'show':!isFocus, 'hidden':isFocus,'readonly':readonly || disable}"
+      class="edit-value currency-display">
+      {{ formControl.value | currency:' ':'symbol':'1.2-2' }}
+    </div>
+
+    <ion-input *ngIf="!readonly" [ngClass]="isFocus? 'show': 'hidden'" (ionChange)="changeInput($event);"
+      (ionBlur)="blurInput($event);" (ionFocus)="focusInput($event)" [formControlName]="inputFormControlName"
+      [placeholder]="tips" type="number" [readonly]="readonly" class="edit-value currency-input" text-start>
+    </ion-input>
+
+  </div>
+
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

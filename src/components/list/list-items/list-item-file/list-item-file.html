@@ -1,0 +1,8 @@
+<div class="list-tile">
+  <div class="lable">{{name| maxString:labelMaxLen}}</div>
+  <div class="colon">:</div>
+  <div class="value">
+    <button class="open-btn" *ngIf="value" (click.stop)="openBrowser(value);" color="default" ion-button
+      small>查看文件</button>
+  </div>
+</div>

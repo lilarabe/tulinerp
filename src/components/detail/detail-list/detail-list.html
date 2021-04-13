@@ -1,0 +1,84 @@
+<card *ngFor="let items of childData.listData; index as i;">
+
+  <ng-container #cardHeader></ng-container>
+
+  <card-body>
+    <div style="padding: 0 12px;overflow: hidden;" class="list-tiles">
+      <ng-container *ngFor="let item of items.itemData">
+
+        <ng-template *ngIf="item.selector === 'display-title'" #cardHeaderOutlet>
+          <card-header [label]="item.name + '：' + item.value">
+            <list-item-status *ngIf="items.approveStatus !== undefined" [status]="items.approveStatus">
+            </list-item-status>
+            <div class="card-btns">
+              <div (click)="del(items.id, i, items);" *ngIf="items.isDel" class="btn"><img
+                  src="assets/images/detail/del.png" class="img"></div>
+              <div (click)="pushEditPage(items);" *ngIf="items.isEdit" class="btn"><img
+                  src="assets/images/detail/edit_1.png" class="img"></div>
+            </div>
+          </card-header>
+        </ng-template>
+
+        <ng-container *ngTemplateOutlet="switchTemplate; context: {item:item}"></ng-container>
+
+
+      </ng-container>
+
+    </div>
+  </card-body>
+</card>
+
+<ng-container *ngIf="childData.listData.length === 0">
+  <detail-add></detail-add>
+</ng-container>
+
+<div *ngIf="isAdd && isShowAdd" (tap)="add();" class="add">添加</div>
+
+
+<ng-template #switchTemplate let-item="item">
+  <ng-container [ngSwitch]="item.selector">
+
+    <!-- 标签 -->
+    <list-item-tag *ngSwitchCase="'display-tag'" [value]="item.value" [tagStyle]="item.tagStyle">
+    </list-item-tag>
+    <!-- 描述 -->
+    <list-item-desc *ngSwitchCase="'display-desc'" [value]="item.value" [name]="item.name" [operate]="false">
+    </list-item-desc>
+    <!-- 图片 -->
+    <list-item-image *ngSwitchCase="'display-image'" [value]="item.value" [name]="item.name">
+    </list-item-image>
+    <!-- 文件 -->
+    <list-item-file *ngSwitchCase="'display-file'" [value]="item.value" [name]="item.name">
+    </list-item-file>
+    <!-- 开关 -->
+    <list-item-toggle *ngSwitchCase="'display-toggle'" [value]="item.value" [name]="item.name">
+    </list-item-toggle>
+    <!-- 货币 -->
+    <list-item-currency *ngSwitchCase="'display-currency'" [value]="item.value" [name]="item.name">
+    </list-item-currency>
+    <!-- 多图片 -->
+    <list-item-multiimage *ngSwitchCase="'display-multiimage'" [value]="item.value" [name]="item.name">
+    </list-item-multiimage>
+    <!-- 多文件 -->
+    <list-item-multifile *ngSwitchCase="'display-multifile'" [value]="item.value" [name]="item.name">
+    </list-item-multifile>
+
+     <!-- 年月  YYYY-MM -->
+     <list-item-date *ngSwitchCase="'display-yearmonth'" [value]="item.value" [name]="item.name" [type]="'yearmonth'">
+    </list-item-date>
+    <!-- 年月日  YYYY-MM-DD -->
+    <list-item-date *ngSwitchCase="'display-date'" [value]="item.value" [name]="item.name" [type]="'date'">
+    </list-item-date>
+    <!-- 年月日 时分秒  YYYY-MM-DD HH:mm:ss -->
+    <list-item-date *ngSwitchCase="'display-datetime'" [value]="item.value" [name]="item.name" [type]="'datetime'">
+    </list-item-date>
+    <!-- 手机 -->
+    <list-item-default *ngSwitchCase="'display-mobile'" [value]="item.value" [name]="item.name" [operate]="false">
+    </list-item-default>
+    <!-- 默认 -->
+    <list-item-default *ngSwitchCase="'display-default'" [value]="item.value" [name]="item.name"
+      [setStyle]="item.setStyle || {}">
+    </list-item-default>
+
+  </ng-container>
+</ng-template>

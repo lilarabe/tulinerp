@@ -1,0 +1,250 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+
+
+$colors: (primary: #488aff,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark: #222,
+  default: (base: #3178FF, contrast: #ffffff),
+  disable: (base: #aeacb4, contrast: #ffffff),
+  header:(base:#ffffff, contrast: #333333),
+);
+
+// 字体颜色颜色
+$fc-primary: color($colors, default);
+$fc-danger:color($colors, danger);
+$fc-0:#000;
+$fc-1:#333;
+$fc-2:#666;
+$fc-3:#999;
+
+
+// 字体大小
+$fs-large:16px;
+$fs-default:14px;
+$fs-small:12px;
+
+/* 边框 */
+$border: 1px solid #c8c7cc;
+
+
+
+/* 详细页 */
+$detail-title-size:14px;
+$detail-title-color:#333;
+
+
+/* 编辑页 */
+/* 编辑页 - lable */
+$edit-lable-size:16px;
+$edit-lable-color:#000;
+
+/* 编辑页 - error */
+$edit-error-size:12px;
+$edit-error-color:#f53d3d;
+/* 编辑页 - value */
+$edit-value-size:12px;
+$edit-value-color:#333;
+/* 编辑页 - lable */
+$edit-lable-size:12px;
+$edit-lable-color:#999;
+
+/* 首页 - catrgory */
+$home-category-size:14px;
+$home-category-color:#666;
+/* 首页 - items */
+$home-items-size:12px;
+$home-items-color:#333;
+
+/* 代办页 - title */
+$workflow-title-size:14px;
+$workflow-title-color:#666;
+/* 代办页 - item */
+$workflow-item-size:14px;
+$workflow-item-color:#333;
+/* 代办页 - more */
+$workflow-more-size:12px;
+$workflow-more-color:#999;
+
+
+.loginModal{
+  z-index: 1000 !important;
+}
+
+.max-zindex {
+  z-index: 11000 !important;
+}
+
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.clearfix{
+  zoom: 1;
+}
+
+
+
+
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+/* 默认主题 */
+@import "theme.default";
+/* 透明主题 */
+@import "theme.transparent";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+@import "icons";
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+// 项目全局定义
+@import "mixin";
+
+
+
+ion-header {
+  overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+//@import "material";
+
+@import "material-theme";
+
+
+@import "reset";
+
+ion-app {
+  background-color: transparent !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.alert-checkbox-icon {
+  border-radius: 0 !important;
+}
+
+
+/* ipad Modal */
+
+$modal-inset-width:100%;
+$modal-inset-height-large: 100%;
+
+/* toggle */
+$toggle-ios-width: 44px;
+$toggle-ios-height: 26px;
+
+/* 自定义 顶部 loading  */
+.loading-top {
+  display: block;
+
+  .backdrop-no-tappable {
+    opacity: 0 !important;
+  }
+
+  .loading-wrapper {
+    height: 48px;
+    width: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 47px;
+    box-sizing: border-box;
+    background-color: #fff !important;
+    border-radius: 0px !important;
+    justify-content: center;
+  }
+}
+
+.loading-delay {
+  opacity: 0;
+  animation-name: loadingDelayAnimate;
+  animation-duration: 0ms;
+  animation-timing-function: linear;
+  animation-delay: 3s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  // background-color: red;
+}
+
+@keyframes loadingDelayAnimate {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

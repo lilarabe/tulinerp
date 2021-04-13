@@ -1,0 +1,7 @@
+<div class="labels" *ngIf="labelShow">
+    <div (click)="labelClick(idx);" [ngClass]="{'active': idx === activeIndex, 'mark': item.isMark }"
+        *ngFor="let item of tabComponents; let idx = index;" class="label">
+        {{ item.label }}
+    </div>
+</div>
+<ng-content></ng-content>

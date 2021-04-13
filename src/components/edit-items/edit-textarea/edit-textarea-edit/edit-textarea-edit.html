@@ -1,0 +1,28 @@
+<ion-header offline>
+
+  <ion-navbar>
+    <!-- <ion-buttons start>
+      <button (click)="dismiss();" ion-button icon-only>
+        <ion-icon name="arrow-back" color="light"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+    <ion-title>{{placeholder}}</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="ok();">
+        <button class="header-btn" ion-button clear>确定</button>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="textarea-content">
+    <div #textarea contenteditable="true" placeholder="请在此处输入内容" class="textarea">{{ value }}</div>
+  </div>
+
+</ion-content>

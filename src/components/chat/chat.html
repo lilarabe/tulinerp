@@ -1,0 +1,67 @@
+<ion-header offline>
+
+  <ion-navbar>
+    <!-- <ion-buttons start>
+      <button (click)="dismiss();" ion-button icon-only>
+        <ion-icon name="arrow-back" color="light"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+    <ion-title>讨论</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="dismiss();">
+        <button class="header-btn" ion-button clear>关闭</button>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content debug-toggle>
+
+  <div class="chat-box">
+
+    <div class="chat-list" #chatListElementRef>
+
+      <div *ngFor="let item of chatList; index as i; trackBy: i" [ngClass]="{'me': item.isUserCall}" class="chat-item">
+        <div class="chat-item-name">{{ item.realname }}</div>
+        <div class="chat-item-msg">
+          <div *ngIf="item.call_user.length > 0" class="aters">
+            <div *ngFor="let ater of item.call_user" class="ater">@{{ater.name}}</div>
+          </div>
+          <div class="content">{{ item.content }}</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div *ngIf="aterNames.length" class="aterUsers">
+      <div *ngFor="let name of aterNames" class="aterUser">{{name}}</div>
+    </div>
+
+    <div class="toolbar" color="light">
+
+      <div class="btns left">
+        <button color="dark" clear ion-button icon-only (click.stop)="selectAters();">
+          <ion-icon name="ios-at-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="inputbar">
+        <ion-input class="inputbar-input" type="text" [(ngModel)]="msgModel" (ionFocus)="inputFocus();"></ion-input>
+      </div>
+
+      <div class="btns right">
+        <button color="default" clear ion-button icon-only (click.stop)="sendMsg();">
+          <ion-icon name="ios-send"></ion-icon>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</ion-content>

@@ -1,0 +1,34 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"
+    [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note class="note-desc edit-bar" item-end>
+      <!-- <button *ngIf="!(readonly || disable) && filePath" (click.stop)="del();" color="danger" ion-button small>删除</button> -->
+      <button *ngIf="!(readonly || disable)" color="default" ion-button small>
+        选择图片
+        <app-images-upload (uploadFileInfoEvent)="getUploadFileInfo($event);" [fileTypeNames]="fileTypeNames"
+          [fileMaxSize]="fileMaxSize"></app-images-upload>
+      </button>
+
+      <!-- <ion-icon name="images" ios="ios-images" md="md-images"></ion-icon> -->
+
+      <!-- <ion-icon *ngIf="isCordova && !(readonly || disable)" native-camera
+        (uploadImageBase64)="getNativeCameraData($event);" class="camera-icon" name="camera" color="default" item-end>
+      </ion-icon> -->
+
+      <!-- <button *ngIf="filePath && fileBase64" (click.stop)="view();" color="default" ion-button small>查看</button> -->
+    </ion-note>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>
+<div class="item-list">
+  <div *ngFor="let item of FileInfo;let i=index;" class="item">
+      <!-- <ion-img [src]="item.filePath" class="img" (click.stop)="view(item);" alt=""></ion-img> -->
+      <img [src]="item.filePath | safeUrl" class="img" (click.stop)="view(i);" alt=""/>
+      <span class="delete" (click.stop)="del(i);"
+        *ngIf="!(readonly || disable) && item.filePath">X</span>
+  </div>
+</div>

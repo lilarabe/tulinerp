@@ -1,0 +1,16 @@
+
+<ion-header offline>
+
+  <ion-navbar>
+    <ion-title>报表</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content debug-toggle>
+
+  <ion-list inset>
+    <button ion-item *ngFor="let chartItem of chartList" [navPush]="chartDetailPage" [navParams]="{ chartId: chartItem.chartId }">{{chartItem.chartName}}</button> 
+  </ion-list>
+
+</ion-content>

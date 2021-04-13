@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>视频录制</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <video autoplay playsinline #video></video>
+
+  <video controls="controls" loop="loop" autoplay playsinline #recordvideo></video>
+
+  <ion-fab class="record-btn" center bottom>
+    <button (click)="startRecord()" *ngIf="!isRecording" ion-fab color="default"><ion-icon name="radio-button-on"></ion-icon></button>
+    <button (click)="stopRecord()" *ngIf="isRecording" ion-fab color="default"><ion-icon name="square"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

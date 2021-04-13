@@ -1,0 +1,9 @@
+<div class="moredata-full">
+  <div class="items">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+  </div>
+  <div *ngIf="moreDataItemData.value" class="video">
+    <app-video-player [src]="moreDataItemData.value" [poster]=""></app-video-player>
+  </div>
+</div>

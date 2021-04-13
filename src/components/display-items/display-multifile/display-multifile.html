@@ -1,0 +1,8 @@
+<div class="items">
+  <div class="lable">{{name}}</div>
+  <div class="colon">:</div>
+  <div class="value">
+    <button class="open-btn" *ngIf="value" (click.stop)="openBrowser(value);" color="default" ion-button
+      small>查看</button>
+  </div>
+</div>

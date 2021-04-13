@@ -1,0 +1,32 @@
+edit-autocomplete {
+  .ion-item {
+    touch-action: auto !important;
+  }
+
+  .readonly {
+    opacity: 0.4;
+  }
+
+  .autocomplete-panle {
+    position: relative;
+
+    .panel>.option-btn:first-child {
+      border-top: none;
+    }
+
+    .panel>.option-btn:last-child {
+      border-bottom: none;
+    }
+
+    .panel {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+
+      .option-btn {
+        background-color: aliceblue;
+      }
+    }
+  }
+
+}

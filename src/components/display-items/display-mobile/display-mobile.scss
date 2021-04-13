@@ -1,0 +1,24 @@
+display-mobile {
+    .mat-icon {
+        width: auto;
+        height: auto;
+    }
+
+    font-size: $desc-size;
+    color: $desc-color;
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        flex-flow: nowrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .phone {
+        font-size: 16px;
+    }
+    .call{
+        font-size: $desc-size;
+        color: $fc-primary;
+        text-decoration:none;
+    }
+}

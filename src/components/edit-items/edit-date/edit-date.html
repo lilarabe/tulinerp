@@ -1,0 +1,18 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids" [inputFormControlName]="inputFormControlName">
+  </edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note *ngIf="readonly || disable" class="edit-value readonly" item-end>
+      {{ formControl.value }}</ion-note>
+    <ion-datetime *ngIf="!(readonly || disable)" [minuteValues]="'0,15,30,45'" [displayFormat]="displayFormat"
+      [pickerFormat]="pickerFormat" [min]="minDate" [max]="maxDate" [formControlName]="inputFormControlName"
+      placeholder="请选择日期" doneText="确定" cancelText="取消" class="edit-value">
+    </ion-datetime>
+    <ion-icon *ngIf="!(readonly || disable)" class="edit-btns" [color]="'default'" name='calendar' item-end>
+    </ion-icon>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state [fieldData]="fieldData"></edit-public-state>
+</div>

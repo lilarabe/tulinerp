@@ -1,0 +1,7 @@
+<ion-item>
+  <ion-label>{{ name }}</ion-label>
+</ion-item>
+
+<div class="pic-box" *ngIf="!!value">
+  <img (tap)="previewImage();" [src]="value | safeUrl" class="pic-img" />
+</div>

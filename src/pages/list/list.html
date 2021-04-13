@@ -1,0 +1,52 @@
+<ion-header offline>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+    <!-- 筛选按钮 -->
+    <!-- <ion-buttons end>
+      <button class="filter-btn" small ion-button icon-only color="light" (tap)="openFilterModal();">
+        <ion-icon name="funnel"></ion-icon>
+        筛选
+      </button>
+    </ion-buttons> -->
+
+  </ion-navbar>
+
+  <list-search (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+    (searchClickEvent)="searchInput($event);"></list-search>
+
+</ion-header>
+
+
+<ion-content debug-toggle>
+  <!--下拉刷新-->
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="下拉刷新" refreshingText="下拉刷新"></ion-refresher-content>
+  </ion-refresher>
+
+  <!-- 请求等等图片 -->
+  <div *ngIf="!isLoaded" class="no-data">
+    <img class="no-data-img" src="assets/images/nodata/list.png">
+  </div>
+
+  <list-num *ngIf="totalNum>0" [totalNum]="totalNum"></list-num>
+
+  <display-items [listData]="listData" [moduleName]="moduleName" [clickAction]="'toDetailPage'" [isDrag]="true"
+    tappable></display-items>
+
+  <ion-fab *ngIf="isAdd" bottom right>
+    <button ion-fab color="default" (tap)="add();">
+      <ion-icon color="light" class="add-btn-icon" name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <div *ngIf="searchOptions.length > 0" ion-fixed class="autocomplete-content">
+    <button ion-item *ngFor="let option of searchOptions" (tap)="optionSelected(option);">
+      {{ option }}
+    </button>
+  </div>
+
+  <!--上拉加载-->
+  <list-next-page [isEnabled]="canFlippingPage" (nextPageEvent)="$event.waitFor(asyncNextPage());"></list-next-page>
+
+</ion-content>

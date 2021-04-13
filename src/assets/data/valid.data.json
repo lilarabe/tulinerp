@@ -1,0 +1,7 @@
+{
+  "status": 1,
+  "payload": {
+    "errorMsg": "异步验证报错",
+    "valid": false
+  }
+}

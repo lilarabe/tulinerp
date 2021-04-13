@@ -1,0 +1,23 @@
+<vg-player style="height: 50px;">
+
+  <vg-controls>
+
+    <vg-play-pause></vg-play-pause>
+
+    <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+
+    <vg-scrub-bar>
+      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
+
+    <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+
+    <vg-mute></vg-mute>
+
+  </vg-controls>
+
+  <audio #media [vgMedia]="media" id="myAudio" preload="auto" [src]="src | safeUrl">
+    <!-- <source  [src]="src" [type]="type"> -->
+  </audio>
+</vg-player>

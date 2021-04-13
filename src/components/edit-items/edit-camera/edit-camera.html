@@ -1,0 +1,25 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+
+    <ion-icon *ngIf="isBrowser && !(readonly || disable)" class="camera-icon" name="camera" color="default" item-end>
+      <app-image-upload (imageDataEvent)="getAppImageUploadData($event);"></app-image-upload>
+    </ion-icon>
+
+    <ion-icon *ngIf="isCordova && !(readonly || disable)" native-camera
+      (uploadImageBase64)="getNativeCameraData($event);" class="camera-icon" name="camera" color="default" item-end>
+    </ion-icon>
+
+    <ion-icon *ngIf="!!uploadImageSrc && !(readonly || disable)" (tap)="del();" class="del" name="trash" color="danger"
+      item-end></ion-icon>
+  </ion-item>
+
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>
+
+<div class="pic-box" *ngIf="!!uploadImageSrc">
+  <img (tap)="previewImage();" [src]="uploadImageSrc | safeUrl" class="pic-img" />
+</div>

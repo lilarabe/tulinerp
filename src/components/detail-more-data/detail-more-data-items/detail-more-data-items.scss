@@ -1,0 +1,164 @@
+@import '../../../theme/mixin';
+
+detail-more-data-items {
+  display: block;
+  overflow: hidden;
+
+  .group {
+    box-sizing: border-box;
+    margin-top: 12px;
+
+    .card-btns{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      .btn {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 25px;
+        img{
+          height: 100%;
+          width: auto;
+        }
+      }
+    }
+
+    .moredata {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 12px;
+
+      .moredata-default {
+        width: calc((100vw - 50px)/2);
+        // height: 30px;
+        overflow: hidden;
+        @include flex-x;
+        align-items: center;
+      }
+
+      .moredata-full {
+        width: calc(100vw - 50px);
+        height: auto;
+      }
+    }
+
+    .items,
+    .items-file,
+    .items-location {
+      @include flex-x;
+      // height: 30px;
+      // line-height: 30px;
+      width: 100%;
+      overflow: hidden;
+
+      .lable {
+        font-size: $desc-size;
+        color: $desc-color;
+        min-width: 55px;
+        max-width: 100px;
+        text-align: justify;
+        overflow: hidden;
+        text-align-last: justify;
+        line-height: 30px;
+        height: 30px;
+        // @include ells(1);
+      }
+
+      .lable:after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        height: 0;
+      }
+
+      .colon {
+        font-size: $desc-size;
+        color: $desc-color;
+        margin: 0 5px 0 3px;
+        line-height: 30px;
+      }
+      /*
+        修改这里要注意 js 的 溢出运算
+      */
+      .value {
+        font-size: $desc-size;
+        color: $title-color;
+        flex: 1;
+        overflow: hidden;
+        white-space: nowrap;
+        line-height: 30px;
+        @include ells(1);
+      }
+
+      .unit{
+        line-height: 30px;
+      }
+    }
+
+    .items-file,
+    .items-location {
+      height: auto;
+      align-items: center;
+
+      .lable:after {
+        content: "";
+        display: inline-block;
+        width: 0;
+        overflow: hidden;
+        height: 0;
+      }
+    }
+
+    .items-file {
+      .value {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+    .items-location {
+      .value {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .address {
+          flex: 1;
+          @include ells(1);
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+
+    .image {
+      width: 100%;
+      height: calc((100vw - 30px) * 0.5625);
+      overflow: hidden;
+
+      @include flex-y();
+      justify-content: center;
+      align-items: center;
+
+      .img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .video {
+      width: calc(100vw - 30px);
+    }
+
+
+  }
+
+}

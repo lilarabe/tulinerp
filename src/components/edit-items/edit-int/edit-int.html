@@ -1,0 +1,18 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"
+    [inputFormControlName]="inputFormControlName">
+  </edit-public-lable>
+  <!-- item -->
+  <ion-input *ngIf="!readonly" (ionChange)="onChange($event);" (keypress)="onKeypress($event);" [formControlName]="inputFormControlName"
+     [placeholder]="tips" type="number" [readonly]="readonly" class="edit-value" text-start>
+  </ion-input>
+
+  <ion-note *ngIf="readonly" [ngClass]="readonly || disable ? 'readonly' : ''" color="dark" class="edit-value"
+    item-content>
+    {{ formControl.value }}
+  </ion-note>
+
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

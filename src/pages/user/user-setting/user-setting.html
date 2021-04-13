@@ -1,0 +1,55 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>用户设置</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item-group>
+
+    <button (tap)="pushPasswordPage();" ion-item>
+      <ion-icon name="ios-eye-outline" item-start color="dark"></ion-icon>
+      <ion-label>修改密码</ion-label>
+    </button>
+
+  </ion-item-group>
+
+  <ion-item-group>
+
+    <ion-item (tap)="hardHotCode();">
+      <ion-icon name='swap' item-start></ion-icon>
+      版本更新
+
+      <ion-note item-end style="font-size: 12px;">
+        <div class="releases">
+          <div>{{ localRelease }}</div>
+          <div>{{ serveRelease }}</div>
+        </div>
+      </ion-note>
+
+      <!-- <ion-note item-end>
+        <button  ion-button color="default" clear >
+          <ion-icon name="ios-cloud-download"></ion-icon>
+          更新
+        </button>
+      </ion-note> -->
+      
+    </ion-item>
+  
+  </ion-item-group>
+
+
+  
+  <!-- <div *ngIf="isWxWorkMobile && false" style="padding: 16px 0;">
+    <div>企业微信浏览器信息:</div>
+    <div>{{ userAgent }}</div>
+  </div> -->
+
+
+
+</ion-content>

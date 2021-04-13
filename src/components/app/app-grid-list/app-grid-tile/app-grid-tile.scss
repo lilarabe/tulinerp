@@ -1,0 +1,14 @@
+@import '../../../../theme/mixin';
+
+app-grid-tile {
+
+}
+
+.app-grid-tile{
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}

@@ -1,0 +1,39 @@
+editor-segment {
+    .segment {
+        width: 100%;
+        height: 46px;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: row;
+
+        .segment-item {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            color: #666666;
+            position: relative;
+
+            &::after{
+                content: '';
+                width: 1px;
+                height: 14px;
+                background-color: #EEEEEE;
+                position: absolute;
+                right: 0;
+            }
+
+            &:last-child {
+                &::after{
+                    width: 0px;
+                }
+            }
+        }
+
+        .segment-item.active {
+            color: #3178ff;
+            font-weight: 700;
+        }
+    }
+}

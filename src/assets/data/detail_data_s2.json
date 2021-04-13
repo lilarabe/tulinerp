@@ -1,0 +1,105 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "isApprovalFlow": false,
+    "isEdit": true,
+    "title": "",
+    "baseData": {
+      "cols": "4",
+      "itemData": ""
+    },
+    "moreData": [{
+      "groupName": "基本信息",
+      "group_Display": true,
+      "itemData": [{
+        "name": "仓库编号",
+        "value": "HZJiuTing",
+        "key": "ID",
+        "selector": "display-default",
+        "realvalue": "HZJiuTing"
+      }, {
+        "name": "仓库类型",
+        "value": "",
+        "key": "cklx",
+        "selector": "hidden",
+        "realvalue": ""
+      }, {
+        "name": "仓库名称",
+        "value": "住宅公司九亭出库",
+        "key": "ckmc",
+        "selector": "display-title",
+        "realvalue": "住宅公司九亭出库"
+      },
+      {
+        "name": "所在部门",
+        "value": "A252,A252B17800,A252B17800C21000",
+        "key": "suozaibumen",
+        "selector": "display-multilevel",
+        "realvalue": "A252,A252B17800,A252B17800C21000"
+      },{
+        "name": "所在部门",
+        "value": "全筑智慧科技集团/智能云事业部/产品开发部",
+        "key": "suozaibumen_name",
+        "selector": "display-multilevel",
+        "realvalue": "全筑智慧科技集团/智能云事业部/产品开发部"
+      },{
+        "name": "省份",
+        "value": "上海",
+        "key": "sheng",
+        "selector": "display-default",
+        "realvalue": "上海"
+      }, {
+        "name": "城市",
+        "value": "上海",
+        "key": "shi",
+        "selector": "display-default",
+        "realvalue": "上海"
+      }, {
+        "name": "区县",
+        "value": "",
+        "key": "quxian",
+        "selector": "display-default",
+        "realvalue": ""
+      }, {
+        "name": "暂存状态",
+        "value": "",
+        "key": "tempsave",
+        "selector": "hidden",
+        "realvalue": ""
+      }, {
+        "name": "仓库状态",
+        "value": "活跃",
+        "key": "ckzt",
+        "selector": "display-tag",
+        "realvalue": "活跃"
+      }]
+    }],
+    "chilerenData": [{
+      "displayStyle": "default",
+      "listData": [],
+      "moduleName": "t_cangku_city",
+      "name": "辐射城市",
+      "isAdd": true,
+      "isHide": false
+    }],
+    "Extra": [],
+    "relevantModuleData": [],
+    "approvalData": {
+      "isShowSubmitBtn": false,
+      "baseOpenFiled": [],
+      "chilerenOpenFiled": [],
+      "logData": [],
+      "rejectData": [{
+        "value": -1,
+        "label": "驳回至发起人"
+      }],
+      "isSubmit": false,
+      "isApprovalPending": false,
+      "isComplete": false,
+      "approvalStatus": -1,
+      "approvalerData": []
+    },
+    "DiscussSum": 0
+  }
+}

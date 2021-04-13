@@ -1,0 +1,5 @@
+<ion-item (tap)="pushFkModulePage($event);">
+  <ion-label>{{ name }}</ion-label>
+  <ion-note item-end>{{ value }}</ion-note>
+  <ion-icon *ngIf="!!fkModuleName" name="information-circle" color="primary" item-end></ion-icon>
+</ion-item>

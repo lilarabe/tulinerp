@@ -1,0 +1,80 @@
+/* 默认主题 */
+:root {
+    --fs-l: 16px;
+    --fs-m: 14px;
+    --fs-s: 12px;
+}
+
+/* 列表页 字体大小 */
+$title-size : var(--fs-m);
+$desc-size  :13px;
+/*列表页 字体颜色*/
+$title-color: #333;
+$desc-color : #B0B0B2;
+
+
+.default-theme {
+
+
+    opacity: 1;
+
+    /* 头部标题 */
+    .toolbar-title {
+        font-size  : 18px !important;
+        font-weight: normal !important;
+        color      : #333333 !important;
+        padding    : 0 !important;
+    }
+
+
+    /* 头部按钮 */
+    .header-btn {
+        color: #3178FF !important;
+    }
+
+
+    /*头部背景色*/
+
+    .toolbar-background {
+        background-color: color($colors, header) !important;
+        transition      : background-color 250ms linear !important;
+        border-width    : 0 !important;
+    }
+
+    /*头部返回*/
+
+    .back-button {
+        color: #333333 !important;
+    }
+
+    .back-button-icon {
+        font-size: 22px !important;
+    }
+
+    // 背景颜色
+    ion-content {
+
+        background-color: #EEEEEE;
+
+        // background-color: #FFFFFF !important;
+        .main {
+            margin-bottom: 20px;
+        }
+    }
+
+    // tabs
+    ion-tabs.tabs {
+
+        .tabbar {
+            border-top      : none;
+            background-color: #FFFFFF;
+            box-shadow      : 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+    }
+}
+
+.popover-ios .popover-content{
+    width: 210px !important;
+}

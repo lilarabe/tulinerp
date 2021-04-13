@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>人脸对比</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <face-description *ngIf="isShow" (resultEvent)="getFaceDescription($event);"></face-description>
+
+  <img *ngIf="src1" [src]="src1" >
+
+  <img *ngIf="src2" [src]="src2" >
+  
+</ion-content>

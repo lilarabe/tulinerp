@@ -1,0 +1,13 @@
+<div class="list-tile">
+  <div class="lable">{{name| maxString:labelMaxLen}}</div>
+  <div class="colon">:</div>
+  <div class="value">
+    <!-- <button class="open-btn" *ngIf="value" (click.stop)="previewImage(value);" color="default" ion-button
+      small>{{ btnText }}</button> -->
+  </div>
+</div>
+<div class="item-list">
+  <div *ngFor="let item of value;let i=index;" class="item">
+      <img [src]="item.filePath" class="img" (click.stop)="previewImage(item.filePath);" alt=""/>
+  </div>
+</div>

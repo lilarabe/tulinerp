@@ -1,0 +1,11 @@
+<div [formGroup]="inputFormGroup">
+  <div class="filter-number" [formGroup]="numberFormGroup">
+    <div class="filter-number-item">
+      <ion-input formControlName="min" type="number" class="filter-number-item-input"></ion-input>
+    </div>
+    <div class="filter-number-split"></div>
+    <div class="filter-number-item">
+      <ion-input formControlName="max" type="number" class="filter-number-item-input"></ion-input>
+    </div>
+  </div>
+</div>

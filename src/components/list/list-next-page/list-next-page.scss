@@ -1,0 +1,13 @@
+list-next-page {
+    display: block;
+    width: 100%;
+  
+    .page-bottom-end {
+      font-size: 12px;
+      color: #999;
+      height: 40px;
+      @include flex-x();
+      justify-content: center;
+      align-items: center;
+    }
+}

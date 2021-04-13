@@ -1,0 +1,30 @@
+<ion-item-group *ngIf="isShow">
+  <ion-item-divider color="light" class="item-divider">
+    <!-- <ion-icon class="item-divider-icon" name="images" color="default" item-start></ion-icon> -->
+    {{ itemsData.name }}
+  </ion-item-divider>
+</ion-item-group>
+
+<div *ngIf="isShow" class="pictures-content">
+
+  <div *ngFor="let item of itemsData.listData; index as i;" class="picture-box">
+    <img (tap)="previewImage(i);" class="img" [src]="item.src">
+    <ion-icon *ngIf="isEdit" (tap)="imageDel(item.id,i);" class="picture-del" color="danger" name="close-circle"></ion-icon>
+  </div>
+
+  <!-- 在browser中新增 -->
+  <div *ngIf="isBrowser && isEdit">
+      <div *ngIf="itemsData.listData.length < max" class="picture-box picture-add">
+          <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
+          <app-image-upload (imageDataEvent)="getBase64FromComponent($event.base64);"></app-image-upload>
+      </div>
+  </div>
+
+  <!-- 在app中新增 -->
+  <div *ngIf="isCordova && isEdit" native-camera (uploadImageBase64)="getBase64FromComponent($event);">
+    <div *ngIf="itemsData.listData.length < max" class="picture-box picture-add">
+      <button ion-fab color="light"><ion-icon name="add"></ion-icon></button>
+    </div>
+  </div>
+
+</div>

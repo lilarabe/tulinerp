@@ -1,0 +1,10 @@
+<div class="mobile">
+  <div class="items">
+    <div class="lable">{{name}}</div>
+    <div class="colon">:</div>
+    <div *ngIf="!operate" class="value">{{value}}</div>
+    <div *ngIf="operate" (click.stop)="doNothing();" tappable class="value">
+      <a href="tel:{{value}}" class="call">{{value}}</a>
+    </div>
+  </div>
+</div>

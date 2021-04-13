@@ -1,0 +1,20 @@
+detail-more-multiimage {
+    .item-list {
+        padding: 0px 10px;
+        display: flex;
+        display: -webkit-flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .item {
+          flex: 0 0 none;
+          width: 30%;
+          margin-right: 3%;
+          position: relative;
+    
+          .img {
+            width: 100%;
+            min-height: 60px;
+          }
+        }
+      }
+}

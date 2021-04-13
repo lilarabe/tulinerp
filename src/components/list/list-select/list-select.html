@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item class='item' *ngFor="let item of valueArray">
+    <ion-label class="label">
+      <input type="radio" class='radio' [disabled]='item.children && !canSelectParent' (change)="change(item)" [(ngModel)]="thisData" [value]='item.value' />
+      <div (click)="checked(item)" class='content'>
+        {{item.label}}
+        <ion-icon *ngIf="item.children" name="arrow-forward" class="icon"></ion-icon>
+      </div>
+    </ion-label>
+  </ion-item>
+</ion-list>

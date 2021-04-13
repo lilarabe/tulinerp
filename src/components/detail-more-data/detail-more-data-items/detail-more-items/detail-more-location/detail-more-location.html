@@ -1,0 +1,11 @@
+<div class="moredata-full">
+  <div class="items-location">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+    <div class="value">
+      <div *ngIf="moreDataItemData.value" class="address">{{ moreDataItemData.value.address }}</div>
+      <button *ngIf="moreDataItemData.value" (click.stop)="presentWebBaiduMapPage(moreDataItemData.value);"
+        color="default" ion-button small>查看地图</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,189 @@
+<ion-header offline *ngIf="!isEditBtn">
+
+  <ion-navbar>
+    <ion-title *ngIf="isLoaded">{{title}}</ion-title>
+  </ion-navbar>
+
+  <!-- 新增页步骤 -->
+  <div *ngIf="currentPage==='add' && stepsData.length > 1" class="addpage-header-steps">
+    <steps [(activeId)]="activeStepId" [stepLength]='stepsData.length'>
+      <ng-container *ngFor="let step of this.stepsData;">
+        <step [title]="step.title" [activeId]="step.id" [ngClass]="{'roll': this.stepsData.length>4}"></step>
+      </ng-container>
+    </steps>
+  </div>
+
+  <!-- 编辑页主子表切换 -->
+  <ng-container *ngIf="currentPage==='edit' && chilerenData.length > 0">
+    <editor-tabs (activeLabelChange)="onActiveLabelChange($event);" [labels]="headerTabs"></editor-tabs>
+  </ng-container>
+
+</ion-header>
+
+
+<ion-content debug-toggle>
+
+  <!-- 请求等等图片 -->
+  <div *ngIf="!isLoaded" class="no-data">
+    <img class="no-data-img" src="assets/images/nodata/edit.png">
+  </div>
+
+  <!-- 编辑页主子表切换 -->
+  <ng-container *ngIf="isEditBtn && headerTabs.length>1">
+    <editor-tabs (activeLabelChange)="onActiveLabelChange($event);" [labels]="headerTabs"></editor-tabs>
+  </ng-container>
+
+  <!-- 编辑页主表数据 -->
+  <div *ngIf="currentPage==='edit'" [hidden]="activeStepId !== 'master'">
+    <ng-container *ngFor="let group of editGroupData; let idx = index;">
+      <ng-container
+        *ngIf="group.hidden === undefined || group.hidden === false || (group.isGroupFieldsCanEdit && group.hidden === false )">
+        <edit-items (sheetlinkChildAddEvent)="onSheetlinkChildAddEvent($event);" [fieldArray]="group.fieldArray || []"
+          [inputFormGroup]="editForm" [groupName]="group.name" [expanded]="group.expanded" [requireData]="params || {}"
+          [editGroupData]="editGroupData || []" [moduleName]="navParams.get('moduleName') || ''" [action]="'edit'">
+        </edit-items>
+      </ng-container>
+    </ng-container>
+  </div>
+
+  <!-- 新增页主表表数据 -->
+  <div *ngIf="currentPage==='add'">
+    <ng-container *ngFor="let group of editGroupData; let idx = index;">
+      <div [hidden]="activeStepId !== 'master-'+idx ">
+
+        <edit-items (sheetlinkChildAddEvent)="onSheetlinkChildAddEvent($event);" [fieldArray]="group.fieldArray || []"
+          [inputFormGroup]="editForm" [groupName]="group.name" [expanded]="group.expanded" [requireData]="params || {}"
+          [editGroupData]="editGroupData || []" [moduleName]="navParams.get('moduleName') || ''" [action]="'add'">
+        </edit-items>
+
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- 子表数据 -->
+  <ng-container *ngIf="chilerenData.length > 0">
+    <ng-container *ngFor="let child of chilerenData; let childIndex=index">
+      <div [hidden]="activeStepId !== 'child-'+childIndex" *ngIf="!child.hidden">
+
+        <div class="btns" *ngIf="child.add && !isEditBtn">
+          <div (click.stop)="onChildAddEvent(child.moduleName);" class="childAddbtn">+ 添加</div>
+        </div>
+
+        <ng-container *ngFor="let groups of child.listData; let groupIndex=index">
+          <ng-container *ngFor="let group of groups.groups; let idx=index">
+            <edit-items [fieldArray]="group.fieldArray || []" [clearHidden]='isEditBtn'
+              [childItemData]="groups"
+              [inputFormGroup]="chilerenForm.at(childIndex).get(child.moduleName).get([groupIndex])" [childData]="child"
+              [childFormArray]="chilerenForm.at(childIndex).get(child.moduleName)" [childGroupIndex]="groupIndex"
+              [mainForm]="editForm" (childDelEvent)="onChildDelEvent($event);" action="child">
+            </edit-items>
+          </ng-container>
+        </ng-container>
+      </div>
+
+    </ng-container>
+  </ng-container>
+
+
+  <div class="edit-footer bg-none" *ngIf="currentPage==='edit' && isLoaded && isEditBtn">
+    <div class="footer-body">
+      <!-- 可以提交 -->
+      <ng-container *ngIf="isSubmitting === false">
+        <div class="btn save" (click.stop)="save('only');">保存</div>
+        <div class="btn save" (click.stop)="detailApprovalConfirm()">确定并提交</div>
+      </ng-container>
+      <!-- 不可提交 -->
+      <ng-container *ngIf="isSubmitting === true">
+        <div class="btn invalid">保存</div>
+        <div class="btn invalid">确定并提交</div>
+      </ng-container>
+    </div>
+  </div>
+
+
+</ion-content>
+
+
+<!-- 底部 -->
+<ion-footer *ngIf="!isEditBtn">
+  <div class="edit-footer">
+    <div class="footer-body">
+
+      <!-- 编辑页底部按钮 -->
+      <ng-container *ngIf="currentPage==='edit' && isLoaded">
+        <!-- 可以提交 -->
+        <ng-container *ngIf="isSubmitting === false">
+          <!-- 保存 -->
+          <div (click.stop)="save('save');" class="btn save">保存</div>
+          <!-- 提交 -->
+          <div (click.stop)="save('submit');" *ngIf="isApprovalFlow && isSubmitting === false" class="btn submit ">提交
+          </div>
+        </ng-container>
+
+        <!-- 不可提交 -->
+        <ng-container *ngIf="isSubmitting === true">
+          <!-- 保存 -->
+          <div class="btn invalid">保存</div>
+          <!-- 提交 -->
+          <div *ngIf="isApprovalFlow && isSubmitting === false" class="btn invalid">提交</div>
+        </ng-container>
+      </ng-container>
+
+
+
+      <!-- 新增页底部按钮 -->
+      <ng-container *ngIf="currentPage==='add' && isLoaded">
+        <!-- 可以提交 -->
+        <ng-container *ngIf="isSubmitting === false">
+          <!-- 暂存 不是最后一步 -->
+          <div (click.stop)="save('only');" *ngIf="activeStepId !== stepsData[stepsData.length - 1]?.id" class="btn">暂存
+          </div>
+          <!-- 保存 最后一步  -->
+          <div (click.stop)="save('save');"
+            *ngIf="stepsData.length > 0 && activeStepId === stepsData[stepsData.length - 1]?.id" class="btn save">保存
+          </div>
+          <!-- 下一步 不是最后一步 -->
+          <ng-container *ngIf="activeStepId !== stepsData[stepsData.length - 1]?.id">
+            <!-- 下一步: 分组验证通过 -->
+            <ng-container *ngIf=" getMasterGroupData(activeStepId) === null || getMasterGroupData(activeStepId).valid">
+              <div (click.stop)="next();" class="btn">下一步</div>
+            </ng-container>
+            <!-- 下一步: 分组验证未通过 -->
+            <ng-container *ngIf=" getMasterGroupData(activeStepId) !== null && !getMasterGroupData(activeStepId).valid">
+              <div (click.stop)="nextInvalid();" class="btn invalid">下一步</div>
+            </ng-container>
+          </ng-container>
+          <!-- 提交: 是审批流 && 是最后一步 -->
+          <div (click.stop)="save('submit');"
+            *ngIf="isApprovalFlow && activeStepId === stepsData[stepsData.length - 1]?.id" class="btn submit">提交</div>
+        </ng-container>
+
+        <!-- 不可提交 -->
+        <ng-container *ngIf="isSubmitting === true">
+          <!-- 暂存 不是最后一步 -->
+          <div *ngIf="activeStepId !== stepsData[stepsData.length - 1]?.id" class="btn invalid">暂存</div>
+          <!-- 保存 最后一步  -->
+          <div *ngIf="stepsData.length > 0 && activeStepId === stepsData[stepsData.length - 1]?.id" class="btn invalid">
+            保存</div>
+          <!-- 下一步 不是最后一步 -->
+          <ng-container *ngIf="activeStepId !== stepsData[stepsData.length - 1]?.id">
+            <!-- 下一步: 分组验证通过 -->
+            <ng-container *ngIf=" getMasterGroupData(activeStepId) === null || getMasterGroupData(activeStepId).valid">
+              <div class="btn invalid">下一步</div>
+            </ng-container>
+            <!-- 下一步: 分组验证未通过 -->
+            <ng-container *ngIf=" getMasterGroupData(activeStepId) !== null && !getMasterGroupData(activeStepId).valid">
+              <div (click.stop)="nextInvalid();" class="btn invalid">下一步</div>
+            </ng-container>
+          </ng-container>
+          <!-- 提交: 是审批流 && 是最后一步 -->
+          <div *ngIf="isApprovalFlow && activeStepId === stepsData[stepsData.length - 1]?.id" class="btn invalid">提交
+          </div>
+        </ng-container>
+
+
+      </ng-container>
+
+    </div>
+  </div>
+</ion-footer>

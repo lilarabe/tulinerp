@@ -1,0 +1,13 @@
+<ion-list>
+  <ion-list-header>
+    {{ title }}
+    <ion-badge color="default" item-end>{{value}}</ion-badge>
+  </ion-list-header>
+  <ion-item>
+    <ion-range (ionChange)="valueChange();" [(ngModel)]="value" [min]="min" [max]="max" [step]="step" pin="true"
+      snaps="true" debounce="500" color="default">
+      <ion-icon range-left small name="settings" color="default"></ion-icon>
+      <ion-icon range-right name="settings" color="default"></ion-icon>
+    </ion-range>
+  </ion-item>
+</ion-list>

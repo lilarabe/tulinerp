@@ -1,0 +1,11 @@
+<div [formGroup]="inputFormGroup">
+  <div class="filter-number" [formGroup]="dateFormGroup">
+    <div class="filter-number-item">
+      <ion-datetime formControlName="min" [max]="datetime.max" [displayFormat]="datetime.displayFormat" [placeholder]="datetime.placeholder" [doneText]="datetime.doneText" [cancelText]="datetime.cancelText" class="datetime"></ion-datetime>
+    </div>
+    <div class="filter-number-split"></div>
+    <div class="filter-number-item">
+      <ion-datetime formControlName="max" [min]="maxFormControlMinDate" [max]="datetime.max" [displayFormat]="datetime.displayFormat" [placeholder]="datetime.placeholder" [doneText]="datetime.doneText" [cancelText]="datetime.cancelText" class="datetime"></ion-datetime>
+    </div>
+  </div>
+</div>

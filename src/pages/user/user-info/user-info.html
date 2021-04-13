@@ -1,0 +1,62 @@
+<ion-header offline>
+
+  <ion-navbar>
+    <ion-title>修改信息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="user-info-list" [formGroup]="userForm">
+    <div class="user-info-item">
+      <div class="lable">头像</div>
+      <div class="colon">:</div>
+      <div class="avatar-text">点击切换</div>
+
+      <div *ngIf="isBrowser" class="avatar">
+        <img class="avatar-img" [src]="userForm.get('avatar').value">
+        <app-image-upload (imageDataEvent)="getAppImageUploadData($event);"></app-image-upload>
+      </div>
+      <div *ngIf="isCordova" (uploadImageBase64)="getNativeCameraData($event);" native-camera class="avatar">
+        <img class="avatar-img" [src]="userForm.get('avatar').value">
+      </div>
+
+      <ion-icon color="disable" name="arrow-forward"></ion-icon>
+    </div>
+    <div class="user-info-item">
+      <div class="lable">姓名</div>
+      <div class="colon">:</div>
+      <div class="value">
+        <ion-input formControlName="name" readonly="true" placeholder="请输入您的姓名" type="text"></ion-input>
+      </div>
+    </div>
+    <div class="user-info-item">
+      <div class="lable">手机号</div>
+      <div class="colon">:</div>
+      <div class="value">
+        <ion-input formControlName="phone" readonly="true" placeholder="请输入您的手机号" type="text"></ion-input>
+      </div>
+    </div>
+    <div class="user-info-item">
+      <div class="lable">邮箱</div>
+      <div class="colon">:</div>
+      <div class="value">
+        <ion-input formControlName="email" placeholder="请输入您的邮箱" type="text"></ion-input>
+      </div>
+    </div>
+
+    <div *ngIf="false" (click.stop)="selectGender();" class="user-info-item" tappable>
+      <div class="lable">性别</div>
+      <div class="colon">:</div>
+      <div class="value">{{ userForm.get('gender').value === 'm' ? '男' : '女' }}</div>
+    </div>
+
+  </div>
+
+  <div padding>
+    <button (tap)="save();" ion-button block color="default">保存</button>
+  </div>
+
+</ion-content>

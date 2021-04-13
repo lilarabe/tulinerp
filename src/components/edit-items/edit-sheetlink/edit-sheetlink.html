@@ -1,0 +1,12 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item (tap)="toSelectPage();" class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note [ngClass]="readonly || disable ? 'readonly' : ''" color="dark" class="edit-value" item-content>{{
+      this.displayValue || formControl.value }}</ion-note>
+    <ion-icon class="edit-btns" name="menu" [color]="readonly || disable ? 'disable' : 'default'" item-end></ion-icon>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state [fieldData]="fieldData"></edit-public-state>
+</div>

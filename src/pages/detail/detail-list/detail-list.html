@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{data.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <detail-list (accomplish)='accomplish($event)' [moduleName]="data.moduleName" [params]="data.params" [getData]='alter'></detail-list>
+  <!-- <detail-add *ngIf="data.action === 'add'">
+    <span (tap)="pushOtherPage(data);" style="color: #3178FF;margin-left: 10px;">新增</span>
+  </detail-add>
+  <ng-container *ngIf="data.action === 'list'">
+    <detail-list [moduleName]="data.moduleName" [params]="data.params"></detail-list>
+  </ng-container> -->
+</ion-content>

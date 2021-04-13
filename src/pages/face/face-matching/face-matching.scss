@@ -1,0 +1,16 @@
+page-face-matching {
+    .video-box {
+        position: relative;
+        // .video {
+        //     width: 100%;
+        // }
+        .video-canvas-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            // width: 100%;
+            // height: 100%;
+        }
+    }
+}

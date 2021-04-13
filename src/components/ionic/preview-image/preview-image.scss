@@ -1,0 +1,18 @@
+preview-image {
+  .slides {
+    background-color: rgba(0, 0, 0, 1);
+
+    .imgs {
+      width: 100vw;
+      height: 100vh;
+      object-fit: contain;
+    }
+  }
+
+  .edit {
+    top: 10px !important;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+}

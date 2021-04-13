@@ -1,0 +1,22 @@
+filter-item {
+    display: block;
+    padding: 15px;
+    background-color: #fff;
+
+    font-size: 16px;
+
+    .header {
+        height: 30px;
+        @include flex-x();
+        justify-content:space-between;
+    }
+
+    .filter-item-content {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .filter-item-content.short {
+        height: 40px;
+    }
+}

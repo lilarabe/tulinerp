@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>极光配置</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-list-header>设置</ion-list-header>
+
+    <ion-item>
+      <ion-label>registrationId</ion-label>
+      <ion-note item-end>{{registrationId}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>是否推送开启</ion-label>
+      <ion-note item-end>{{toggle?'开':'关'}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>系统是否开启推送</ion-label>
+      <ion-note item-end>{{systemToggle?'开启':'禁止'}}</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>允许推送时间</ion-label>
+      <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='book' item-start></ion-icon>
+      Hermoine
+      <ion-note item-end>Muggle-born</ion-note>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name='beer' item-start></ion-icon>
+      Ron
+      <ion-note item-end>Brilliant!</ion-note>
+    </ion-item>
+
+
+  </ion-list>
+</ion-content>

@@ -1,0 +1,34 @@
+page-demo-webrtc-video {
+    .menu1 {
+        top:10px;
+    }
+    .menu2 {
+        top:60px;
+    }
+    .menu3 {
+        top:110px;
+    }
+    .menu4 {
+        top:160px;
+    }
+    .btn1 {
+        top: 20px;
+    }
+    .btn2 {
+        top: 90px;
+    }
+
+    .setting {
+        width: 90%;
+        position: fixed;
+        top: 45%;
+        left: 5%;
+        background-color: #fff;
+        border-radius: 20px;
+        opacity: 0.75;
+        overflow: hidden;
+        .setting-close-btn {
+            width: 50%;
+        }
+    }
+}

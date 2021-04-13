@@ -1,0 +1,17 @@
+<ion-list no-lines class="list">
+  <ion-item-sliding class="ion-item-sliding" *ngFor="let items of listData; index as i;">
+    <ion-item class="item" (click)="doSelect(items);">
+
+      <ion-icon *ngIf="!items.isSelected" name="square-outline" color="default" item-start></ion-icon>
+      <ion-icon *ngIf="!!items.isSelected" name="checkbox" color="default" item-start></ion-icon>
+
+      <ion-thumbnail item-start *ngIf="items.pic && items.pic.src">
+        <img class="thumbnail" [style.width.px]="items.pic.width * rowHeight" [style.height.px]="items.pic.height * rowHeight"
+          [src]="items.pic.src">
+      </ion-thumbnail>
+
+      <grid-list [items]="items"></grid-list>
+
+    </ion-item>
+  </ion-item-sliding>
+</ion-list>

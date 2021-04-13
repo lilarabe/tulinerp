@@ -1,0 +1,22 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>视频输入</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <h1>local video:</h1>
+  <video autoplay playsinline #localVideo></video>
+  <h3>offer SDP:</h3>
+  <div [innerHTML]="offerSDP"></div>
+
+  <h1>remote video:</h1>
+  <video autoplay playsinline #remoteVideo></video>
+  <h3>answer SDP:</h3>
+  <div [innerHTML]="answerSDP"></div>
+
+</ion-content>

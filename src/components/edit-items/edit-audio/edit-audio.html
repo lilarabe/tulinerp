@@ -1,0 +1,20 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+
+  <ion-icon *ngIf="isBrowser && !(readonly || disable)" class="camera-icon" name="folder" color="default" item-end>
+    <app-file-upload (uploadFileInfoEvent)="getUploadFileInfo($event);" [fileTypeNames]="['mp3']"></app-file-upload>
+  </ion-icon>
+
+  <ion-icon *ngIf="isApp && !(readonly || disable)" (uploadFileInfoEvent)="getUploadFileInfo($event)" native-audio
+    class="record-icon" name="mic" color="default" item-end></ion-icon>
+
+  <ion-icon *ngIf="!!uploadAudioSrc && !(readonly || disable)" (click)="del($event);" class="del" name="trash"
+    color="danger" item-end></ion-icon>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+
+  <app-audio-player *ngIf="uploadAudioSrc" [src]="uploadAudioSrc"></app-audio-player>
+
+</div>

@@ -1,0 +1,23 @@
+#忽略 安装包文件
+app.apk
+
+#忽略 静态文件
+#**/assets/css/**
+**/assets/data/**
+#**/assets/fonts/**
+#**/assets/i18n/**
+#**/assets/icon/**
+#**/assets/images/**
+#**/assets/js/**
+#**/assets
+
+#忽略 原生功能桥接的JS
+#**/cordova-js-src
+
+#忽略 cordova 插件 js 
+#**/plugins
+#cordova_plugins.js
+#cordova.js
+
+#忽略 build
+#**/build/polyfills.js

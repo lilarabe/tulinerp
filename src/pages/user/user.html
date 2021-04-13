@@ -1,0 +1,38 @@
+<ion-header offline>
+
+  <ion-navbar>
+    <ion-title>个人中心</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content debug-toggle>
+
+  <ion-list inset class="user-info">
+    <ion-item (tap)="pushUserInfo();" class="user-info-item" tappable>
+      <ion-avatar item-start>
+        <img class="avatar" [src]="userData.avatar">
+      </ion-avatar>
+      <h2>{{userData.name}}</h2>
+      <p>{{userData.role}}</p>
+      <ion-icon color="disable" name="arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+
+  <div padding *ngIf="otherCompanys.length > 1 && site === ''">
+    <user-toggle-company></user-toggle-company>
+  </div>
+
+  <ion-item-group padding>
+    <button (tap)="pushUserSetting();" ion-item>
+      <ion-icon name="ios-settings" item-start color="dark"></ion-icon>
+      <ion-label>设置</ion-label>
+    </button>
+  </ion-item-group>
+
+  <div padding>
+    <button (tap)="logout();" ion-button block color="default">退出登录</button>
+  </div>
+
+</ion-content>

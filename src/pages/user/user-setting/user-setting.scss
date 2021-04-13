@@ -1,0 +1,6 @@
+page-user-setting {
+    .releases{
+        @include flex-y();
+        font-size: 12px;
+    }
+}

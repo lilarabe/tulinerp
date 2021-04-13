@@ -1,0 +1,54 @@
+<div class="list-tiles">
+
+  <!-- 显示数据 -->
+  <ng-container *ngFor="let item of items.itemData">
+    <ng-container [ngSwitch]="item.selector">
+
+      <!-- 标题 -->
+      <list-item-title *ngSwitchCase="'display-title'">
+        <div class="title">{{ item.value }}</div>
+        <!-- 状态 -->
+        <div class="status">
+          <list-item-status *ngIf="items.approveStatus !== undefined" [status]="items.approveStatus"
+            [isTempSave]="items.isTempSave"></list-item-status>
+        </div>
+      </list-item-title>
+      <!-- 标签 -->
+      <list-item-tag *ngSwitchCase="'display-tag'" [value]="item.value" [tagStyle]="item.tagStyle">
+      </list-item-tag>
+      <!-- 描述 -->
+      <list-item-desc *ngSwitchCase="'display-desc'" [value]="item.value" [name]="item.name" [operate]="operate">
+      </list-item-desc>
+      <!-- 图片 -->
+      <list-item-image *ngSwitchCase="'display-image'" [value]="item.value" [name]="item.name">
+      </list-item-image>
+      <!-- 文件 -->
+      <list-item-file *ngSwitchCase="'display-file'" [value]="item.value" [name]="item.name">
+      </list-item-file>
+      <!-- 开关 -->
+      <list-item-toggle *ngSwitchCase="'display-toggle'" [value]="item.value" [name]="item.name">
+      </list-item-toggle>
+      <!-- 货币 -->
+      <list-item-currency *ngSwitchCase="'display-currency'" [value]="item.value" [name]="item.name">
+      </list-item-currency>
+      <!-- 年月  YYYY-MM -->
+      <list-item-date *ngSwitchCase="'display-yearmonth'" [value]="item.value" [name]="item.name" [type]="'yearmonth'">
+      </list-item-date>
+      <!-- 年月日  YYYY-MM-DD -->
+      <list-item-date *ngSwitchCase="'display-date'" [value]="item.value" [name]="item.name" [type]="'date'">
+      </list-item-date>
+      <!-- 年月日 时分秒  YYYY-MM-DD HH:mm:ss -->
+      <list-item-date *ngSwitchCase="'display-datetime'" [value]="item.value" [name]="item.name" [type]="'datetime'">
+      </list-item-date>
+
+      <!-- 手机 -->
+      <list-item-default *ngSwitchCase="'display-mobile'" [value]="item.value" [name]="item.name" [operate]="operate">
+      </list-item-default>
+      <!-- 默认 -->
+      <list-item-default *ngSwitchCase="'display-default'" [value]="item.value" [name]="item.name"
+        [setStyle]="item.setStyle || {}">
+      </list-item-default>
+
+    </ng-container>
+  </ng-container>
+</div>

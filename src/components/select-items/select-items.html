@@ -1,0 +1,16 @@
+<ion-list no-lines no-margin class="list-page" *ngIf="listData.length">
+  <ion-item-sliding class="ion-item-sliding" *ngFor="let items of listData; index as i;" no-lines #itemElement>
+    <button ion-item class="list-item" (click.stop)="doSelect(items);">
+
+      <!-- <ion-thumbnail item-start *ngIf="items.pic && items.pic.src">
+        <img class="thumbnail" [style.width.px]="2 * rowHeight" [style.height]="'auto'" [src]="items.pic.src">
+      </ion-thumbnail> -->
+
+      <!-- <grid-list *ngIf="items" [items]="items" [operate]="false"></grid-list> -->
+
+      <list-items *ngIf="items" [items]="items" [operate]="false"></list-items>
+
+    </button>
+
+  </ion-item-sliding>
+</ion-list>

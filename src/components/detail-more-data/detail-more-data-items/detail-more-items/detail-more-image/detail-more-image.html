@@ -1,0 +1,9 @@
+<div class="moredata-full">
+  <div class="items">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+  </div>
+  <div *ngIf="moreDataItemData.value" class="image">
+    <img (click.stop)="previewImage(moreDataItemData.value);" [src]="moreDataItemData.value" class="img">
+  </div>
+</div>

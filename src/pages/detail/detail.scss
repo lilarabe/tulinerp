@@ -1,0 +1,235 @@
+@import '../../theme/mixin';
+
+page-detail {
+  .scroll-content {
+    background-color: #f5f5f5;
+  }
+  .edit-png{
+    width: 40%;
+  }
+
+  .no-data {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    .no-data-img {
+      width: 100%;
+    }
+  }
+
+  .tabs {
+    width: 100%;
+    .tl-tabs{
+      .labels{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .children-tabs{
+    .labels{
+      .label.active {
+        &:after{
+          background-color: #ffffff;
+        }
+      }
+    }
+    background-color: #ffffff;
+  }
+
+  .detail-btn {
+    color: #fff;
+  }
+
+  .mat-tab-header {
+    background-color: #fff;
+  }
+
+  .mat-tab-label {
+    font-size: 14px;
+  }
+
+  .list-item {
+    margin: 0 0 20px 0;
+  }
+
+  .item-ios {
+    padding: 0 0 0 15px;
+  }
+
+
+  .otherModules {
+    background-color: #fff;
+    border-bottom: 1px solid #c8c7cc;
+    margin: 0 0 20px 0;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .otherModules-title {
+      font-size: 12px;
+      color: #666;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .otherModule {
+      width: calc((100vw - 30px)/4);
+      height: calc((100vw - 30px)/4);
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .add {
+        font-size: 40px;
+        font-weight: bold;
+        color: #000;
+        height: 40px;
+      }
+
+      .link {
+        font-size: 36px;
+        color: #000;
+        height: 40px;
+      }
+      .chat {
+        font-size: 36px;
+        color: #123072;
+        height: 40px;
+      }
+
+      .badge {
+        font-size: 30px;
+        color: #000;
+        height: 40px;
+      }
+
+      .otherModule-img {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: visible;
+
+        .otherModule-icon-img-img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .otherModule-title {
+        height: 20px;
+        position: relative;
+        // @include ell();
+      }
+
+      .otherModule-title.message {
+        color: $fc-primary;
+      }
+
+      .badge-title {
+        position: absolute;
+        background-color: #FF4646;
+        top: -5px;
+        right: -20px;
+        color: #fff;
+        font-size: 12px;
+        padding: 1px 5px;
+        border-radius: 10px;
+      }
+    }
+
+
+  }
+
+  .edit-pop-top{
+    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100% ;
+    padding-top: 44px;
+    background:  rgba(0, 0, 0,0.6) !important;
+    box-sizing: border-box;
+    z-index:9999999;
+    .page-edit{
+      margin: 0 auto;
+      width: calc(100% - 20px);
+      height: calc(100% - 10px);
+      border-radius: 8px;
+      overflow: hidden;
+     
+      .z-header{
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+        .icon{
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          transform: translateY(-50%);
+        }
+      }
+      .edit-page{
+        width: 100%;
+        height: calc(100% - 40px);
+      }
+    }
+    .animation{
+      animation: init 1s;
+    }
+    @keyframes init {
+      from{
+        transform: translateY(100vh);
+      }
+      to{
+        transform: translateY(0vh);
+      }
+    }
+
+    .out{
+      animation: out 0.32s linear;
+    }
+
+    @keyframes out {
+      from{
+        transform: translateY(0vh);
+      }
+      to{
+        transform: translateY(100vh);
+      }
+    }
+  }
+.detail-curtain{
+  width: 100vw;
+  height: 100px;
+  background:rgba(0, 0, 0,0.6) !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 888888;
+}
+}

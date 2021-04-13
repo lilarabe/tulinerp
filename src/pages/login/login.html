@@ -1,0 +1,61 @@
+<div class="loginPage" debug-toggle>
+
+  <div class="top">
+    <div (click.stop)="loginType='register';" *ngIf="loginType === 'login'" class="register-btn" tappable>注册</div>
+    <div (click.stop)="loginType='login';" *ngIf="loginType === 'register'" class="login-btn" tappable>登录</div>
+  </div>
+
+  <div class="logo">
+    <img [src]="logoSrc" class="logo-img">
+  </div>
+  <!-- 登录 -->
+  <div [hidden]="loginType === 'register'" [formGroup]="loginForm" class="form" tappable>
+    <div [class.highlight]="highlight.get('loginName')" class="input-box" tappable>
+      <ion-icon [color]="highlight.get('loginName') ? 'default' : 'disable'" name="phone-portrait" class="icon">
+      </ion-icon>
+      <ion-input #loginName (ionFocus)="highlight.set('loginName', true);" (ionBlur)="highlight.set('loginName', false);"
+        formControlName="name" type="tel" placeholder="请输入工号或手机号" class="input" tappable></ion-input>
+    </div>
+    <div [class.highlight]="highlight.get('loginPassword')" class="input-box" tappable>
+      <ion-icon [color]="highlight.get('loginPassword') ? 'default' : 'disable'" name="ios-lock-outline" class="icon">
+      </ion-icon>
+      <ion-input (ionFocus)="highlight.set('loginPassword', true);" (ionBlur)="highlight.set('loginPassword', false);"
+        [type]="isPasswordVisibility ? 'text' : 'password'" formControlName="password" placeholder="请输入密码"
+        class="input" tappable></ion-input>
+      <ion-icon [name]="isPasswordVisibility? 'eye' : 'eye-off'" (click)="displayPassword($event);" class="icon"
+        color="disable"></ion-icon>
+    </div>
+    <!-- 记住登录信息 -->
+    <div (click)="rememberMe();" class="remember-item" tappable>
+      <ion-icon class="remember-checkbox" [color]="isRememberMe ? 'default' : 'disable'" name="checkbox"></ion-icon>
+      <span class="remember-span">记住登录信息</span>
+    </div>
+
+    <div class="input-box-btn">
+      <button (click.stop)="loginFormSubmit();" [disabled]="loginForm.invalid" ion-button block
+        color="default">登录</button>
+    </div>
+
+  </div>
+  <!-- 注册 -->
+  <div [hidden]="loginType === 'login'" [formGroup]="registerForm" class="form">
+    <div class="input-box" tappable>
+      <ion-icon color="disable" name="phone-portrait" class="icon"></ion-icon>
+      <ion-input formControlName="name" type="tel" placeholder="请输入手机号" class="input"></ion-input>
+    </div>
+    <div class="input-box" tappable>
+      <ion-icon color="disable" name="ios-lock-outline" class="icon"></ion-icon>
+      <ion-input formControlName="password" type="password" placeholder="请输入密码" class="input"></ion-input>
+    </div>
+    <div class="input-box" tappable>
+      <ion-icon color="disable" name="ios-lock-outline" class="icon"></ion-icon>
+      <ion-input formControlName="repassword" type="password" placeholder="请再次输入密码" class="input"></ion-input>
+    </div>
+    <div class="input-box-btn">
+      <button (click.stop)="registerFormSubmit();"
+        [disabled]="registerForm.invalid || (registerForm.get('password').value !== registerForm.get('repassword').value)"
+        ion-button block color="default">注册</button>
+    </div>
+  </div>
+
+</div>

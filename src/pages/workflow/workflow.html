@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content debug-toggle>
+
+  <div class="main">
+    <!-- 我的消息 -->
+    <!-- <card>
+      <card-header [label]="'我的消息'"></card-header>
+      <card-body>
+        <div class="items">
+          <div (click.stop)="pushMessageListPage(1);" class="item" tappable>
+            <div class="label">消息</div>
+            <div [ngClass]="{'bg-red': messageBadge > 0}" class="badge">{{ messageBadge }}</div>
+          </div>
+        </div>
+      </card-body>
+    </card> -->
+    <!-- 我参与的 -->
+    <card *ngIf="approvalData.length > 0">
+      <card-header [label]="'我参与的'"></card-header>
+      <card-body>
+        <div class="items">
+          <div (click.stop)="pushListPage(item.moduleName);" *ngFor="let item of approvalData.slice(0,3)" class="item"
+            tappable>
+            <div class="label">{{ item.categoryName }}</div>
+            <div [ngClass]="{'bg-red': item.badgeColor == 'red'}" class="badge">{{ item.badge }}</div>
+          </div>
+        </div>
+      </card-body>
+    </card>
+    <!-- 我发起的 -->
+    <card *ngIf="approvalData.length > 0">
+      <card-header [label]="'我发起的'"></card-header>
+      <card-body>
+        <div class="items">
+          <div (click.stop)="pushListPage(item.moduleName);" *ngFor="let item of approvalData.slice(3)" class="item"
+            tappable>
+            <div class="label">{{ item.categoryName }}</div>
+            <div [ngClass]="{'bg-red': item.badgeColor == 'red'}" class="badge">{{ item.badge }}</div>
+          </div>
+        </div>
+      </card-body>
+    </card>
+    <!-- 我的其他企业 -->
+    <card *ngIf="otherCompanys.length > 0 && site === ''">
+      <card-header [label]="'我的其他企业'"></card-header>
+      <card-body>
+        <div class="items">
+          <div (click.stop)="toggleOtherCompany(company);" *ngFor="let company of otherCompanys" class="item"
+            tappable>
+            <div class="label">{{ company.name }}</div>
+            <div [ngClass]="{'bg-red': company.todo_num > '0'}" class="badge">{{ company.todo_num }}</div>
+          </div>
+        </div>
+      </card-body>
+    </card>
+    
+  </div>
+
+
+</ion-content>

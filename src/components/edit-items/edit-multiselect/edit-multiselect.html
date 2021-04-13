@@ -1,0 +1,18 @@
+<div class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-select (ionChange)="doSelect();" [(ngModel)]="selectData" [disabled]="disable" multiple="true" cancelText="取消"
+      okText="确定" class="edit-value">
+      <ion-option *ngFor="let option of valueArray" [value]="option.value" [disabled]="readonly">{{ option.name }}
+      </ion-option>
+    </ion-select>
+  </ion-item>
+  <!-- state -->
+  <!-- <edit-public-state></edit-public-state> -->
+</div>
+
+<div [formGroup]="inputFormGroup" style="display:none;">
+  <input type="hidden" [formControlName]="inputFormControlName">
+</div>

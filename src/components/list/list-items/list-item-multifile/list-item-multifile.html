@@ -1,0 +1,13 @@
+<div class="list-tile">
+  <div class="lable">{{name| maxString:labelMaxLen}}</div>
+  <div class="colon">:</div>
+  <div class="value">
+    <!-- <button class="open-btn" *ngIf="value" (click.stop)="openBrowser(value);" color="default" ion-button
+      small>查看文件</button> -->
+  </div>
+</div>
+<div class="item-list">
+  <ion-chip *ngFor="let item of value;let i=index;">
+    <ion-label color="secondary" *ngIf="item.filePath"  (click.stop)="openBrowser(item.filePath);"><span class="look">查看</span></ion-label>
+  </ion-chip>
+</div>

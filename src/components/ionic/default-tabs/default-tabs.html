@@ -1,0 +1,9 @@
+<ul *ngIf="titles.length > 0" class="tabs">
+  <li *ngFor="let title of titles; index as i" [class]="activeIndex === i ? 'active' : ''" (tap)="setActiveIndex(i);">
+    {{ title }}
+  </li>
+</ul>
+
+<div #body>
+  <ng-content></ng-content>
+</div>

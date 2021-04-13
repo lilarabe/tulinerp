@@ -1,0 +1,64 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>视频demo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <video autoplay playsinline #video></video>
+
+  <ion-fab class="menu1" left top>
+    <button ion-fab mini color="default">验</button>
+    <ion-fab-list side="right">
+      <button color="default" ion-fab (click)="testSupport();">支持</button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab class="menu2" left top>
+    <button ion-fab mini color="default">视</button>
+    <ion-fab-list side="right">
+      <button color="default" ion-fab (click)="setVideoConstraints('width');">宽</button>
+      <button color="default" ion-fab (click)="setVideoConstraints('height');">高</button>
+      <button color="default" ion-fab (click)="setVideoConstraints('frameRate');">频</button>
+      <button (click)="reverseCamera();" color="default" ion-fab><ion-icon name="reverse-camera"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab class="menu3" left top>
+    <button ion-fab mini color="default">音</button>
+    <ion-fab-list side="right">
+      <button (click)="reverseCamera();" color="default" ion-fab><ion-icon name="reverse-camera"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab class="menu4" left top>
+    <button ion-fab mini color="default"><ion-icon name="information"></ion-icon></button>
+    <ion-fab-list side="right">
+      <button (click)="showDevices();" color="default" ion-fab>设备</button>
+      <button (click)="showVideoInfo();" color="default" ion-fab>视频</button>
+      <button (click)="showVideoTracks();" color="default" ion-fab >视轨</button>
+      <button (click)="showAudioTracks();" color="default" ion-fab >音轨</button>
+    </ion-fab-list>
+  </ion-fab>
+
+
+  <ion-fab class="btn1" right top>
+    <button (click)="getPicture();" ion-fab color="default"><ion-icon name="camera"></ion-icon></button>
+  </ion-fab>
+
+  <ion-fab class="btn2" right top>
+    <button (click)="getVideo();" ion-fab color="default"><ion-icon name="videocam"></ion-icon></button>
+  </ion-fab>
+
+  <div *ngIf="isSettingShow" class="setting">
+    <range-box (valueChangeEvent)="setChangeValue($event);" [title]="thisSetting.title" [value]="thisSetting.value" [min]="thisSetting.min" [max]="thisSetting.max"
+      [step]="thisSetting.step"></range-box>
+    <button (click)="isSettingShow=false;" ion-button small full round color="default">关闭</button>
+  </div>
+
+
+
+</ion-content>

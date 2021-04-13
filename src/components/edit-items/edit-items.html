@@ -1,0 +1,316 @@
+<!-- <default-group [groupName]="groupName" [expanded]="expanded" class="group">
+</default-group> -->
+
+<!-- add -->
+<!-- <card *ngIf="action === 'add'" [hidden]="indexGroup != indexSelectedGroup"> -->
+<card *ngIf="action === 'add'">
+  <card-header [label]="groupName"></card-header>
+  <card-body>
+    <div class="selectors">
+      <ng-container *ngFor="let item of fieldArray;">
+        <div class="selector" *ngIf="!item.isHidden" [ngClass]="{'hidden': !!item.isHidden}">
+          <!-- <ng-container *ngIf="!item.isHidden && isRequired(item.valids)"> -->
+          <ng-container *ngTemplateOutlet="switchTemplate; context: {item:item}"></ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </card-body>
+</card>
+
+<!-- edit -->
+<card *ngIf="action === 'edit'">
+  <card-header [label]="groupName"></card-header>
+  <card-body>
+    <div class="selectors">
+      <ng-container *ngFor="let item of fieldArray;">
+        <div class="selector" *ngIf="!item.isHidden">
+          <ng-container *ngTemplateOutlet="switchTemplate; context: {item:item}"></ng-container>
+        </div>
+      </ng-container>
+    </div>
+  </card-body>
+</card>
+
+
+<!-- child -->
+<card *ngIf="action === 'child'">
+  <card-body>
+    <div class="topBar" *ngIf="!clearHidden">
+      <div (click.stop)="onChildDell();" class="del-btn">
+        <ion-icon color="danger" name="ios-remove-circle-outline"></ion-icon>
+      </div>
+    </div>
+    <div class="selectors">
+      <ng-container *ngFor="let item of fieldArray;">
+        <div class="selector" *ngIf="!item.isHidden">
+          <ng-container *ngTemplateOutlet="switchTemplate; context: {item:item}"></ng-container>
+        </div>
+      </ng-container>
+    </div>
+
+  </card-body>
+</card>
+
+
+<!-- switchTemplate -->
+<ng-template #switchTemplate let-item="item">
+  <div [ngSwitch]="item.selector">
+    <!-- 1.input -->
+    <edit-input *ngSwitchCase="'input'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [displayValue]="item.displayValue || ''"
+      [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-input>
+
+    <!-- 2.select -->
+    <edit-select *ngSwitchCase="'select'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [valueArray]="item.valueArray || []" [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup"
+      [valids]="item.valids || []" [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-select>
+
+    <!-- 3.radiobox -->
+    <edit-radiobox *ngSwitchCase="'radiobox'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [valueArray]="item.valueArray || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-radiobox>
+
+    <!-- 4.date -->
+    <edit-date *ngSwitchCase="'date'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [minDate]="item.minDate || '1970-01-01'"
+      [maxDate]="item.maxDate || '2200-12-31'" [displayFormat]="item.displayFormat || 'YYYY-MM-DD'"
+      [readonly]="item.readonly || false" [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action"
+      [value]="item.value" [fieldData]="item">
+    </edit-date>
+
+    <!-- 5.1.datetime -->
+    <edit-datetime *ngSwitchCase="'datetime'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [displayFormat]="item.displayFormat || 'YYYY-MM-DD HH:mm'"
+      [readonly]="item.readonly || false" [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action"
+      [value]="item.value" [fieldData]="item" [minDate]="item.minDate || '1970-01-01'"
+      [maxDate]="item.maxDate || '2200-12-31'" [type]="'datetime'">
+    </edit-datetime>
+
+    <!-- 5.2.yearmonth -->
+    <edit-datetime *ngSwitchCase="'yearmonth'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [displayFormat]="item.displayFormat || 'YYYY-MM'"
+      [readonly]="item.readonly || false" [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action"
+      [value]="item.value" [fieldData]="item" [minDate]="item.minDate || '1970-01-01'"
+      [maxDate]="item.maxDate || '2200-12-31'" [type]="'yearmonth'">
+    </edit-datetime>
+
+    <!-- 6.toggle -->
+    <edit-toggle *ngSwitchCase="'toggle'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-toggle>
+
+    <!-- 7.checkbox -->
+    <edit-toggle *ngSwitchCase="'checkbox'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-toggle>
+
+    <!-- 8.camera -->
+    <edit-camera *ngSwitchCase="'camera'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [action]="action" [value]="item.value" [valueUrl]="item.valueUrl" [fieldData]="item">
+    </edit-camera>
+
+    <!-- 9.sheetlink -->
+    <edit-sheetlink *ngSwitchCase="'sheetlink'" (sheetlinkChildAddEvent)="onSheetlinkChildAddEvent($event);"
+      [placeholder]="item.placeholder" [isHidden]="item.isHidden" [inputFormControlName]="item.key || ''"
+      [inputFormGroup]="inputFormGroup" [valids]="item.valids || []" [asyncValids]="item.asyncValids || []"
+      [sheetlinkParams]="item.params || {}" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [displayValue]="item.displayValue || ''" [editGroupData]="editGroupData || []" [moduleName]="moduleName || ''"
+      [requireData]="requireData || {}" [action]="action" [value]="item.value" [fieldData]="item"
+      [childData]="childData" [mainForm]="mainForm" [childItemData]="childItemData"></edit-sheetlink>
+
+    <!-- 10.hidden -->
+    <!-- <edit-hidden *ngSwitchCase="'hidden'" [placeholder]="item.placeholder" [isHidden]="item.isHidden" [type]="item.type"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [displayValue]="item.displayValue || ''"
+      [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-hidden> -->
+
+    <!-- 11.mobile -->
+    <edit-mobile *ngSwitchCase="'mobile'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-mobile>
+
+    <!-- 12.textarea -->
+    <edit-textarea *ngSwitchCase="'textarea'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-textarea>
+
+    <!-- 13.autocomplete -->
+    <edit-autocomplete *ngSwitchCase="'autocomplete'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [autocompleteParams]="item.autocompleteParams || {}"
+      [readonly]="item.readonly || false" [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action"
+      [value]="item.value" [fieldData]="item">
+    </edit-autocomplete>
+
+    <!-- 14.sign -->
+    <edit-sign *ngSwitchCase="'sign'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-sign>
+
+    <!-- 15.card -->
+    <edit-card *ngSwitchCase="'card'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [moduleName]="moduleName || ''" [inputFormGroup]="inputFormGroup"
+      [valids]="item.valids || []" [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-card>
+
+    <!-- 16.multiselect -->
+    <edit-multiselect *ngSwitchCase="'multiselect'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [valueArray]="item.valueArray || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-multiselect>
+
+    <!-- 17.audio -->
+    <edit-audio *ngSwitchCase="'audio'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-audio>
+
+    <!-- 18.video -->
+    <edit-video *ngSwitchCase="'video'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [fileMaxSize]="item.fileMaxSize || 1000" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-video>
+
+    <!-- 19.tagselect -->
+    <edit-tagselect *ngSwitchCase="'tagselect'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [valueArray]="item.valueArray || []" [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup"
+      [valids]="item.valids || []" [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-tagselect>
+
+    <!-- 20.tagmultiselect -->
+    <edit-tagmultiselect *ngSwitchCase="'tagmultiselect'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [valueArray]="item.valueArray || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [limit]="item.limit" [fieldData]="item">
+    </edit-tagmultiselect>
+
+
+    <!-- 21.multisheetlink -->
+    <edit-multisheetlink *ngSwitchCase="'multisheetlink'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [multisheetlinkParams]="item.params || {}"
+      [readonly]="item.readonly || false" [disable]="item.disable || false" [displayValue]="item.displayValue || ''"
+      [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-multisheetlink>
+
+    <!-- 22.1.file -->
+    <edit-file *ngSwitchCase="'file'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [fileMaxSize]="item.fileMaxSize || 1000" [fileTypeNames]="item.fileTypeNames || []"
+      [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-file>
+
+    <!-- 22.2.multifile -->
+    <edit-multifile *ngSwitchCase="'multifile'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [fileMaxSize]="item.fileMaxSize || 1000" [fileTypeNames]="item.fileTypeNames || []"
+      [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-multifile>
+
+    <!-- 22.gps -->
+    <edit-gps *ngSwitchCase="'location'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-gps>
+
+    <!-- 23.int -->
+    <edit-int *ngSwitchCase="'int'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-int>
+
+    <!-- 24.decimal -->
+    <edit-decimal *ngSwitchCase="'decimal'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [action]="action" [value]="item.value"
+      [fieldData]="item">
+    </edit-decimal>
+
+    <!-- 25.currency -->
+    <edit-currency *ngSwitchCase="'currency'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-currency>
+
+    <!-- 26.faceid -->
+    <edit-faceid *ngSwitchCase="'faceid'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [action]="action" [value]="item.value"
+      [faceidArr]="item.faceidArr || []" [editGroupData]="editGroupData || []" [moduleName]="moduleName || ''"
+      [valueUrl]="item.valueUrl || ''" [fieldData]="item">
+    </edit-faceid>
+
+    <!-- 27.multiimage -->
+    <edit-multiimage *ngSwitchCase="'multiimage'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [fileMaxSize]="item.fileMaxSize || 1000" [fileTypeNames]="item.fileTypeNames || []"
+      [action]="action" [value]="item.value" [valueUrl]="item.valueUrl" [fieldData]="item">
+    </edit-multiimage>
+
+    <!-- 28.multilevel -->
+    <edit-multilevel *ngSwitchCase="'multilevel'" [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [valueArray]="item.valueArray || []" [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup"
+      [valids]="item.valids || []" [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false"
+      [disable]="item.disable || false" [tips]="item.tips || ''" [action]="action" [value]="item.value"
+      [fieldData]="item"  [mainForm]="mainForm"  [editGroupData]="editGroupData || []"  [childItemData]="childItemData">
+    </edit-multilevel>
+
+
+    <!-- 0.default -->
+    <edit-input *ngSwitchDefault [placeholder]="item.placeholder" [isHidden]="item.isHidden"
+      [inputFormControlName]="item.key || ''" [inputFormGroup]="inputFormGroup" [valids]="item.valids || []"
+      [asyncValids]="item.asyncValids || []" [readonly]="item.readonly || false" [disable]="item.disable || false"
+      [tips]="item.tips || ''" [requireData]="requireData || {}" [displayValue]="item.displayValue || ''"
+      [action]="action" [value]="item.value" [fieldData]="item">
+    </edit-input>
+
+
+
+  </div>
+</ng-template>

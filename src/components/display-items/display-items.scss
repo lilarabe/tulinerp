@@ -1,0 +1,48 @@
+@import '../../theme/mixin';
+
+display-items {
+
+  font-size: $desc-size;
+  color    : $desc-color;
+
+}
+
+.list-page {
+  font-size : $desc-size;
+  color     : $desc-color;
+  margin-top: 0 !important;
+
+  .thumbnail {
+    width: 105px;
+    height: 70px;
+    margin: 0 12px 0 0 !important;
+    overflow: hidden;
+    .img {
+      @include img-center();
+    }
+  }
+
+  .list-item {
+    display      : flex !important;
+    width        : 100% !important;
+    margin       : 0 !important;
+    padding-right: 0 !important;
+    padding-left : 12px !important;
+
+    .item-inner {
+      background-image: none !important;
+      padding         : 0 !important;
+    }
+
+    
+  }
+}
+
+.list-page .ion-item-sliding {
+  border-bottom: 1px solid #ddd;
+  // touch-action: none;
+}
+
+.list-page .ion-item-sliding:last-child {
+  margin-bottom: 0;
+}

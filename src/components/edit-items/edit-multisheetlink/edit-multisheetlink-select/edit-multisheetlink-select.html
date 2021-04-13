@@ -1,0 +1,37 @@
+<ion-header class="list-page-header" offline>
+
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button (click)="dismiss();">
+        <button class="header-btn" ion-button clear>{{ langs.LOGIN_CANCEL }}</button>
+      </button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <button ion-button (click)="ok();">
+        <button class="header-btn" ion-button clear>确定</button>
+      </button>
+    </ion-buttons>
+
+    <ion-title></ion-title>
+
+  </ion-navbar>
+
+  <list-search (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+    (searchClickEvent)="searchInput($event);"></list-search>
+
+</ion-header>
+
+
+<ion-content class="list-page-content" debug-toggle>
+
+
+  <edit-multisheetlink-select-items (sendSelectDataEvent)="getSelectData($event);" [listData]="listData" [moduleName]="moduleName" [selectKey]="selectKey"></edit-multisheetlink-select-items>
+
+
+  <!--上拉加载-->
+  <list-next-page [isEnabled]="canFlippingPage" (nextPageEvent)="$event.waitFor(asyncNextPage());"></list-next-page>
+
+
+</ion-content>

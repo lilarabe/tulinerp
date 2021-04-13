@@ -1,0 +1,17 @@
+app-textarea {
+  .app-textarea {
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    user-select: text;
+  }
+
+  .app-textarea:empty:before {
+    content: attr(placeholder);
+    color: #bbb;
+  }
+
+  .app-textarea:focus:before {
+    content: none;
+  }
+}

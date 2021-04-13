@@ -1,0 +1,5 @@
+
+<ion-infinite-scroll (ionInfinite)="sendNextPageEvent($event);" [enabled]="isEnabled">
+  <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+<div class="page-bottom-end" no-lines *ngIf="!isEnabled">我是有底线的</div>

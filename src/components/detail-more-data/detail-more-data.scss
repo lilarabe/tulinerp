@@ -1,0 +1,23 @@
+@import '../../theme/mixin';
+
+detail-more-data {
+  .detail-more-data {
+    padding-bottom: 20px;
+  }
+
+  .showMore {
+    height: 30px;
+    margin: 15px;
+    @include flex-x;
+    justify-content: center;
+    align-items: center;
+    color: $fc-primary;
+    font-size: 12px;
+
+    .icon {
+      color: $fc-primary;
+      margin: 0 5px 0 0;
+      font-size: 24px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import '../../../theme/mixin';
+
+edit-camera {
+}
+
+
+.no-border .item-inner {
+  border: 0 !important;
+}
+
+.pic-box {
+  width: 100%;
+  background-color: #fff;
+  padding: 0 12px 12px 12px;
+  position: relative;
+}
+
+.del {
+  margin-left: 20px !important;
+}
+
+.pic-img {
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  width: calc(100vw - 24px);
+  touch-action: auto !important;
+}
+
+.camera-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+.camera-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
+
+.native-camera {
+  font-size: 2.8rem;
+}

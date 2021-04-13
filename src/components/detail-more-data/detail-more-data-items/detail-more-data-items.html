@@ -1,0 +1,88 @@
+<ng-container *ngFor="let items of moreData">
+  <div *ngIf="items.group_Display === undefined || items.group_Display === true" class="group">
+    <!-- <div *ngIf="items.showGroup === true" class="group"> -->
+    <card class="card">
+      <card-header [label]="items.groupName">
+        <div class="card-btns">
+          <div *ngIf="isEdit" (click.stop)="pushEditPage();" class="btn">
+            <img src="assets/images/detail/edit.png" class="img">
+          </div>
+        </div>
+      </card-header>
+      <card-body>
+        <div class="moredata" *ngIf="items.isOpen">
+
+          <div *ngFor="let item of items.itemData" [hidden]="item.selector === 'hidden' || item.isHide">
+
+            <ng-container *ngTemplateOutlet="switchTemplate; context: {item:item,items:items}"></ng-container>
+
+          </div>
+
+        </div>
+      </card-body>
+    </card>
+
+  </div>
+</ng-container>
+
+
+<ng-template #switchTemplate let-item="item" let-items='items'>
+  <div [ngSwitch]="item.selector">
+
+    <!-- 图片 -->
+    <div *ngSwitchCase="'display-image'">
+      <detail-more-image [moreDataItemData]="item"></detail-more-image>
+    </div>
+    <!-- 文件 -->
+    <div *ngSwitchCase="'display-file'">
+      <detail-more-file [moreDataItemData]="item"></detail-more-file>
+    </div>
+    <!-- 定位 -->
+    <div *ngSwitchCase="'display-location'">
+      <detail-more-location [moreDataItemData]="item"></detail-more-location>
+    </div>
+    <!-- 视频 -->
+    <div *ngSwitchCase="'display-video'">
+      <detail-more-video [moreDataItemData]="item"></detail-more-video>
+    </div>
+    <!-- toggle -->
+    <div *ngSwitchCase="'display-toggle'">
+      <detail-more-toggle [moreDataItemData]="item"></detail-more-toggle>
+    </div>
+    <!-- 货币 -->
+    <div *ngSwitchCase="'display-currency'">
+      <detail-more-currency [moreDataItemData]="item"></detail-more-currency>
+    </div>
+    <!-- 多图片 -->
+    <div *ngSwitchCase="'display-multiimage'">
+      <detail-more-multiimage [moreDataItemData]="item"></detail-more-multiimage>
+    </div>
+    <!-- 多文件 -->
+    <div *ngSwitchCase="'display-multifile'">
+      <detail-more-multifile [moreDataItemData]="item"></detail-more-multifile>
+    </div>
+    <!-- 级联选择 -->
+    <div *ngSwitchCase="'display-multilevel'">
+      <detail-more-multilevel *ngIf="!item.key.includes('_name')" [moreDataItemData]="item" [itemData]='items.itemData'>
+      </detail-more-multilevel>
+    </div>
+    <!-- 年月  YYYY-MM -->
+    <div *ngSwitchCase="'display-yearmonth'">
+      <detail-more-date [moreDataItemData]="item" [type]="'yearmonth'"></detail-more-date>
+    </div>
+    <!-- 年月日  YYYY-MM-DD -->
+    <div *ngSwitchCase="'display-date'">
+      <detail-more-date [moreDataItemData]="item" [type]="'date'"></detail-more-date>
+    </div>
+    <!-- 年月日 时分秒  YYYY-MM-DD HH:mm:ss -->
+    <div *ngSwitchCase="'display-datetime'">
+      <detail-more-date [moreDataItemData]="item" [type]="'datetime'"></detail-more-date>
+    </div>
+
+    <!-- 其他 -->
+    <div *ngSwitchDefault>
+      <detail-more-default [moreDataItemData]="item"></detail-more-default>
+    </div>
+
+  </div>
+</ng-template>

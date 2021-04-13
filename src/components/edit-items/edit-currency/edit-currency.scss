@@ -1,0 +1,34 @@
+edit-currency {
+
+  .currency-box {
+    flex: 1;
+    position: relative;
+
+    .currency-display.show{
+      opacity: 1;
+    }
+    .currency-display.hidden{
+      opacity: 0;
+    }
+
+    .currency-input {
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      .text-input {
+          caret-color: #000;
+      }
+    }
+
+    .currency-input.show {
+      opacity: 1;
+    }
+
+    .currency-input.hidden {
+      opacity: 0;
+    }
+  }
+
+}

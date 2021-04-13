@@ -1,0 +1,47 @@
+@import '../../../../theme/mixin';
+
+edit-public-lable {
+  display: block;
+
+  .edit-public-lable {
+    width: 120px;
+    @include flex-y;
+
+    .edit-lable {
+      @include flex-x;
+
+      .title {
+        width: 60px;
+        text-align: justify;
+        text-align-last: justify;
+        font-size: $fs-small;
+        color: $fc-2;
+      }
+
+      .title.readonly {
+        color: $fc-3;
+      }
+
+      .colon {
+        margin: 0 5px;
+      }
+
+      .required {
+        @include flex-y;
+        color: $fc-danger;
+      }
+
+      .opacity{
+        opacity: 0;
+      }
+    }
+
+    .edit-error {
+      width: 60px;
+      font-size: $fs-small;
+      color: $fc-danger;
+      text-align: justify;
+      text-align-last: justify;
+    }
+  }
+}

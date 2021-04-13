@@ -1,0 +1,15 @@
+<div class="edit-public-lable">
+  <div class="edit-lable">
+    <div class="title" #title [ngClass]="{'readonly':readonly}">{{ placeholder }}</div>
+    <div class="colon">:</div>
+    <div *ngIf="errorMap.has('required')" class="required">*</div>
+  </div>
+  <div class="edit-error">
+    <!-- 必填 -->
+    <!-- <span *ngIf="itemFormControl.hasError('required')">{{'必填'}}</span> -->
+    <!-- 异步:唯一 -->
+    <!-- <span *ngIf="itemFormControl.hasError('asyncOnly')">{{ itemFormControl.errors.errorMsg }}</span> -->
+    <!-- 验证中 -->
+    <!-- <span *ngIf="itemFormControl.pending">验证中...</span> -->
+  </div>
+</div>

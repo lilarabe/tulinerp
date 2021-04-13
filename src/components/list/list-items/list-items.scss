@@ -1,0 +1,102 @@
+list-items {
+  display: block;
+  width  : 100%;
+
+  .title-bar {
+    display       : flex;
+    flex-direction: row;
+  }
+
+  .w100 {
+    width              : 100%;
+    // background-color: lightblue;
+  }
+
+
+}
+
+.list-tiles {
+  font-size: $desc-size;
+  color    : $desc-color;
+
+  display       : flex;
+  flex-direction: row;
+  flex-wrap     : wrap;
+  margin        : 15px 0 0 0;
+
+
+}
+
+list-item-title,
+list-item-default,
+list-item-desc,
+list-item-file,
+list-item-image,
+list-item-tag {
+  font-size  : $desc-size;
+  color      : $desc-color;
+  width      : 100%;
+  display    : flex;
+  align-items: center;
+  height     : 30px;
+  overflow   : hidden;
+  white-space: nowrap;
+}
+
+list-item-title {
+  display        : flex;
+  flex-direction : row;
+  height         : 30px;
+  justify-content: space-between;
+  align-items    : center;
+
+  .title {
+    flex         : 1;
+    overflow     : hidden;
+    font-size    : var(--fs-m);
+    font-weight  : bold;
+    color        : $title-color;
+    white-space  : nowrap;
+    text-overflow: ellipsis;
+  }
+
+
+}
+
+list-item-desc,
+list-item-title,
+list-item-status,
+list-item-file,
+list-item-image {
+  width: 100%;
+}
+
+list-item-default,
+list-item-toggle,
+list-item-tag {
+  width: 50%;
+}
+
+
+list-item-image.list-item-image,
+list-item-file.list-item-file {
+  .list-tile {
+    .value {
+      @include flex-x();
+      justify-content: flex-end;
+      padding-right  : 10px;
+      align-items    : center;
+    }
+  }
+}
+
+list-item-desc.list-item-desc {
+  min-height: 30px;
+  height    : auto;
+
+  .list-tile {
+    .value {
+      @include ells(2);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+grid-list {
+  .items {
+    @include flex-x;
+    height: 26px;
+    line-height: 26px;
+
+    .lable {
+      font-size: $desc-size;
+      color: $desc-color;
+      width: 60px;
+      overflow: hidden;
+      text-align: justify;
+      text-align-last: justify;
+    }
+
+    .lable:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+      height: 0;
+    }
+
+    .colon {
+      font-size: $desc-size;
+      color: $desc-color;
+      margin: 0 5px 0 3px;
+    }
+
+    .value {
+      font-size: $desc-size;
+      color: $title-color;
+      flex: 1;
+      overflow: hidden;
+      white-space: normal;
+      @include ells(1);
+    }
+
+    .icon {
+      font-size: 24px;
+    }
+
+    .open-btn {
+      margin: -8px 0 0 10px;
+      font-size: 12px;
+      height: 24px;
+    }
+
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "tulin-erp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

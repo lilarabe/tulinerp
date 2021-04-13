@@ -1,0 +1,64 @@
+<ion-header class="companyHeader" offline>
+  <ion-navbar>
+
+    <ion-title>{{ title }}</ion-title>
+
+    <!-- <ion-buttons end>
+      <div (outputQrCodeEvent)="getQrCode($event);" native-qr-scanner end>
+        <button class="qr-btn" color="header" ion-button icon-only>
+          <ion-icon name="qr-scanner"></ion-icon>
+        </button>
+      </div>
+    </ion-buttons> -->
+
+
+  </ion-navbar>
+
+  <list-search [(keyword)]="keyword" (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+    (searchClickEvent)="searchInput($event);"></list-search>
+
+</ion-header>
+
+<ion-content debug-toggle tappable>
+
+  <div class="main">
+
+    <card *ngFor="let cateogty of moduleCategory; let cateogtyIndex = index;">
+      <card-header [label]="cateogty.categoryName"></card-header>
+      <card-body>
+        <div class="items" tappable>
+          <div (click.stop)="pushListPage(item.key);" *ngFor="let item of cateogty.moduleList" class="item">
+            <div class="icon">
+
+              <ng-container *ngIf="item.src; else elseTemplate">
+                <img [src]="item.src" class="img-icon">
+              </ng-container>
+              <ng-template #elseTemplate>
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 20.001 20.001">
+                  <path
+                    d="M-771.568,240.721a3.462,3.462,0,0,1,3.462,3.462v4.231a1.539,1.539,0,0,1-1.539,1.539h-4.231a3.462,3.462,0,0,1-3.462-3.462v-4.231a1.539,1.539,0,0,1,1.539-1.539Zm-8.846,0a1.539,1.539,0,0,1,1.538,1.513v4.256a3.462,3.462,0,0,1-3.4,3.461h-4.288a1.539,1.539,0,0,1-1.538-1.513v-4.256a3.462,3.462,0,0,1,3.4-3.461h4.288Zm8.846,1.154H-775.8a.385.385,0,0,0-.385.385v4.231a2.308,2.308,0,0,0,2.308,2.308h4.231a.385.385,0,0,0,.385-.385v-4.231a2.308,2.308,0,0,0-2.308-2.308Zm-8.846,0h-4.231a2.308,2.308,0,0,0-2.308,2.27v4.269a.385.385,0,0,0,.374.385h4.242a2.308,2.308,0,0,0,2.307-2.27v-4.269a.385.385,0,0,0-.385-.385Zm-1.923-11.923a3.462,3.462,0,0,1,3.462,3.462v4.231a1.539,1.539,0,0,1-1.538,1.539h-4.231a3.462,3.462,0,0,1-3.462-3.462v-4.231a1.538,1.538,0,0,1,1.539-1.538Zm10.392,0a.577.577,0,0,1,.577.577.577.577,0,0,1-.577.577h-1.93a2.308,2.308,0,0,0-2.308,2.308v4.231a.385.385,0,0,0,.385.385h4.231a2.308,2.308,0,0,0,2.308-2.308V233.8a.577.577,0,0,1,.577-.577.577.577,0,0,1,.577.577v1.925a3.462,3.462,0,0,1-3.462,3.462H-775.8a1.539,1.539,0,0,1-1.539-1.539v-4.231a3.462,3.462,0,0,1,3.462-3.462Zm-10.392,1.154h-4.231a.385.385,0,0,0-.385.385v4.231a2.308,2.308,0,0,0,2.308,2.308h4.231a.385.385,0,0,0,.385-.385v-4.231a2.308,2.308,0,0,0-2.308-2.308Zm13.077-1.154a1.154,1.154,0,0,1,1.154,1.154,1.154,1.154,0,0,1-1.154,1.154,1.154,1.154,0,0,1-1.154-1.154,1.154,1.154,0,0,1,1.154-1.154Zm0,0"
+                    transform="translate(788.107 -229.951)" [attr.fill]="defaultIconColors[cateogtyIndex%4]" />
+                </svg>
+              </ng-template>
+
+            </div>
+            <div class="label">{{ item.name | maxString:6 }}</div>
+          </div>
+        </div>
+      </card-body>
+    </card>
+
+  </div>
+
+  <!-- <div class="version">v:0.07</div> -->
+
+</ion-content>
+
+<ion-content [ngStyle]="{'z-index': searchResult.length > 0 ? 1 : -1}" class="search-result" debug-toggle tappable>
+  <div class="list">
+    <div (click.stop)="pushListPage(item.key);" *ngFor="let item of searchResult" class="item" tappable>
+      <div class="label">{{ item.name }}</div>
+      <div class="category">{{ item.categoryName }}</div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,5 @@
+<div class="list-tile" [ngClass]="{'w100': isOverflowAt}">
+  <div class="lable">{{name| maxString:labelMaxLen}}</div>
+  <div class="colon">:</div>
+  <div class="value" #values is-overflow2 (overflow)="isOverflow($event);" [ngStyle]="setStyle">{{datetimeValue}}</div>
+</div>

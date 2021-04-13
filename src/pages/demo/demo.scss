@@ -1,0 +1,18 @@
+page-demo {
+
+    mat-list-item{
+        height: auto !important;
+        background-color: #fff;
+    }
+
+    .mat-grid-tile .mat-figure {
+        justify-content:left;
+    }
+
+    .mat-list-avatar {
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 3px !important;
+    }
+
+}

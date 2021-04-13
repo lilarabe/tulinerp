@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我的企业</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list inset>
+
+    <ion-item *ngFor="let company of companys;" (click.stop)="toggleCompany(company);">
+      <ion-note [ngClass]="{'title': company.SAAS_DB_AUTH === currCompanyId}" item-start>{{ company.name }}</ion-note>
+      <ion-badge color="danger" item-start>{{ company.todo_num }}</ion-badge>
+      <ion-icon *ngIf="company.SAAS_DB_AUTH === currCompanyId" name="checkmark" color="default" item-end></ion-icon>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

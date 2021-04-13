@@ -1,0 +1,9 @@
+<div class="list-status">
+  <div *ngIf="status === 0 && !isTempSave" class="tag y">未发起</div>
+  <div *ngIf="status === 1" class="tag b">审批中</div>
+  <div *ngIf="status === 2" class="tag r">已驳回</div>
+  <div *ngIf="status === 3" class="tag g">已归档</div>
+  <div *ngIf="status === 0 && isTempSave" class="tag z">
+    <ion-icon name="ios-alert" class="alert"></ion-icon>暂存
+  </div>
+</div>

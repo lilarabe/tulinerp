@@ -1,0 +1,13 @@
+<div class="moredata-full">
+  <div class="items">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+  </div>
+  <!-- <div *ngIf="moreDataItemData.value" class="image">
+  </div> -->
+</div>
+<div class="item-list">
+  <ion-chip *ngFor="let item of moreDataItemData.value;let i=index;">
+    <ion-label color="secondary" *ngIf="item.filePath"  (click.stop)="openBrowser(item.filePath);"><span class="look">查看</span></ion-label>
+  </ion-chip>
+</div>

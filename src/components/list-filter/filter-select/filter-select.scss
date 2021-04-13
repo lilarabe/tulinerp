@@ -1,0 +1,31 @@
+filter-select {
+    display: block;
+    width: 100%;
+
+    font-size: 16px;
+    
+    .filter-select {
+        @include flex-x();
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .filter-select-item {
+            width: calc( (100% - 30px)/3 );
+            height: 40px;
+            border-radius: 4px;
+            background-color: #f5f5f5;
+            color:#333;
+            @include flex-x();
+            justify-content: center;
+            align-items: center;
+            margin: 0 0 15px 0;
+        }
+
+        .filter-select-item.active {
+            background-color: #2eb8c0;
+            color:#fff;
+        }
+    }
+
+    
+}

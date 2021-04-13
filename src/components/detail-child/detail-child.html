@@ -1,0 +1,33 @@
+<ion-item-group *ngIf="isAdd || showListData.length">
+  <ion-item-divider color="light">
+
+    <button *ngIf="isAdd" class="btns" (tap)="add();" ion-button [color]="'default'" [clear]="true" item-end>
+      <ion-icon class="icon-add" name="ios-add-circle-outline"></ion-icon>
+      添加
+    </button>
+
+    <button (tap)="openExcel();" *ngIf="showListData.length" class="btns" ion-button [color]="'default'" [clear]="true" item-end>
+      <ion-icon class="icon-add" name="ios-information-circle-outline"></ion-icon>
+      预览
+    </button>
+
+  </ion-item-divider>
+</ion-item-group>
+
+<display-items *ngIf="isShowList" [listData]="showListData" [parentModuleName]="moduleName" [moduleName]="itemsData.moduleName"
+  [clickAction]="clickAction" [isDrag]="isEdit"></display-items>
+
+
+<div *ngIf="itemsData.listData.length > defaultShowCount">
+
+  <div *ngIf="isShowMoreOn" (click)="showMoreList();" class="bottom-info">
+    <ion-icon class="bottom-icon" name="arrow-round-down" color="primary"></ion-icon>
+    查看剩下的<span class="num">{{ showMoreCount }}</span>条信息
+  </div>
+
+  <div *ngIf="isShowMoreOff" (click)="hideMoreList();" class="bottom-info">
+    <ion-icon class="bottom-icon" name="arrow-round-up" color="primary"></ion-icon>
+    收起
+  </div>
+
+</div>

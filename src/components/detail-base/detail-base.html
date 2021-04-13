@@ -1,0 +1,6 @@
+<div *ngIf="listData.length > 0" class="background">
+  <div *ngFor="let items of listData">
+    <!-- <grid-list [items]="items"></grid-list> -->
+    <list-items [items]="items" [operate]="false"></list-items>
+  </div>
+</div>

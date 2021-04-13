@@ -1,0 +1,7 @@
+<div class="list-tile">
+  <div class="lable">{{name| maxString:labelMaxLen}}</div>
+  <div class="colon">:</div>
+  <div *ngIf="isOverflow" (click.stop)="readMore(value);" is-overflow2 (overflow)="testIsOverflow($event);"
+    class="value">{{value}}</div>
+  <div *ngIf="!isOverflow" is-overflow2 (overflow)="testIsOverflow($event);" class="value">{{value}}</div>
+</div>

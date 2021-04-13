@@ -1,0 +1,36 @@
+<ion-list no-lines no-margin class="list-page" *ngIf="listData.length">
+  <ion-item-sliding class="ion-item-sliding" *ngFor="let items of listData; index as i;" no-lines #itemElement>
+    <div ion-item class="list-item" (click.stop)="clickItem(items);">
+
+      <ion-thumbnail item-start *ngIf="items.pic && items.pic.src" class="thumbnail">
+        <img class="img" [src]="items.pic.src">
+      </ion-thumbnail>
+
+      <!-- <div *ngIf="items.approveStatus !== undefined" class="list-status">
+        <div *ngIf="items.approveStatus === 0" class="tag y">未发起</div>
+        <div *ngIf="items.approveStatus === 1" class="tag b">审批中</div>
+        <div *ngIf="items.approveStatus === 2" class="tag r">被驳回</div>
+        <div *ngIf="items.approveStatus === 3" class="tag g">已归档</div>
+      </div>
+      
+      <grid-list *ngIf="items" [items]="items" [operate]="false"></grid-list> -->
+
+      <list-items *ngIf="items" [items]="items" [operate]="false"></list-items>
+
+    </div>
+
+    <ion-item-options side="right" *ngIf="isDrag || items.isDel || items.isEdit">
+      <!-- 删除 -->
+      <button *ngIf="isDrag && items.isDel" ion-button color="danger" (click)="del(items.id, i, items);">
+        <ion-icon name="trash"></ion-icon>
+        删除
+      </button>
+      <!-- 编辑 -->
+      <button *ngIf="isDrag && items.isEdit" ion-button color="secondary" (click)="pushEditPage(items);itemElement.close();">
+        <ion-icon name="create"></ion-icon>
+        编辑
+      </button>
+    </ion-item-options>
+
+  </ion-item-sliding>
+</ion-list>

@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>demoVideo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div style="width: 200px;height: 60px;background-color: blueviolet;">
+    视屏上传
+    <app-file-upload (uploadFileInfoEvent)="uploadFileInfo($event);" [fileTypeNames]="['png']"></app-file-upload>
+  </div>
+
+</ion-content>

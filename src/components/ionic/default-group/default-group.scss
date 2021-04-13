@@ -1,0 +1,14 @@
+default-group {
+  .group-content {
+    background-color: #fff;
+  }
+
+  .default-group-item-group {
+    border-bottom: 2px solid #fff;
+  }
+}
+
+ion-content ion-item-group:last-child .default-group-item-group,
+ion-content detail-items:last-child .default-group-item-group {
+  border-bottom: none;
+}

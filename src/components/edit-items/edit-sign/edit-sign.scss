@@ -1,0 +1,13 @@
+edit-sign {
+  .ion-item {
+    touch-action: auto !important;
+  }
+
+  .readonly {
+    opacity: 0.4;
+  }
+
+  .edit-value {
+    width: calc(100% - 160px);
+  }
+}

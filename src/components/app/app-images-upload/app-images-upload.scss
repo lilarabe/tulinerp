@@ -1,0 +1,21 @@
+app-images-upload {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  
+    .input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      padding: 0;
+      margin: 0;
+      opacity: 0;
+    }
+}

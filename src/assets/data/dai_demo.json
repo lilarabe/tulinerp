@@ -1,0 +1,60 @@
+{
+  "status": 1,
+  "payload": [{
+      "userName": "系统提示222",
+      "read":false,
+      "content": [{
+        "transmissionTime": "1593322597000",
+        "title": "工地停工通知111",
+        "details": "停工时间：2020-06-01~2020-08-01"
+      }]
+    },
+    {
+      "userName": "系统提示",
+      "read":false,
+      "content": [{
+        "transmissionTime": "1593322597000",
+        "title": "工程延期预警",
+        "details": "木工工程验收已逾期3天"
+      }]
+    },
+    {
+      "userName": "系统提示",
+      "read":false,
+      "content": [{
+          "transmissionTime": "1593322597000",
+          "title": "工地验收",
+          "details": "今天木工工地验收请跟进"
+        },
+        {
+          "transmissionTime": "1593322597000",
+          "title": "工地验收",
+          "details": "今天木工工地验收请跟进"
+        }
+      ]
+    },
+    {
+        "userName": "系统提示",
+        "read":false,
+        "content": [{
+          "transmissionTime": "1593322597000",
+          "title": "工程变更",
+          "details": "工地变工通知"
+        }]
+      },
+      {
+        "userName": "系统提示",
+        "read":false,
+        "content": [{
+            "transmissionTime": "1593322597000",
+            "title": "工单提醒",
+            "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque molestias eligendi nam quos soluta facere adipisci minus cupiditate quae perspiciatis?"
+          },
+          {
+            "transmissionTime": "1593322597000",
+            "title": "工单提醒",
+            "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque molestias eligendi nam quos soluta facere adipisci minus cupiditate quae perspiciatis?"
+          }]
+      }
+    ]
+}

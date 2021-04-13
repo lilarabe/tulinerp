@@ -1,0 +1,38 @@
+card-header {
+  display: block;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 10px;
+    padding-left: 0;
+    align-items: center;
+  
+
+    &::before {
+      content: '';
+      background-color: #3178FF;
+      width: 3px;
+      height: 15px;
+      display: block;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #333333;
+      font-weight: 500;
+      display: flex;
+      flex-direction: row;
+      margin-left: 10px;
+    }
+
+    .flex1 {
+      flex: 1;
+    }
+  }
+
+}

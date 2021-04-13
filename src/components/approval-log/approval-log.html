@@ -1,0 +1,89 @@
+<div class="approval-log-title">
+  审批日志
+  <div class="withdraw" (click)="withdraw()" *ngIf="approvalData.withdraw!==undefined && approvalData.withdraw!= '-1'" tappable>
+    撤回
+  </div>
+</div>
+
+<div class="approval-log-items">
+  <!-- 待审批 -->
+  <div *ngIf="approvalData.isApprovalPending" class="approval-log-item">
+    <div class="approval-log-item-content">
+      <div class="message-box">
+        <div class="message-box-title">待审批</div>
+        <div class="message-textarea-box">
+            <!-- <app-textarea (valueChangeEvent)="textareaValueChange($event);" (focusEvent)="focusTextarea()" classNames="message-box-textarea-div" placeholder="这里填写审批意见" #textarea></app-textarea> -->
+            <ion-textarea [(ngModel)]="message" (ionFocus)="focusTextarea();" #textarea placeholder="这里填写审批意见" class="message-box-textarea"></ion-textarea>
+        </div>
+        <div class="message-box-btns">
+          <div (click)="doOk();" class="message-box-btn yes">同意</div>
+          <div (click)="doCancel();" class="message-box-btn no">驳回</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 审批日志 -->
+  <div *ngFor="let log of approvalData.logData" [ngClass]="{'only': (approvalData.logData.length === 1 && !approvalData.isApprovalPending)}" class="approval-log-item">
+    <!-- 审批状态 - 发起 -->
+    <div *ngIf="log.result === 'start'" class="item-status-start">
+      <div class="approval-log-item-content">
+        <div class="approval-log-item-content-box">
+          <div class="info">
+            <div class="info-text">由{{ log.user }}提交的审批</div>
+            <div class="info-time">{{ log.date }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 审批状态 - 同意 -->
+    <div *ngIf="log.result === 'yes'" class="item-status-ok">
+      <div class="approval-log-item-content">
+        <div class="approval-log-item-content-box">
+          <div class="info">
+            <div class="info-name">{{ log.user }}</div>
+            <div class="info-status ok">同意</div>
+            <div class="info-time">{{ log.date }}</div>
+          </div>
+          <div class="message">意见：{{ log.message }}</div>
+        </div>
+      </div>
+    </div>
+     <!-- 审批状态 - 等候 -->
+     <div *ngIf="log.result === 'wait'" class="item-status-start">
+      <div class="approval-log-item-content">
+        <div class="approval-log-item-content-box">
+          <div class="info">
+            <div class="info-text">{{ log.user }}正在审批</div>
+            <!-- <div class="info-status no">驳回</div> -->
+            <div class="info-time">{{ log.date }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 审批状态 - 驳回 -->
+    <div *ngIf="log.result === 'no'" class="item-status-no">
+      <div class="approval-log-item-content">
+        <div class="approval-log-item-content-box">
+          <div class="info">
+            <div class="info-name">{{ log.user }}</div>
+            <div class="info-status no">驳回</div>
+            <div class="info-time">{{ log.date }}</div>
+          </div>
+          <div class="message">意见：{{ log.message }}</div>
+        </div>
+      </div>
+    </div>
+    <!-- 审批状态 - 完成 -->
+    <div *ngIf="log.result === 'end'" class="item-status-end">
+      <div class="approval-log-item-content">
+        <div class="approval-log-item-content-box">
+          <div class="info">
+            <div class="info-text">审批完成</div>
+            <div class="info-time">{{ log.date }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

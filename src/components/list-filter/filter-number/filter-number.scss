@@ -1,0 +1,31 @@
+filter-number, filter-date {
+  display: block;
+  width: 100%;
+
+  font-size: 16px;
+
+  .filter-number {
+    @include flex-x();
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .filter-number-item {
+      width: calc((100% - 30px)/2.5);
+      height: 40px;
+      border-radius: 4px;
+      background-color: #f5f5f5;
+      color: #333;
+      @include flex-x();
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .filter-number-split {
+      flex: 1;
+      height: 3px;
+      margin: 0 15px;
+      background-color: #2eb8c0;
+    }
+  }
+}

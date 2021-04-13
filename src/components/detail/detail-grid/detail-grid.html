@@ -1,0 +1,10 @@
+<div class="gridView clearfix">
+  <div class="item" *ngFor="let item of relevantModuleData">
+    <div class="item-content" (click)="click(item)">
+      <div *ngIf="item.badge" class="badge" [ngClass]="{'blue': item.badge!=0}">{{item.badge?item.badge>99?"99+":item.badge:"0"}}</div>
+       <img [src]="item.iconImage?item.iconImage:'assets/images/default.png'" alt="" class="image">
+    <div class="title">{{item.name}}</div>
+    </div>
+  </div>
+
+</div>

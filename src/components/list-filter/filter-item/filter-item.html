@@ -1,0 +1,7 @@
+<div class="header">
+  <div class="name">{{ name }}</div>
+  <div (click)="show();" *ngIf="isShowBtn" class="show">显示全部 <ion-icon [name]="isShow ? 'arrow-up' : 'arrow-down'"></ion-icon></div>
+</div>
+<div #content [class.short]="!isShow" class="filter-item-content">
+  <ng-content></ng-content>
+</div>

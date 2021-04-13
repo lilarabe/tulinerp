@@ -1,0 +1,4 @@
+
+<!-- <wx-work-pc *ngIf="isWxWorkPc"></wx-work-pc>
+<ion-nav *ngIf="!isWxWorkPc" #nav [root]="rootPage" [class]="themeName"></ion-nav>  -->
+<ion-nav #nav [root]="rootPage" [class]="themeName" [ngClass]="{'height': isIphone}"></ion-nav> 

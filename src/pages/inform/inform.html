@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="header">
+    <div class="header_left">
+      <span>上海</span>
+      |
+      <span>23&#8451;</span>
+    </div>
+    <ion-title>{{title}}</ion-title>
+    <ion-buttons end>
+      <div (outputQrCodeEvent)="getQrCode($event);" native-qr-scanner end>
+        <button class="qr-btn" color="header" ion-button icon-only>
+          <img src="assets/images/scan.png" alt="" width="20" height="20">
+        </button>
+      </div>
+    </ion-buttons>
+  </ion-navbar>
+  <list-search [(keyword)]="keyword" (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+    (searchClickEvent)="searchInput($event);"></list-search>
+ </ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item class="dai_item" *ngFor="let item of data" (click.stop)="onDetail(item)">
+      <ion-avatar item-start>
+        <img src="assets/images/icon_one.png">
+      </ion-avatar>
+      <h2>{{item.content[0].title}}</h2>
+      <p>{{item.content[0].details}}</p>
+      <ion-note item-end class="note note-md">
+        {{item.content[0].transmissionTime | timeDispose}}
+      </ion-note>
+      <div class="dai_badge" *ngIf="!item.read">{{item.content.length}}</div>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
+

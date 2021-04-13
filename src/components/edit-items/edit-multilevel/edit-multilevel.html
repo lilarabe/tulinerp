@@ -1,0 +1,36 @@
+<!-- <div class="edit-formGroup relative" [ngClass]="{'hidden': isHidden, 'readonly':readonly}"> -->
+  <!-- lable -->
+  <!-- <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable> -->
+  <!-- item -->
+  <!-- <ion-item class="edit-item" [ngClass]="{'readonly':readonly}"> -->
+    <!-- <ion-select [ngClass]="{'readonly': readonly || disable}" [(ngModel)]="selectData[0]" item-content interface="popover" class="edit-value">
+      <ng-container *ngFor="let option of valueArray">
+        <ion-option *ngIf="!option.isHidden"  [value]="option.value" [disabled]="readonly">{{ option.label }}
+        </ion-option>
+      </ng-container>
+    </ion-select> -->
+    <!-- <ion-label>
+          <multilevel-select [readonly]='readonly' [disable]='disable' [valueArray]='valueArray' [selectData]='selectData'  (uploadSelectData)="doSelect($event)"></multilevel-select>
+    </ion-label> -->
+  <!-- </ion-item> -->
+  <!-- state -->
+  <!-- <div [formGroup]="inputFormGroup" style="display:none;">
+    <input type="hidden" [formControlName]="inputFormControlName">
+  </div>
+  <edit-public-state ></edit-public-state>
+  <div class="curtain" *ngIf=" readonly || disable"></div>
+</div> -->
+<div *ngIf="!inputFormControlName.includes('_name')" [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item (tap)="toSelectPage();" class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note [ngClass]="readonly || disable ? 'readonly' : ''" color="dark" class="edit-value" item-content>{{
+      displayData || tips }}</ion-note>
+      <ion-icon class="edit-btns"  name="md-list" [color]="readonly || disable ? 'disable' : 'default'" item-end></ion-icon>
+    <!-- <ion-icon class="edit-btns" name="menu" [color]="readonly || disable ? 'disable' : 'default'" item-end></ion-icon> -->
+  </ion-item>
+  <!-- state -->
+  <edit-public-state [fieldData]="fieldData"></edit-public-state>
+</div>
+

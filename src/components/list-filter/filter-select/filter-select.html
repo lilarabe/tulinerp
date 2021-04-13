@@ -1,0 +1,3 @@
+<div class="filter-select" [formGroup]="inputFormGroup">
+  <div (tap)="doSelect(item.value);" [class.active]="item.selected" *ngFor="let item of valueArray; index as i;" class="filter-select-item">{{ item.name }}</div>
+</div>

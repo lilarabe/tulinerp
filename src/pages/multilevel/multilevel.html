@@ -1,0 +1,50 @@
+<ion-header class="list-page-header" offline>
+
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button (click)="dismiss();">
+        <button class="header-btn" ion-button clear>取消</button>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="confirm();">
+        <button class="header-btn" ion-button clear>确定</button>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+  <div class="titleList">
+    <div class="nowData">
+      <div class='titleMain'>
+        <span class="title" [ngClass]="{'black':displayData.length===0}" (click)="setLabel(0)">
+          根目录
+        </span>
+        <ion-icon class='arrow-forward' name="arrow-forward"></ion-icon>
+        <ng-container *ngFor="let item of displayData;let i=index">
+          <span class="title" [ngClass]="{'black': i===displayData.length-1}" (click)="setLabel(item)">
+            {{item.label}}
+          </span>
+          <ion-icon class='arrow-forward' *ngIf="i!==displayData.length-1" name="arrow-forward"></ion-icon>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+
+  <!-- <list-search (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+    (searchClickEvent)="searchInput($event);"></list-search> -->
+
+</ion-header>
+
+
+<ion-content padding>
+  <list-select [canSelectParent]='canSelectParent' [selectData]='selectData' [thisData]='selectData[selectData.length-1]' [valueArray]='showArray'
+    (uploadSelectData)='doSelect($event)' (uploadSelectAtData)='doSelectAt($event)'></list-select>
+</ion-content>
+
+<ion-footer padding class='footer'>
+  <div class="text">
+     当前选中值:{{realValueStr}}
+  </div>
+ 
+</ion-footer>

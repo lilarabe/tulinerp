@@ -1,0 +1,1636 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "isApprovalFlow": true,
+    "addDefaultTrigger": {
+      "main": []
+    },
+    "approvalData": {
+      "approvalStatus": 0,
+      "approvalerData": [
+        {
+          "value": "00002",
+          "label": "00002",
+          "name": "陈文"
+        },
+        {
+          "value": "00409",
+          "label": "00409",
+          "name": "袁志良"
+        }
+      ],
+      "baseOpenFiled": [],
+      "chilerenOpenFiled": []
+    },
+    "Calculation": [
+      {
+        "code": "if ((string)(M.zhtbh) == '') {\n::t_lwht_staff:: {\nif (@(S.jine) == 0 && @(number)(S.yusuanjine) > 0 && (number)(M.zbjsgs) != 2) @(S.jine) = (@(number)(S.yusuanjine) * (1 + (number)(M.sysl)\/100)).toFixed(2);\n@(S.lwjebhs) = (@(number)(S.jine) \/ (1 + (number)(M.sysl)\/100)).toFixed(2);\n}\n}\nM.zbjsgs = 2;\nM.htzje= ((number)(+)(S.t_lwht_staff){(number)(S.jine)}).toFixed(2);\nM.bhshtj= ((number)(M.htzje)\/(1+(number)(M.sysl)\/100)).toFixed(2);\nM.yujishuie= ((number)(M.htzje)-(number)(M.bhshtj)).toFixed(2);\nM.fbhtje=M.htzje;\nif ((number)(M.bhshtj) > (number)(M.yqdhtje)) {\n    setColor('M','bhshtj','#F56C6C');\n    setColor('M','yqdhtje','#F56C6C');\n}\nif ((number)(M.bhshtj) <= (number)(M.yqdhtje)) {\n    clearColor('M','bhshtj');\n    clearColor('M','yqdhtje');\n}",
+        "field": "",
+        "call_type": 1
+      },
+      {
+        "code": "M.bhshtj= ((number)(M.htzje)\/(1+(number)(M.sysl)\/100)).toFixed(2);\nM.yujishuie= ((number)(M.htzje)-(number)(M.bhshtj)).toFixed(2);\nM.fbhtje=M.htzje;\nif ((number)(M.bhshtj) > (number)(M.yqdhtje)) {\n    setColor('M','bhshtj','#F56C6C');\n    setColor('M','yqdhtje','#F56C6C');\n}\nif ((number)(M.bhshtj) <= (number)(M.yqdhtje)) {\n    clearColor('M','bhshtj');\n    clearColor('M','yqdhtje');\n}",
+        "field": "htzje",
+        "call_type": 0
+      },
+      {
+        "code": "if ((number)(M.fkfs) == 1 && (number)(M.yuefukuan) <= 0) {\n     alert('按月度付款，必须填写月付款金额!');\n     return false;\n} else if ((number)(M.fkfs) == 3 && (number)(M.fukuanbili) == '') {\n     alert('按比例付款，必须选择付款比例!');\n     return false;\n}\nif ((number)(M.bhshtj) > (number)(M.yqdhtje) && (string)(M.beizhu) =='') {\n     alert('合同不含税金额超出可用预算，请填写备注!');\n     return false;\n}\nif ((number)(M.gmbx) != 1 && (string)(M.beizhu) =='') {\n     alert('购买保险为否，请填写备注!');\n     return false;\n}\nif ((number)(M.htzje) == 0) {\n     alert('劳务分包总额不能为0!');\n     return false;\n}",
+        "field": "",
+        "call_type": 4
+      },
+      {
+        "code": "::t_lwht_staff:: {\nif (@(S.jine) == 0) @(S.jine) = (@(number)(S.yusuanjine) * (1 + (number)(M.sysl)\/100)).toFixed(2);\n@(S.lwjebhs) = (@(number)(S.jine) \/ (1 + (number)(M.sysl)\/100)).toFixed(2);\n}\nM.bhshtj= ((number)(M.htzje)\/(1+(number)(M.sysl)\/100)).toFixed(2);\nM.yujishuie= ((number)(M.htzje)-(number)(M.bhshtj)).toFixed(2);\nM.fbhtje=M.htzje;\nif ((number)(M.bhshtj) > (number)(M.yqdhtje)) {\n    setColor('M','bhshtj','#F56C6C');\n    setColor('M','yqdhtje','#F56C6C');\n}\nif ((number)(M.bhshtj) <= (number)(M.yqdhtje)) {\n    clearColor('M','bhshtj');\n    clearColor('M','yusuanheji');\n}",
+        "field": "sysl",
+        "call_type": 0
+      },
+      {
+        "code": "if ((number)(M.bhshtj) > (number)(M.yqdhtje)) {\n    setColor('M','bhshtj','#F56C6C');\n    setColor('M','yqdhtje','#F56C6C');\n}",
+        "field": "",
+        "call_type": 3
+      }
+    ],
+    "Dynamic_Form": [
+      {
+        "field": "gmbx",
+        "condition": 0,
+        "con_val": 0,
+        "custom_cond": "",
+        "dynamic_fields": [
+          {
+            "field": [
+              "laowuhetong.xml",
+              "beizhu"
+            ],
+            "hidden": "false",
+            "required": "true",
+            "readonly": "false"
+          }
+        ],
+        "Son_Table": []
+      },
+      {
+        "field": "sfzb",
+        "condition": 0,
+        "con_val": 1,
+        "custom_cond": "",
+        "dynamic_fields": [
+          {
+            "field": [
+              "laowuhetong.xml",
+              "zhtbh"
+            ],
+            "hidden": "false",
+            "required": "true",
+            "readonly": "false",
+            "message": "必填"
+          }
+        ],
+        "Son_Table": []
+      },
+      {
+        "field": "sfzb",
+        "condition": 0,
+        "con_val": 0,
+        "custom_cond": "",
+        "dynamic_fields": [
+          {
+            "field": [
+              "laowuhetong.xml",
+              "zhtbh"
+            ],
+            "hidden": "true",
+            "required": "false",
+            "readonly": "false",
+            "message": "必填"
+          },
+          {
+            "field": [
+              "laowuhetong.xml",
+              "zbcs"
+            ],
+            "hidden": "true",
+            "required": "false",
+            "readonly": "false",
+            "message": "必填"
+          }
+        ],
+        "Son_Table": []
+      }
+    ],
+    "title": "劳务合同",
+    "base": "t_laowuhetong",
+    "editGroup": [
+      {
+        "name": "基本信息",
+        "expanded": 1,
+        "fieldArray": [
+          {
+            "placeholder": "编号",
+            "key": "ID",
+            "value": "BSLWHT2021-000001",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "劳务类型",
+            "key": "lwlx",
+            "value": "1",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "单个",
+                "value": "1"
+              },
+              {
+                "name": "批量",
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "placeholder": "是否增补",
+            "key": "sfzb",
+            "value": "0",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "是",
+                "value": "1"
+              },
+              {
+                "name": "否",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "placeholder": "主合同编号",
+            "key": "zhtbh",
+            "value": "",
+            "selector": "sheetlink",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0500",
+              "moduleName": "laowuhetong"
+            }
+          },
+          {
+            "placeholder": "销售合同编号",
+            "key": "ccbh",
+            "value": "BSCC202101-000013",
+            "selector": "sheetlink",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "202255SJ0171",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0270",
+              "moduleName": "dingdanchengce"
+            }
+          },
+          {
+            "placeholder": "业务类型",
+            "key": "ywlx",
+            "value": "BSYW2019-000010",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "项目编号",
+            "key": "xmbh",
+            "value": "BSLX2021-000007",
+            "selector": "sheetlink",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "LX2122550007",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0175",
+              "moduleName": "lixiangtongji"
+            }
+          },
+          {
+            "placeholder": "项目编号1",
+            "key": "xmbh1",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "项目名称",
+            "key": "xmmc",
+            "value": "赵惠莲",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "合同甲方",
+            "key": "htjf",
+            "value": "BSJF2019-0002",
+            "selector": "sheetlink",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "上海全筑住宅装饰工程有限公司",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0262",
+              "moduleName": "fabaodanwei"
+            }
+          },
+          {
+            "placeholder": "合同乙方",
+            "key": "fbdw",
+            "value": "BSLW2019-000020",
+            "selector": "sheetlink",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "上海蓉申建筑劳务有限公司（木）",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0191",
+              "moduleName": "laowugongsi"
+            }
+          },
+          {
+            "placeholder": "劳务公司名称",
+            "key": "lwgsmc",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "工种",
+            "key": "gongzhong",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "乙方名称",
+            "key": "dwmc",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "项目组织",
+            "key": "bumen",
+            "value": "",
+            "selector": "input",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "合同编号1",
+            "key": "htbh",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "合同编号",
+            "key": "htbh1",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "合同名称",
+            "key": "htmc",
+            "value": "青浦徐泾高泾路800弄321号劳务合同",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "项目经理",
+            "key": "xmjl",
+            "value": "13818174661",
+            "selector": "sheetlink",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "成存干",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0174",
+              "moduleName": "yonghuxinxi"
+            }
+          },
+          {
+            "placeholder": "付款方式",
+            "key": "fkfs",
+            "value": "4",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "按合同约定内容付款",
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "placeholder": "付款比例",
+            "key": "fukuanbili",
+            "value": "BS2-4-3.7-0.3",
+            "selector": "sheetlink",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "2-4-3.7-0.3",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0205",
+              "moduleName": "fkjh"
+            }
+          },
+          {
+            "placeholder": "月付款",
+            "key": "yuefukuan",
+            "value": "0.0000",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "所在省",
+            "key": "sheng",
+            "value": "上海市",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "项目地址",
+            "key": "xmdz",
+            "value": "青浦徐泾高泾路800弄321号",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "劳务开始日期",
+            "key": "lwksrq",
+            "value": "2020-05-10",
+            "selector": "date",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "劳务截止日期",
+            "key": "lwjzrq",
+            "value": "2020-06-30",
+            "selector": "date",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "总天数",
+            "key": "zts",
+            "value": "",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "签订日期",
+            "key": "qdrq",
+            "value": "2021-01-12 00:00:00",
+            "selector": "datetime",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "minDate": "",
+            "maxDate": ""
+          },
+          {
+            "placeholder": "合同状态",
+            "key": "htzt",
+            "value": "0",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "待审核",
+                "value": "0"
+              },
+              {
+                "name": "执行中",
+                "value": "1"
+              },
+              {
+                "name": "已完成",
+                "value": "2"
+              },
+              {
+                "name": "已作废",
+                "value": "10"
+              }
+            ]
+          },
+          {
+            "placeholder": "付款状态",
+            "key": "fkzt",
+            "value": "0",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "未付款",
+                "value": "0"
+              },
+              {
+                "name": "已付部分款",
+                "value": "1"
+              },
+              {
+                "name": "已付全款",
+                "value": "2"
+              }
+            ]
+          },
+          {
+            "placeholder": "合同附件",
+            "key": "htyj",
+            "value": "",
+            "selector": "multifile",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "购买保险",
+            "key": "gmbx",
+            "value": "1",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "是",
+                "value": "1"
+              },
+              {
+                "name": "否",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "placeholder": "是否正式开工",
+            "key": "sfzskg",
+            "value": "0",
+            "selector": "select",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "是",
+                "value": "1"
+              },
+              {
+                "name": "否",
+                "value": "0"
+              }
+            ]
+          },
+          {
+            "placeholder": "增补次数",
+            "key": "zbcs",
+            "value": "",
+            "selector": "",
+            "isHidden": false,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "备注",
+            "key": "beizhu",
+            "value": "",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          }
+        ],
+        "hidden": false
+      },
+      {
+        "name": "合同金额信息",
+        "expanded": 1,
+        "fieldArray": [
+          {
+            "placeholder": "项目合同金额",
+            "key": "xshtje",
+            "value": "98600.0000",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "预算总额(不含税)",
+            "key": "yusuanheji",
+            "value": "",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "预算可用金额",
+            "key": "yqdhtje",
+            "value": "0.0000",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "本项目下人工预算总金额-人工预算已用金额"
+          }
+        ],
+        "hidden": false
+      },
+      {
+        "name": "劳务金额信息",
+        "expanded": 1,
+        "fieldArray": [
+          {
+            "placeholder": "申请中金额",
+            "key": "sqje",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "累计已付金额",
+            "key": "ljyfje",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "累计到场",
+            "key": "ljdc",
+            "value": "",
+            "selector": "",
+            "isHidden": false,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "分包总额(不含税)",
+            "key": "bhshtj",
+            "value": "0.0000",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "劳务分包总额",
+            "key": "htzje",
+            "value": "0.0000",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "劳务合同金额（含税）"
+          },
+          {
+            "placeholder": "劳务总金额(含增补)",
+            "key": "lwzje",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "供应商纳税人身份",
+            "key": "gysnsrsf",
+            "value": "0.0000",
+            "selector": "input",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "增值税3%",
+                "value": "0.03"
+              }
+            ]
+          },
+          {
+            "placeholder": "税率(%)",
+            "key": "sysl",
+            "value": "3",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": false,
+            "disable": false,
+            "valids": [
+              "required"
+            ],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "0",
+                "value": "0"
+              },
+              {
+                "name": "3",
+                "value": "3"
+              },
+              {
+                "name": "5",
+                "value": "5"
+              },
+              {
+                "name": "6",
+                "value": "6"
+              }
+            ]
+          },
+          {
+            "placeholder": "预计税额",
+            "key": "yujishuie",
+            "value": "0.0000",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "含税合同价",
+            "key": "fbhtje",
+            "value": "0.0000",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "当前收款",
+            "key": "dqsk",
+            "value": "0.0000",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "计划付款金额",
+            "key": "jhfkje",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "计划已付金额",
+            "key": "jhyfje",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          }
+        ],
+        "hidden": false
+      },
+      {
+        "name": "系统信息",
+        "expanded": 1,
+        "fieldArray": [
+          {
+            "placeholder": "创建用户1",
+            "key": "createuser",
+            "value": "18117370416",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "创建用户",
+            "key": "cjyhxm",
+            "value": "",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "业务板块",
+            "key": "ywbk",
+            "value": "BSYWBK2019-0001",
+            "selector": "sheetlink",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "displayValue": "别墅",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0447",
+              "moduleName": "yewubankuai"
+            }
+          },
+          {
+            "placeholder": "板块负责人",
+            "key": "bkfzr",
+            "value": "",
+            "selector": "sheetlink",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "params": {
+              "workFlowId": "qjjfwpt_dev0472",
+              "moduleName": "yonghuxinxi"
+            }
+          },
+          {
+            "placeholder": "创建时间",
+            "key": "cjsj",
+            "value": "2021-01-12",
+            "selector": "date",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "所属组",
+            "key": "groupname",
+            "value": "",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "修改用户1",
+            "key": "modifyuser",
+            "value": "18117370416",
+            "selector": "",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "修改用户",
+            "key": "xgyhxm",
+            "value": "",
+            "selector": "input",
+            "isHidden": false,
+            "readonly": true,
+            "disable": true,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "修改日期",
+            "key": "updated_at",
+            "value": "2021-01-12",
+            "selector": "datetime",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "子表计算公式",
+            "key": "zbjsgs",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "审批状态",
+            "key": "spzt",
+            "value": "4",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入",
+            "valueArray": [
+              {
+                "name": "审批中",
+                "value": "1"
+              },
+              {
+                "name": "驳回",
+                "value": "2"
+              },
+              {
+                "name": "归档",
+                "value": "3"
+              },
+              {
+                "name": "未发起",
+                "value": "4"
+              }
+            ]
+          },
+          {
+            "placeholder": "暂存状态",
+            "key": "tempsave",
+            "value": "暂存",
+            "selector": "input",
+            "isHidden": true,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "共享用户",
+            "key": "allianceusers",
+            "value": "",
+            "selector": "",
+            "isHidden": true,
+            "readonly": false,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          },
+          {
+            "placeholder": "建档日期",
+            "key": "jdrq",
+            "value": "",
+            "selector": "date",
+            "isHidden": false,
+            "readonly": true,
+            "disable": false,
+            "valids": [],
+            "asyncValids": [],
+            "tips": "请输入"
+          }
+        ],
+        "hidden": false
+      }
+    ],
+    "chilerenData": [
+      {
+        "hidden": false,
+        "add": true,
+        "readonly": false,
+        "metaData": {
+          "primaryKey": "ID",
+          "groups": [
+            {
+              "name": "基本信息",
+              "expanded": 1,
+              "fieldArray": [
+                {
+                  "placeholder": "成员",
+                  "key": "cybh",
+                  "value": "",
+                  "selector": "sheetlink",
+                  "isHidden": false,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [
+                    "required"
+                  ],
+                  "asyncValids": [],
+                  "tips": "请输入",
+                  "params": {
+                    "workFlowId": "qjjfwpt_dev0190",
+                    "moduleName": "laowurenyuan"
+                  }
+                },
+                {
+                  "placeholder": "工种",
+                  "key": "gongzhong",
+                  "value": "",
+                  "selector": "sheetlink",
+                  "isHidden": false,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入",
+                  "params": {
+                    "workFlowId": "qjjfwpt_dev0491",
+                    "moduleName": "gongzhongguanli"
+                  }
+                },
+                {
+                  "placeholder": "姓名",
+                  "key": "xingming",
+                  "value": "",
+                  "selector": "",
+                  "isHidden": true,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "手机",
+                  "key": "mobile",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "银行卡",
+                  "key": "yinhangka",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "开户行",
+                  "key": "kaihuhang",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "预算金额",
+                  "key": "yusuanjine",
+                  "value": "0",
+                  "selector": "input",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "劳务金额(含税)",
+                  "key": "jine",
+                  "value": "0",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [
+                    "required"
+                  ],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "劳务金额(不含税)",
+                  "key": "lwjebhs",
+                  "value": "0",
+                  "selector": "input",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "编号",
+                  "key": "ID",
+                  "value": "",
+                  "selector": "",
+                  "isHidden": true,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "序号",
+                  "key": "serial",
+                  "value": "",
+                  "selector": "int",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "主表编号",
+                  "key": "fk",
+                  "value": "BSLWHT2021-000001",
+                  "selector": "",
+                  "isHidden": true,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                }
+              ],
+              "hidden": false
+            }
+          ]
+        },
+        "listData": [
+          {
+            "groups": [
+              {
+                "name": "基本信息",
+                "expanded": 1,
+                "fieldArray": [
+                  {
+                    "placeholder": "成员",
+                    "key": "cybh",
+                    "value": "",
+                    "selector": "sheetlink",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [
+                      "required"
+                    ],
+                    "asyncValids": [],
+                    "tips": "请输入",
+                    "params": {
+                      "workFlowId": "qjjfwpt_dev0190",
+                      "moduleName": "laowurenyuan"
+                    },
+                    "displayValue": ""
+                  },
+                  {
+                    "placeholder": "工种",
+                    "key": "gongzhong",
+                    "value": "",
+                    "selector": "sheetlink",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入",
+                    "params": {
+                      "workFlowId": "qjjfwpt_dev0491",
+                      "moduleName": "gongzhongguanli"
+                    }
+                  },
+                  {
+                    "placeholder": "姓名",
+                    "key": "xingming",
+                    "value": "",
+                    "selector": "",
+                    "isHidden": true,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "手机",
+                    "key": "mobile",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "银行卡",
+                    "key": "yinhangka",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "开户行",
+                    "key": "kaihuhang",
+                    "value": "",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "预算金额",
+                    "key": "yusuanjine",
+                    "value": "0.00",
+                    "selector": "input",
+                    "isHidden": true,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "劳务金额(含税)",
+                    "key": "jine",
+                    "value": "0.00",
+                    "selector": "input",
+                    "isHidden": false,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [
+                      "required"
+                    ],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "劳务金额(不含税)",
+                    "key": "lwjebhs",
+                    "value": "0.00",
+                    "selector": "input",
+                    "isHidden": true,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "编号",
+                    "key": "ID",
+                    "value": "960",
+                    "selector": "",
+                    "isHidden": true,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "序号",
+                    "key": "serial",
+                    "value": "1.00",
+                    "selector": "int",
+                    "isHidden": true,
+                    "readonly": true,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  },
+                  {
+                    "placeholder": "主表编号",
+                    "key": "fk",
+                    "value": "BSLWHT2021-000001",
+                    "selector": "",
+                    "isHidden": true,
+                    "readonly": false,
+                    "disable": false,
+                    "valids": [],
+                    "asyncValids": [],
+                    "tips": "请输入"
+                  }
+                ],
+                "hidden": false
+              }
+            ]
+          }
+        ],
+        "moduleName": "t_lwht_staff",
+        "name": "劳务人员"
+      },
+      {
+        "hidden": true,
+        "add": false,
+        "readonly": false,
+        "metaData": {
+          "primaryKey": "ID",
+          "groups": [
+            {
+              "name": "基本信息",
+              "expanded": 1,
+              "fieldArray": [
+                {
+                  "placeholder": "成员编号",
+                  "key": "cybh",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "成员",
+                  "key": "xingming",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "工种",
+                  "key": "gongzhong",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "手机",
+                  "key": "mobile",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "银行卡",
+                  "key": "yinhangka",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "开户行",
+                  "key": "kaihuhang",
+                  "value": "",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "已付金额",
+                  "key": "yfje",
+                  "value": "0",
+                  "selector": "",
+                  "isHidden": false,
+                  "readonly": false,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "劳务金额(含增补)",
+                  "key": "jine",
+                  "value": "0",
+                  "selector": "input",
+                  "isHidden": false,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "付款申请金额",
+                  "key": "sqzfje",
+                  "value": "0",
+                  "selector": "",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "编号",
+                  "key": "ID",
+                  "value": "",
+                  "selector": "",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "序号",
+                  "key": "serial",
+                  "value": "",
+                  "selector": "int",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                },
+                {
+                  "placeholder": "主表编号",
+                  "key": "fk",
+                  "value": "BSLWHT2021-000001",
+                  "selector": "",
+                  "isHidden": true,
+                  "readonly": true,
+                  "disable": false,
+                  "valids": [],
+                  "asyncValids": [],
+                  "tips": "请输入"
+                }
+              ],
+              "hidden": false
+            }
+          ]
+        },
+        "listData": [],
+        "moduleName": "service_contract_child",
+        "name": "劳务人员(汇总)"
+      }
+    ]
+  }
+}

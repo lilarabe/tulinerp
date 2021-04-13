@@ -1,0 +1,12 @@
+face-description {
+  .video-box {
+    position: relative;
+
+    .video-canvas-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 1;
+    }
+  }
+}

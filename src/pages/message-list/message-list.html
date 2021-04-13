@@ -1,0 +1,19 @@
+<ion-header class="list-page-header" offline>
+
+  <ion-navbar>
+    <ion-title>我的消息</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="list-page-content" debug-toggle>
+
+  <list-num [totalNum]="totalNum"></list-num>
+
+  <display-items [clickAction]="'toDetailPageMessage'" [listData]="listData" [moduleName]="moduleName" [isDrag]="false">
+  </display-items>
+
+  <list-next-page [isEnabled]="canFlippingPage" (nextPageEvent)="$event.waitFor(asyncNextPage());"></list-next-page>
+
+</ion-content>

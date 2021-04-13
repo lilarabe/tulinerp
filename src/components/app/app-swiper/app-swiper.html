@@ -1,0 +1,28 @@
+<ion-content class="content">
+
+  <button (click.stop)="onImageClick();" class="close-btn" ion-button icon-only clear>
+    <ion-icon name="close"></ion-icon>
+  </button>
+
+  <div #containerSelector class="swiper-container">
+    <div *ngIf="imgArray && imgArray.length" class="swiper-wrapper">
+
+      <div *ngFor="let img of imgArray" class="swiper-slide">
+        <div class="swiper-zoom-container">
+          <img (press)="onActionSheet();" [src]="img?.src | safeUrl" class="swiper-lazy">
+        </div>
+      </div>
+
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+
+    <!-- 如果需要导航按钮 -->
+    <!-- <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div> -->
+
+    <!-- 如果需要滚动条 -->
+    <!-- <div class="swiper-scrollbar"></div> -->
+  </div>
+
+</ion-content>

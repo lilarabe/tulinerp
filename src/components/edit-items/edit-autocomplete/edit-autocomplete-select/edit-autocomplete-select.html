@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-toolbar no-border-top>
+    <ion-buttons start>
+      <button (tap)="dismiss();" ion-button icon-only>
+        <ion-icon name="arrow-back" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-searchbar (ionInput)="onInput($event);" [(ngModel)]="value"  [placeholder]="placeholder" debounce="1000" cancelButtonText="取消"></ion-searchbar>
+
+    <ion-buttons end>
+      <button ion-button icon-only (tap)="doSelect(value);">
+        <button class="header-btn" ion-button clear>确定</button>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="autocomplete-content">
+    <button ion-item *ngFor="let option of autocompleteOptions" (tap)="optionSelected(option);">
+      {{ option }}
+    </button>
+  </div>
+
+</ion-content>

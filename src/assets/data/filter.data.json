@@ -1,0 +1,87 @@
+{
+  "status": 1,
+  "payload": {
+    "filterData": [{
+        "selector": "filter-select",
+        "name": "单选",
+        "key": "category1",
+        "value": 2,
+        "valueArray": [
+          {
+            "name": "类别1",
+            "value": 1
+          },
+          {
+            "name": "类别2",
+            "value": 2
+          },
+          {
+            "name": "类别3",
+            "value": 3
+          },
+          {
+            "name": "类别4",
+            "value": 4
+          },
+          {
+            "name": "类别5",
+            "value": 5
+          },
+          {
+            "name": "类别6",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "selector": "filter-multiSelect",
+        "name": "多选",
+        "key": "category2",
+        "value": [2, 3],
+        "valueArray": [{
+            "name": "类别1",
+            "value": 1
+          },
+          {
+            "name": "类别2",
+            "value": 2
+          },
+          {
+            "name": "类别3",
+            "value": 3
+          },
+          {
+            "name": "类别4",
+            "value": 4
+          },
+          {
+            "name": "类别5",
+            "value": 5
+          },
+          {
+            "name": "类别6",
+            "value": 6
+          }
+        ]
+      },
+      {
+        "selector": "filter-number",
+        "name": "数字选择",
+        "key": "number",
+        "value": {
+          "min": "1",
+          "max": "2"
+        }
+      },
+      {
+        "selector": "filter-date",
+        "name": "日期选择",
+        "key": "date",
+        "value": {
+          "min": "2001-01-01",
+          "max": "2002-02-22"
+        }
+      }
+    ]
+  }
+}

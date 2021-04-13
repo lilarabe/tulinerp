@@ -1,0 +1,10 @@
+<div class="moredata-text" [ngClass]="isOverflow ? 'moredata-full' : 'moredata-default'">
+  <div class="items">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+    <div class="value" [ngStyle]="moreDataItemData.setStyle" is-overflow2 (overflow)="testOverflow($event);"
+      (click.stop)="textView();">{{datetimeValue}}
+      <span *ngIf="moreDataItemData.displayunit" class="unit">{{ moreDataItemData.displayunit }}</span>
+    </div>
+  </div>
+</div>

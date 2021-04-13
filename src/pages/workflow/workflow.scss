@@ -1,0 +1,165 @@
+@import '../../theme/mixin';
+
+page-workflow {
+
+  ion-content.content {
+    background-color: #F5F5F5;
+
+    .items {
+      .item {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+
+        .label {
+          font-size: 12px;
+          color: #333333;
+        }
+
+        .badge {
+          color: #FFFFFF;
+          font-size: 12px;
+          min-width: 20px;
+          height: 20px;
+          border-radius: 10px;
+          @include flex-center();
+          padding: 0 5px;
+          background-color: #D9D9D9;
+        }
+
+        .badge.bg-red {
+          background-color: #FD3535;
+        }
+
+        .badge.bg-blue {
+          background-color: #3178FF;
+        }
+
+        .badge.bg-green {
+          background-color: #2FEB39;
+        }
+
+        .badge.bg-grey {
+          background-color: #D9D9D9;
+        }
+      }
+    }
+  }
+
+
+  .workflow {
+    padding: 0 15px 15px;
+
+    .category {
+      @include flex-y;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .category:last-child {
+      border-bottom: none;
+    }
+
+    .workflow-title {
+      @include flex-x;
+      font-size: $workflow-title-size;
+      color: $workflow-title-color;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+    }
+
+    .workflow-item {
+      @include flex-x;
+      width: 100%;
+      font-size: $workflow-item-size;
+      color: $workflow-item-color;
+      height: 50px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 4px;
+      border-left: 5px solid #3DB2FF;
+      margin: 0 0 10px 0;
+      justify-content: space-between;
+      align-items: center;
+
+      .workflow-item-name {
+        margin: 0 0 0 10px;
+      }
+
+      .workflow-item-badge {
+        @include flex-x;
+        margin: 0 10px 0 0;
+        padding: 5px;
+        background-color: #999999;
+        color: #fff;
+        border-radius: 20px;
+        min-width: 26px;
+        justify-content: center;
+        align-items: center;
+        height: 26px;
+      }
+
+      .workflow-item-badge.gray {
+        background-color: #999999;
+      }
+
+      .workflow-item-badge.red {
+        background-color: #F78080;
+      }
+    }
+
+    .workflow-more {
+      @include flex-x;
+      width: 100%;
+      margin: 10px 0 20px 0;
+      height: 30px;
+      font-size: $workflow-more-size;
+      color: $workflow-more-color;
+      background-color: #ddd;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .approval-item {
+      @include flex-y;
+      width: 100%;
+      font-size: $workflow-item-size;
+      color: $workflow-item-color;
+      height: 60px;
+      box-sizing: border-box;
+      background-color: #fff;
+      border-radius: 4px;
+      border-left: 5px solid #2FB8C1;
+      margin: 0 0 10px 0;
+
+      .title {
+        width: 100%;
+        padding: 10px 10px 0 10px;
+      }
+
+      .info {
+        @include flex-x;
+        width: 100%;
+        justify-content: space-between;
+        padding: 5px 10px 10px 10px;
+
+        .user,
+        .time {
+          @include flex-x;
+          font-size: $workflow-more-size;
+          color: $workflow-more-color;
+
+          .value {
+            color: $workflow-more-color;
+          }
+
+          .value {
+            color: $workflow-item-color;
+          }
+        }
+      }
+    }
+  }
+}

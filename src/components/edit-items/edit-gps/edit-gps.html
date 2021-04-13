@@ -1,0 +1,15 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note class="note-desc edit-bar" item-end>
+      <div>
+        <button (click.stop)="presentWebBaiduMapPage();" color="default" ion-button small>查看地图</button>
+      </div>
+      <div class="note-title">{{ address }}</div>
+    </ion-note>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

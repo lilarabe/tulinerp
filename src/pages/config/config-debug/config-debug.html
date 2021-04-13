@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>debug 调试</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list no-border>
+
+    <ion-list-header></ion-list-header>
+
+
+    <ion-item *ngFor="let debugItem of debugConfigs; index as i;">
+      <ion-icon [color]="debugItem.isDebug? 'secondary' : 'light'" name='bug' item-start></ion-icon>
+      <ion-label>{{ debugItem.name }}</ion-label>
+      <ion-toggle (tap)="save();" [(ngModel)]="debugItem.isDebug"></ion-toggle>
+    </ion-item>
+
+
+  </ion-list>
+
+</ion-content>

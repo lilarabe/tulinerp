@@ -1,0 +1,10 @@
+<div class="items">
+  <div class="lable">{{name}}</div>
+  <div class="colon">:</div>
+  <div class="value">{{value}}</div>
+  <div *ngIf="value.length >= 20 && operate" class="icon">
+    <button (click.stop)="showDescription();" ion-button clear icon-only>
+      <ion-icon color="default" name="md-more"></ion-icon>
+    </button>
+  </div>
+</div>

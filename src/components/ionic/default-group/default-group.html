@@ -1,0 +1,13 @@
+<ion-item-group class="default-group-item-group">
+  <ion-item-divider color="light" (tap)="expanded = !expanded;">
+    <ion-icon name="information-circle" color="default" item-start></ion-icon>
+    {{ groupName }}
+    <ion-icon *ngIf="expanded" name="arrow-up" color="dark" item-end></ion-icon>
+    <ion-icon *ngIf="!expanded" name="arrow-down" color="dark" item-end></ion-icon>
+  </ion-item-divider>
+</ion-item-group>
+
+<div *ngIf="expanded" class="group-content">
+  <ng-content></ng-content>
+</div>
+

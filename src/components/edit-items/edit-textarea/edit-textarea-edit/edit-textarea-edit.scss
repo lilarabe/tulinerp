@@ -1,0 +1,25 @@
+edit-textarea-edit {
+  .textarea-content {
+    min-height: calc(100vh - 44px);
+    background-color: #fff;
+  }
+
+  .textarea {
+    padding: 15px;
+    width: calc(100%);
+    font-size: 18px;
+    min-height: calc(100vh - 44px);
+    user-select: text;
+  }
+
+  .textarea:empty:before {
+    content: attr(placeholder);
+    color: #bbb;
+  }
+
+  .textarea:focus:before {
+    content: none;
+  }
+
+
+}

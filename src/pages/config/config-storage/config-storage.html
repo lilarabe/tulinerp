@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Storage</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="type" color="dark">
+      <ion-segment-button value="storage">storage</ion-segment-button>
+      <ion-segment-button value="map">map</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+  <div *ngIf="type === 'storage'">
+
+    <ion-card>
+      <ion-card-header>url信息</ion-card-header>
+      <ion-card-content>{{ href }}</ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>本地数据库信息</ion-card-header>
+      <ion-card-content>{{ localForageOptions }}</ion-card-content>
+    </ion-card>
+
+    <ion-card *ngFor="let item of storageData">
+      <ion-card-header>{{ item.key }}</ion-card-header>
+      <ion-card-content>{{ item.value }}</ion-card-content>
+      <ion-row>
+
+        <ion-col>
+          <button (click.stop)="del(item);" ion-button icon-start small>
+            <ion-icon name="trash"></ion-icon>
+            <div>删除</div>
+          </button>
+        </ion-col>
+
+      </ion-row>
+    </ion-card>
+  </div>
+
+  <div *ngIf="type === 'map'">
+    <ion-card *ngFor="let item of mapData">
+      <ion-card-header>{{ item.key }}</ion-card-header>
+      <ion-card-content>{{ item.value }}</ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

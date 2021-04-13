@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>demo列表</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <button ion-item (click)="pushSocketIoPage();">socketIo</button>  
+  </ion-list>
+
+  <h1>web RTC</h1>
+  <button (click)="openWebRTC();" ion-button>web RTC</button>
+
+
+  <h1>grid list2</h1>
+
+  <app-grid-list [cols]="gridData.cols" [rowHeight]="'30px'">
+    <app-grid-tile *ngFor="let item of gridData.itemData; index as i" [ngStyle]="{'background-color' : item.background}" [colspan]="item.colspan" [rowspan]="item.rowspan ? item.rowspan : 1">
+      <div>第{{ i+1 }}个元素</div>
+    </app-grid-tile>
+  </app-grid-list>
+
+  <h1>音频播放</h1>
+
+  <app-audio-player [src]="sources"></app-audio-player>
+
+
+  <h1>iframe</h1>
+
+  <button (click)="openFrame();" ion-button>iframe</button>
+
+  <h1>iframe</h1>
+
+  <button (click)="nativeBrowser();" ion-button>nativeBrowser</button>
+
+  <h1>打开App</h1>
+  <button (click)="launchApp('微信');" ion-button>打开微信</button>
+  <button (click)="launchApp('支付宝');" ion-button>打开支付宝</button>
+  <button (click)="launchApp('QQ');" ion-button>打开QQ</button>
+  <button (click)="launchApp('百度地图');" ion-button>打开百度地图</button>
+  <button (click)="launchApp('不存在的app');" ion-button>打开不存在的app</button>
+
+  <h1>微信demo</h1>
+  <button (click)="pushWxPage();" ion-button>打开微信demo页</button>
+
+  <h3>获取Base64</h3>
+  <button (click)="getBase64();" ion-button>获取Base64</button>
+
+  <h1>切换tabs</h1>
+  <button (click)="changeTabs();" ion-button>切换tabs</button>
+
+  <h1>极光推送</h1>
+  <button (click)="pushJpushPage();" ion-button>极光推送测试页</button>
+
+  <h1>设备</h1>
+  <button (click)="pushDevicePage();" ion-button>设备信息</button>
+
+  <h1>脸部识别</h1>
+  <button (click)="pushFaceApiPage();" ion-button>face-api</button>
+
+  <h1>视频</h1>
+  <button (click)="pushVideoPage();" ion-button>视屏上传</button>
+
+
+</ion-content>

@@ -1,0 +1,11 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item (tap)="pushEditTextareaPage();" class="ion-item edit-item" [ngClass]="readonly || disable ? 'readonly' : ''">
+    <ion-note class="note-desc" [ngClass]="readonly || disable ? 'readonly' : ''" color="dark"
+      class="note-desc edit-value" item-end>{{ formControl.value }}</ion-note>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

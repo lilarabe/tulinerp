@@ -1,0 +1,1625 @@
+{
+  "status": 1,
+  "msg": "",
+  "payload": {
+    "isAdd": true,
+    "listData": [
+      {
+        "id": "BSYZ2020-0003703",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003703",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "1",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "0.00",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "刘达",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "未发起",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          },
+          {
+            "name": "暂存状态",
+            "value": "暂存",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "tempsave",
+            "isHidden": false
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "2.00",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "未发起",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003604",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003604",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "运输辅材（结构胶、聚氨酯发泡、双面胶）3%",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "包",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "0.00",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "唐友文",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "未发起",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003603",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003603",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "测量安装费7%",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003602",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003602",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "70型断桥中空5mm+18A+5mm外开窗",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003601",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003601",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "70型断桥中空5mm+18A+5mm外开门",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003600",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003600",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "隐形纱窗（摩尔戴克）",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003599",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003599",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "120型中空5mm+18A+5mm平移门",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003598",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003598",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "70型断桥中空5mm+18A+5mmn内开内倒窗",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003597",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003597",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "玻璃弧形加工",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003596",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003596",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "型材弧形加工",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003595",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003595",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "金钢网纱窗",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003594",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003594",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "78型断桥中空5mm+12A+5mm推拉窗",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003593",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003593",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "皇家天沟",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      },
+      {
+        "id": "BSYZ2020-0003592",
+        "pic": [],
+        "cols": "4",
+        "isDel": true,
+        "isEdit": true,
+        "itemData": [
+          {
+            "name": "供应商全称",
+            "value": "上海尊亭建筑装饰工程有限公司",
+            "selector": "display-title",
+            "colspan": "4",
+            "colName": "gysqc",
+            "isHidden": true
+          },
+          {
+            "name": "产品类型",
+            "value": "主材",
+            "selector": "display-tag",
+            "colspan": "2",
+            "colName": "cplx",
+            "isHidden": false,
+            "tagStyle": ""
+          },
+          {
+            "name": "产品编号",
+            "value": "BSYZ2020-0003592",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "ID",
+            "isHidden": false
+          },
+          {
+            "name": "产品名称",
+            "value": "沿墙防水板",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "mingcheng",
+            "isHidden": false
+          },
+          {
+            "name": "产品型号",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "1",
+            "colName": "kcbh",
+            "isHidden": false
+          },
+          {
+            "name": "所属户型",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "producttx",
+            "isHidden": false
+          },
+          {
+            "name": "计量单位",
+            "value": "套",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "jldw",
+            "isHidden": false
+          },
+          {
+            "name": "销售价(不含税)",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "xsjbhs",
+            "isHidden": false
+          },
+          {
+            "name": "品牌",
+            "value": "墅景",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "pinpai",
+            "isHidden": false
+          },
+          {
+            "name": "创建用户",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "2",
+            "colName": "cjyhxm",
+            "isHidden": false
+          },
+          {
+            "name": "建档日期",
+            "value": "",
+            "selector": "display-datetime",
+            "colspan": "2",
+            "colName": "jdrq",
+            "isHidden": true
+          },
+          {
+            "name": "审批状态",
+            "value": "",
+            "selector": "display-default",
+            "colspan": "4",
+            "colName": "spzt",
+            "isHidden": true
+          }
+        ],
+        "Goto_Module": "chanpin"
+      }
+    ],
+    "num": 15,
+    "title": "",
+    "total": 3709
+  }
+}

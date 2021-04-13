@@ -1,0 +1,10 @@
+<div class="moredata-full">
+  <div class="items-file">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+    <div class="value">
+      <button *ngIf="moreDataItemData.value" (click.stop)="openBrowser(moreDataItemData.value);" color="default"
+        ion-button small>查看文件</button>
+    </div>
+  </div>
+</div>

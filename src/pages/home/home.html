@@ -1,0 +1,25 @@
+<ion-header class="companyHeader" offline tappable>
+  <ion-navbar>
+    <ion-title>图表</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content debug-toggle>
+
+  <div class="home">
+
+    <div *ngFor="let panel of panelData" class="home-category">
+      <div class="home-category-title">{{panel.Name}}</div>
+      <div class="items">
+        <div (click.stop)="onItemClick(item);" *ngFor="let item of panel.Item" class="item" tappable>
+          <div class="icon">
+            <img *ngIf="item.Type === 'Chart'" [src]="item.src || 'assets/images/home/chart.png'" class="itemImg">
+          </div>
+          <div class="name">{{ item.Name }}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</ion-content>

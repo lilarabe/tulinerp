@@ -1,0 +1,15 @@
+<div class="moredata-full">
+  <div class="items">
+    <div class="lable">{{moreDataItemData.name | maxString:labelMaxLen}}</div>
+    <div class="colon">:</div>
+  </div>
+  <!-- <div *ngIf="moreDataItemData.value" class="image">
+    <img (click.stop)="previewImage(moreDataItemData.value);" [src]="moreDataItemData.value" class="img">
+  </div> -->
+</div>
+<div class="item-list">
+  <div *ngFor="let item of moreDataItemData.value;let i=index;" class="item">
+      <!-- <ion-img [src]="item.filePath" class="img" (click.stop)="previewImage(item.filePath);" alt=""></ion-img> -->
+      <img [src]="item.filePath" class="img" (click.stop)="previewImage(item.filePath);" alt=""/>
+  </div>
+</div>

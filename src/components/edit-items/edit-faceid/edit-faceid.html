@@ -1,0 +1,37 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"
+    [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <!-- 浏览器上传 -->
+    <ion-icon *ngIf="isBrowser && !(readonly || disable) && isRequiredFieldsOk" class="camera-icon" name="camera"
+      color="default" item-end>
+      <app-image-upload (imageDataEvent)="getAppImageUploadData($event);"></app-image-upload>
+    </ion-icon>
+    <!-- 浏览器检查 -->
+    <ion-icon *ngIf="isBrowser && !(readonly || disable) && !isRequiredFieldsOk"
+      (click.stop)="checkRequiredFieldsMitMsg();" class="camera-icon" name="camera" color="disable" item-end>
+    </ion-icon>
+    <!-- native上传 -->
+    <ion-icon *ngIf="isCordova && !(readonly || disable) && isRequiredFieldsOk" native-camera
+      (uploadImageBase64)="getNativeCameraData($event);" class="camera-icon" name="camera" color="default" item-end>
+    </ion-icon>
+    <!-- native检查 -->
+    <ion-icon *ngIf="isCordova && !(readonly || disable) && isRequiredFieldsOk"
+      (click.stop)="checkRequiredFieldsMitMsg();" native-camera class="camera-icon" name="camera" color="default"
+      item-end></ion-icon>
+    <!-- 删除 -->
+    <ion-icon *ngIf="!!uploadImageSrc && !(readonly || disable)" (click.stop)="del();" class="del" name="trash"
+      color="danger" item-end></ion-icon>
+
+
+  </ion-item>
+
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>
+
+<div class="pic-box" *ngIf="!!uploadImageSrc">
+  <img (tap)="previewImage();" [src]="uploadImageSrc | safeUrl" class="pic-img" />
+</div>

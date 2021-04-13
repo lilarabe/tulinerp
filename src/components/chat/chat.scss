@@ -1,0 +1,102 @@
+chat {
+
+  .chat-box {
+    @include flex-y;
+
+    height: 100%;
+
+    .chat-list {
+      flex: 1;
+      overflow-x: hidden;
+      overflow-y: scroll;
+
+      .chat-item {
+        overflow: hidden;
+        padding: 5px 15px;
+
+        .chat-item-name {
+          padding: 0 0 5px 0;
+          font-size: $fs-large;
+          font-weight: bold;
+          width: 100%;
+          float: left;
+        }
+
+        .chat-item-msg {
+          font-size: 15px;
+          background-color: #ffffff;
+          border-radius: 5px;
+          padding: 5px 10px;
+          float: left;
+          max-width: 90%;
+
+          .aters{
+            padding: 0 0 5px 0;
+            .ater{
+              color: $fc-primary;
+              display: inline-block;
+              padding: 0 5px 0 0;
+            }
+          }
+        }
+      }
+
+      .chat-item.me .chat-item-name {
+        text-align: right;
+      }
+
+      .chat-item.me .chat-item-msg {
+        background-color: #8be069;
+        float: right;
+      }
+    }
+
+    .aterUsers {
+      width: 100%;
+      background-color: lightblue;
+      color: $fc-primary;
+      font-size: $fs-large;
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      background-color: #eeeeee;
+      border-top: 1px solid #cccccc;
+      .aterUser {
+        margin: 0 5px;
+      }
+      .aterUser:before{
+        content: '@';
+      }
+    }
+
+    .toolbar {
+      height: 45px;
+      @include flex-x;
+      background-color: #eeeeee;
+      border-top: 1px solid #cccccc;
+      box-sizing: border-box;
+      .btns {
+        width: 45px;
+      }
+
+      .inputbar {
+        border: 1px solid #dddddd;
+        margin: 2px 20px;
+        border-radius: 5px;
+        flex: 1;
+        .inputbar-input {
+          .text-input-ios {
+            margin: 0;
+            padding: 0;
+            text-indent: 5px;
+            height: 30px;
+            width: calc(100%);
+            background-color: #ffffff;
+          }
+        }
+      }
+
+    }
+  }
+}

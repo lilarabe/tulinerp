@@ -1,0 +1,10 @@
+page-demo-face-api {
+    .face{
+        position: relative;
+        .canvas-overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

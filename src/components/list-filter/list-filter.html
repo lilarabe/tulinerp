@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-toolbar no-border-top>
+
+    <ion-buttons start>
+      <button (tap)="dismiss();" ion-button icon-only>
+        <ion-icon name="arrow-back" color="light"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title>筛选</ion-title>
+
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="content">
+
+    <ion-scroll class="scroll" scrollY="true">
+
+      <filter-item *ngFor="let item of filterData;" [name]="item.name" class="switch-item">
+
+        <div [ngSwitch]="item.selector">
+          <filter-select *ngSwitchCase="'filter-select'" [value]="item.value || ''" [multi]="false" [valueArray]="item.valueArray" [inputFormGroup]="filterForm" [inputFormControlName]="item.key"></filter-select>
+          <filter-select *ngSwitchCase="'filter-multiSelect'" [value]="item.value || []" [multi]="true" [valueArray]="item.valueArray" [inputFormGroup]="filterForm" [inputFormControlName]="item.key"></filter-select>
+          <filter-number *ngSwitchCase="'filter-number'" [value]="item.value || {}" [inputFormGroup]="filterForm" [inputFormControlName]="item.key"></filter-number>
+          <filter-date *ngSwitchCase="'filter-date'" [value]="item.value || {}" [inputFormGroup]="filterForm" [inputFormControlName]="item.key"></filter-date>
+        </div>
+
+      </filter-item>
+
+    </ion-scroll>
+
+
+    <div class="footer">
+      <div (tap)="dismiss();" class="footer-item cancel">取消</div>
+      <div (tap)="ok();" class="footer-item ok">确定</div>
+    </div>
+
+  </div>
+
+</ion-content>

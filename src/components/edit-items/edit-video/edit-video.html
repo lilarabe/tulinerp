@@ -1,0 +1,27 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids" [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-note class="note-desc edit-bar" item-end>
+      <button *ngIf="!!uploadVideoSrc && !(readonly || disable)" (click.stop)="del();" color="danger" ion-button
+        small>删除</button>
+      <!-- 浏览器上传 -->
+      <button *ngIf="isBrowser && !(readonly || disable)" color="default" ion-button small>
+        上传
+        <app-file-upload (uploadFileInfoEvent)="getBrowserUploadFileInfo($event);" [fileTypeNames]="['mp4']"
+          [fileMaxSize]="fileMaxSize || 1000"></app-file-upload>
+      </button>
+      <!-- app上传 -->
+      <div *ngIf="isApp && !(readonly || disable)" (uploadVideoPath)="getAppUploadFileInfo($event);"
+        [fileMaxSize]="fileMaxSize || 1000" native-video>
+        <button color="default" ion-button small>视频上传</button>
+      </div>
+
+    </ion-note>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>
+
+<app-video-player *ngIf="uploadVideoSrc" [src]="uploadVideoSrc" [poster]="poster"></app-video-player>

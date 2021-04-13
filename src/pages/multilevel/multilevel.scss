@@ -1,0 +1,42 @@
+page-multilevel {
+  .head_btn{
+    color: #999999;
+  }
+  .titleList {
+    overflow: hidden;
+    width: 100%;
+    padding: 6px 20px;
+  }
+
+  .nowData {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 30px;
+    vertical-align: middle;
+    @include scroll-hide();
+
+    .titleMain {
+      display: inline-block;
+      color: #999999;
+      white-space: nowrap;
+    }
+  }
+
+  .black {
+    color: black;
+  }
+
+  .arrow-forward {
+    vertical-align: middle;
+  }
+
+  .footer{
+    background-color: #f8f8f8;
+    color: #1b1b1b;
+    .text{
+      @include ells(2);
+    }
+  }
+}

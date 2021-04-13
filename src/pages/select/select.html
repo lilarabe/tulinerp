@@ -1,0 +1,38 @@
+<ion-header class="list-page-header" offline>
+
+  <ion-navbar>
+
+    <ion-buttons start>
+      <button ion-button (click)="dismiss();">
+        <button class="header-btn" ion-button clear>取消</button>
+      </button>
+    </ion-buttons>
+
+    <ion-title>{{title}}</ion-title>
+
+  </ion-navbar>
+
+  <list-search (searchClearEvent)="searchClear();" (searchAutoEvent)="inputSearch($event);"
+    (searchClickEvent)="searchInput($event);"></list-search>
+
+</ion-header>
+
+
+<ion-content class="list-page-content" debug-toggle>
+
+
+  <select-items [listData]="listData" [moduleName]="moduleName" [workFlowId]="headerData.workFlowId || ''"
+    [currentData]="this.navParams.get('editData') || {}" [mainForm]="mainForm" [action]="action" tappable></select-items>
+
+  <ion-fab *ngIf="isAdd && viewsLength < 3" bottom right>
+    <button ion-fab color="default" (tap)="add();">
+      <ion-icon color="light" class="add-btn-icon" name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+
+  <!--上拉加载-->
+  <list-next-page [isEnabled]="canFlippingPage" (nextPageEvent)="$event.waitFor(asyncNextPage());"></list-next-page>
+
+
+</ion-content>

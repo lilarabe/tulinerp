@@ -1,0 +1,23 @@
+<ion-tabs #tabs class="tabs1">
+
+  <!-- 首页 -->
+  <!-- <ion-tab [root]="informPage" tabTitle="通知" tabIcon="ios-tab1"></ion-tab> -->
+
+  <!-- 首页 -->
+  <ion-tab [root]="menuPage" tabTitle="工作台" tabIcon="ios-tab2" tabUrlPath='menu'></ion-tab>
+
+  <!-- 代办 -->
+  <ion-tab [tabBadge]="workFlowTabsInfo?.badge || 0" tabBadgeStyle="danger"
+    [root]="workflowPage" tabTitle="待办" tabIcon="ios-tab3" tabUrlPath='workflow'></ion-tab>
+
+  <!-- 功能 -->
+  <!-- <ion-tab (ionSelect)="goToRoot($event);" [root]="homePage" tabTitle="图表" tabIcon="apps" tabUrlPath='menu'></ion-tab> -->
+
+  <!-- 我的 -->
+  <ion-tab [root]="userPage" tabTitle="我的" tabIcon="ios-tab4" tabUrlPath='user' tabsHideOnSubPages="false"></ion-tab>
+
+  <!-- 配置 -->
+  <!-- <ion-tab *ngIf="!platform.is('cordova')" [root]="configPage" tabTitle="配置" tabIcon="settings" tabUrlPath='config'>
+  </ion-tab> -->
+
+</ion-tabs>

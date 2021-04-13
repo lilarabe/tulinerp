@@ -1,0 +1,18 @@
+page-list {
+  .filter-btn {
+    font-size: 14px;
+  }
+
+  .add-btn-icon {
+    font-size: 6rem;
+  }
+
+  .no-data {
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    .no-data-img {
+      width: 100%;
+    }
+  }
+}

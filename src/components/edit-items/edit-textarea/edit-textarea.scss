@@ -1,0 +1,18 @@
+edit-textarea {
+  .ion-item {
+    touch-action: auto !important;
+  }
+
+  .note-desc {
+    margin: 10px 0 !important;
+    @include ells(4);
+  }
+
+  .edit-item.readonly {
+    background-color: #eee;
+  }
+
+  // .note-desc.readonly {
+  //   opacity: 0.4;
+  // }
+}

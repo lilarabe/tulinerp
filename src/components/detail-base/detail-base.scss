@@ -1,0 +1,15 @@
+@import '../display-items/display-items.scss';
+
+detail-base {
+
+  display: block;
+  overflow: hidden;
+
+  font-size: $desc-size;
+  color: $desc-color;
+
+  .background{
+    background-color: #fff;
+    padding: 15px;
+  }
+}

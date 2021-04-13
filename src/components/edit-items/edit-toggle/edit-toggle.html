@@ -1,0 +1,12 @@
+<div [formGroup]="inputFormGroup" class="edit-formGroup" [ngClass]="{'hidden': isHidden, 'readonly':readonly}">
+  <!-- lable -->
+  <edit-public-lable [readonly]="readonly" [placeholder]="placeholder" [valids]="valids"  [inputFormControlName]="inputFormControlName"></edit-public-lable>
+  <!-- item -->
+  <ion-item class="edit-item" [ngClass]="{'readonly':readonly}">
+    <ion-toggle *ngIf="readonly || disable" [checked]="!!formControl.value" [disabled]="true" color="default" class="toggle">
+    </ion-toggle>
+    <ion-toggle *ngIf="!(readonly || disable)" [formControlName]="inputFormControlName" color="default" class="toggle"></ion-toggle>
+  </ion-item>
+  <!-- state -->
+  <edit-public-state></edit-public-state>
+</div>

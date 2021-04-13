@@ -1,0 +1,30 @@
+detail-items {
+  .item-inner {
+    border: 0 !important;
+  }
+
+  .selector {
+    border-bottom: 1px solid #c8c7cc;
+  }
+
+  .group .selector:last-child {
+    border-bottom: 0;
+  }
+
+  .list {
+    // margin: 0 !important;
+  }
+
+  .note-ios {
+    color: $desc-color;
+    // max-width: 70%;
+    flex: 1;
+    @include ells(2);
+  }
+
+  .input-wrapper {
+    // flex: 1;
+    flex: none;
+    width: 30%;
+  }
+}
